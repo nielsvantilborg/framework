@@ -1,0 +1,23 @@
+/* Partnavigation vvb styling*/
+/* Level 0 */
+.partNavigation-vvb 										{margin:0; padding:0; width: 200px;}
+.partNavigation-vvb li 										{list-style-type:none; margin:0; padding:0; position: relative; background: silver; }
+.partNavigation-vvb li a 									{padding: 15px 20px; display: block; text-decoration: none; color: #000; }
+
+/* Level 1 */
+.partNavigation-vvb ul 										{display: none; position: absolute; left:100%; top: 0; min-width: 200px; z-index: 99; padding:0;}
+.partNavigation-vvb ul li 									{float: none; background: #AABDE6;}
+.partNavigation-vvb ul li a 								{padding: 10px 20px;}
+
+/* Selected & Hover effects */
+/* Same hover effect at all levels */
+.partNavigation-vvb li a:hover, .partNavigation-vvb li.selected a:hover {background: red; color: #fff;}
+
+.partNavigation-vvb li.selected a 							{background: blue; color: #fff;}
+.partNavigation-vvb li.selected ul a 						{background: inherit; color: inherit;}
+.partNavigation-vvb ul li.selected a 						{background: blue; color: #fff;}
+
+/* Arrows */
+.partNavigation-vvb.sf-arrows > li > .sf-with-ul 			{padding-right: 28px; }
+.partNavigation-vvb.sf-arrows > li > .sf-with-ul:after 		{margin-top: -5px; margin-right: -3px; border-color: transparent; border-left-color: #fff; border-left-color: rgba(255,255,255,.5);}
+.partNavigation-vvb.sf-arrows li > .sf-with-ul:focus:after, .partNavigation-vvb.sf-arrows li:hover > .sf-with-ul:after, .partNavigation-vvb.sf-arrows .sfHover > .sf-with-ul:after {border-color: transparent; border-left-color: white;}

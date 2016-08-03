@@ -1,0 +1,114 @@
+/*** ESSENTIAL STYLES ***/
+.partNavigation-hhbvb {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.partNavigation-hhbvb .sf-mega {
+  position: absolute;
+  display: none;
+  top: 100%;
+  z-index: 99;
+}
+.partNavigation-hhbvb > li {
+  float: left;
+}
+.partNavigation-hhbvb li:hover > .sf-mega,
+.partNavigation-hhbvb li.sfHover > .sf-mega {
+  display: block;
+}
+
+.partNavigation-hhbvb > li > a {
+  display: block;
+  position: relative;
+}
+
+/*** DEMO SKIN ***/
+.partNavigation-hhbvb {
+  width: 100%;
+  height: 50px; /* not needed */
+}
+
+.partNavigation-hhbvb > li {
+  background: silver;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+
+.partNavigation-hhbvb > li > a {
+  padding:0px 20px;
+  text-decoration: none;
+  zoom: 1; /* IE7 */
+  color: #000;
+  line-height: 50px;
+}
+
+.partNavigation-hhbvb ul > li > a {
+  display: block;
+}
+
+.partNavigation-hhbvb > li:hover,
+.partNavigation-hhbvb > li.sfHover {
+  background: #CFDEFF;
+  /* only transition out, not in */
+  -webkit-transition: none;
+  transition: none;
+}
+
+.partNavigation-hhbvb ul > li:hover,
+.partNavigation-hhbvb ul > li.sfHover {
+  background: red;
+}
+
+.partNavigation-hhbvb > li.selected     {background-color: blue;}
+.partNavigation-hhbvb > li.selected > a {color: #fff; font-weight: bold;}
+.partNavigation-hhbvb > li.selected:hover, .partNavigation-hhbvb > li.selected.sfHover {background-color: black;}
+
+.partNavigation-hhbvb ul > li.selected     {background-color: blue;}
+.partNavigation-hhbvb ul > li.selected > a {color: #fff; font-weight: bold;}
+.partNavigation-hhbvb ul > li.selected:hover, .partNavigation-hhbvb > li.selected.sfHover {background-color: black;}
+
+/*** mega menu dropdown ***/
+
+.sf-mega {
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  width: 100%; /* allow long menu items to determine submenu width */
+  left:0; /* remove left:0 if you want the dropdown menu to start where the menu item starts */
+}
+
+
+.sf-mega-section {
+  float: left;
+  width: 50%;
+  border-left: 1px solid #000;
+  padding: 20px;
+}
+.sf-mega-section:first-child {border-left: none;}
+.sf-mega-section h2     {font-size: 125%;}
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+  padding-right: 2.5em;
+  *padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  margin-top: -3px;
+  height: 0;
+  width: 0;
+  /* order of following 3 rules important for fallbacks to work */
+  border: 5px solid transparent;
+  border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+  border-top-color: rgba(255,255,255,.5);
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+  border-top-color: white; /* IE8 fallback colour */
+}

@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html lang='nl' prefix='og: http://ogp.me/ns#'>
+<head>  
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <title>Range slider</title>
+    
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- In case the website is not responsive, apply an static width <meta name='viewport' content='width=1024, maximum-scale=1.0'> -->
+
+    <!-- CSS -->
+    <link rel='Stylesheet' type='text/css' href='css/reset.css'>
+    <link rel='Stylesheet' type='text/css' href='css/fonts.css'>
+    <link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
+    <link rel='Stylesheet' type='text/css' href='css/index.css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' type='text/css' href='css/range-slider.css'>
+    <!-- end CSS -->
+</head>
+<body>
+
+    <div id='tableOfContents'>
+        <div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
+        <div class="menu"><span class="mobileMenuButton mobileMenuOpen">Menu</span><a href='index.html'>&lt; Back to overview</a></div>
+        <div id="mobileMenuContainer">
+            <span class="mobileMenuButton mobileMenuClose">Sluiten</span>
+            <!-- this is just a random menu for the example -->
+            <ul>
+                <li><a href='#rangeSliderOneHandle'>Range slider one handle</a></li>
+                <li><a href='#rangeSliderTwoHandle'>Range slider two handles</a></li> 
+                <li><a href='#rangeSliderTwoHandlePrefix'>Range slider two handles with prefix</a></li> 
+            </ul>
+        </div>
+    </div>
+
+    <div class='basicContainer'>
+
+        <h1>Range slider</h1>
+
+        <h3>Notes</h3>
+
+        <div class='partContentText'>
+            <ul>
+                <li>Class 'noUi-extended' let the handles stay within the slide bar (instead of the default overlap)</li> 
+                <li>UniqueId is a variable name</li>
+            </ul>
+        </div>
+        
+        <h3>Source</h3>
+
+        <div class='partContentText'>
+            <ul>
+                <li><a href="https://refreshless.com/nouislider/">http://refreshless.com/nouislider/</a></li> 
+            </ul>
+        </div>
+
+        <h2 id="rangeSliderOneHandle">Range slider one handle</h2>
+
+        <div class="rangeSliderContainer">
+            <div id="rangeSliderUniqueId1" class="noUi-extended"></div>
+            <span id="rangeSliderUniqueIdValue1" class="rangeSliderValue"></span>
+        </div>
+
+        <h3>Javascript</h3>
+
+<xmp class='prettyprint'>
+<script type='text/javascript' src='js/range-slider-8.5.1.js'></script>
+
+<script type="text/javascript">  
+    // Range slider one handle
+    var rangeSlider = document.getElementById('rangeSliderUniqueId1');
+
+    noUiSlider.create(rangeSlider, {
+        start: [ 4000 ],
+        range: {
+            'min': [  2000 ],
+            'max': [ 10000 ]
+        }
+    });
+
+    var rangeSliderValueElement = document.getElementById('rangeSliderUniqueIdValue1');
+
+    rangeSlider.noUiSlider.on('update', function( values, handle ) {
+        rangeSliderValueElement.innerHTML = values[handle];
+    });
+</script>
+</xmp>
+
+        <h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class="rangeSliderContainer">
+    <div id="rangeSliderUniqueId1" class="noUi-extended"></div>
+    <span id="rangeSliderUniqueIdValue1" class="rangeSliderValue"></span>
+</div>
+</xmp>
+        
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<link rel='stylesheet' type='text/css' href='css/range-slider.css'>
+</xmp>
+
+        <h2 id="rangeSliderTwoHandle">Range slider two handles</h2>
+
+        <div class="rangeSliderContainer">
+            <div id="rangeSliderUniqueId2" class="noUi-extended"></div>
+            <span id="rangeSliderUniqueIdValueMin2" class="rangeSliderValueMin"></span>
+            <span id="rangeSliderUniqueIdValueMax2" class="rangeSliderValueMax"></span>
+        </div>
+
+        <h3>Javascript</h3>
+
+<xmp class='prettyprint'>
+<script type='text/javascript' src='js/range-slider-8.5.1.js'></script>
+
+<script type="text/javascript">  
+    var snapSlider = document.getElementById('rangeSliderUniqueId2');
+        
+    noUiSlider.create(snapSlider, {
+        start: [ 0, 1000 ],
+        step: 10,
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 1000
+        }
+    });
+
+    var snapValues = [
+        document.getElementById('rangeSliderUniqueIdValueMin2'),
+        document.getElementById('rangeSliderUniqueIdValueMax2')
+    ];
+
+    snapSlider.noUiSlider.on('update', function( values, handle ) {
+        snapValues[handle].innerHTML = values[handle];
+    });
+</script>
+</xmp>
+
+        <h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class="rangeSliderContainer">
+    <div id="rangeSliderUniqueId2" class="noUi-extended"></div>
+    <span id="rangeSliderUniqueIdValueMin2" class="rangeSliderValueMin"></span>
+    <span id="rangeSliderUniqueIdValueMax2" class="rangeSliderValueMax"></span>
+</div>
+</xmp>
+        
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<link rel='stylesheet' type='text/css' href='css/range-slider.css'>
+</xmp>
+
+<h2 id="rangeSliderTwoHandlePrefix">Range slider two handles with prefix</h2>
+
+        <h3>Notes</h3>
+
+        <div class='partContentText'>
+            <ul>
+                <li>Value with prefix like currency, size, distance, etc</li> 
+                <li>Span with prefix can be place before or after the span with id "rangeSliderUniqueIdValueMin3", like the example below.</li> 
+            </ul>
+        </div>
+
+        <div class="rangeSliderContainer">
+            <div id="rangeSliderUniqueId3" class="noUi-extended"></div>
+            <span class="rangeSliderValueMin"><span>€ </span><span id="rangeSliderUniqueIdValueMin3"></span></span>
+            <span class="rangeSliderValueMax"><span id="rangeSliderUniqueIdValueMax3"></span><span> €</span></span>
+        </div>
+
+        <h3>Javascript</h3>
+
+<xmp class='prettyprint'>
+<script type='text/javascript' src='js/range-slider-8.5.1.js'></script>
+
+<script type="text/javascript">  
+    var snapSlider = document.getElementById('rangeSliderUniqueId3');
+    
+    noUiSlider.create(snapSlider, {
+        start: [ 0, 500 ],
+        step: 10,
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 500
+        }
+    });
+
+    var snapValues = [
+        document.getElementById('rangeSliderUniqueIdValueMin3'),
+        document.getElementById('rangeSliderUniqueIdValueMax3')
+    ];
+
+    snapSlider.noUiSlider.on('update', function( values, handle ) {
+        snapValues[handle].innerHTML = values[handle];
+    });
+</script>
+</xmp>
+
+        <h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class="rangeSliderContainer">
+    <div id="rangeSliderUniqueId3" class="noUi-extended"></div>
+    <span class="rangeSliderValueMin"><span>€ </span><span id="rangeSliderUniqueIdValueMin3"></span></span>
+    <span class="rangeSliderValueMax"><span id="rangeSliderUniqueIdValueMax3"></span><span> €</span></span>
+</div>
+</xmp>
+        
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<link rel='stylesheet' type='text/css' href='css/range-slider.css'>
+</xmp>
+
+
+
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/range-slider-8.5.1.js"></script>
+
+    <script type="text/javascript">  
+        // Range slider one handle
+        var rangeSlider = document.getElementById('rangeSliderUniqueId1');
+
+        noUiSlider.create(rangeSlider, {
+            start: [ 4000 ],
+            range: {
+                'min': [  2000 ],
+                'max': [ 10000 ]
+            }
+        });
+
+        var rangeSliderValueElement = document.getElementById('rangeSliderUniqueIdValue1');
+
+        rangeSlider.noUiSlider.on('update', function( values, handle ) {
+            rangeSliderValueElement.innerHTML = values[handle];
+        });
+
+
+        // Range slider two handles
+        var snapSlider = document.getElementById('rangeSliderUniqueId2');
+    
+        noUiSlider.create(snapSlider, {
+            start: [ 0, 1000 ],
+            step: 10,
+            connect: true,
+            range: {
+                'min': 0,
+                'max': 1000
+            }
+        });
+
+        var snapValues = [
+            document.getElementById('rangeSliderUniqueIdValueMin2'),
+            document.getElementById('rangeSliderUniqueIdValueMax2')
+        ];
+
+        snapSlider.noUiSlider.on('update', function( values, handle ) {
+            snapValues[handle].innerHTML = values[handle];
+        });
+
+        // Range slider two handles with prefix
+        var snapSlider = document.getElementById('rangeSliderUniqueId3');
+    
+        noUiSlider.create(snapSlider, {
+            start: [ 0, 500 ],
+            step: 10,
+            connect: true,
+            range: {
+                'min': 0,
+                'max': 500
+            }
+        });
+
+        var snapValues = [
+            document.getElementById('rangeSliderUniqueIdValueMin3'),
+            document.getElementById('rangeSliderUniqueIdValueMax3')
+        ];
+
+        snapSlider.noUiSlider.on('update', function( values, handle ) {
+            snapValues[handle].innerHTML = values[handle];
+        });
+    </script>
+
+    <script type='text/javascript' src='https://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
+    <script type='text/javascript'>
+        $(document).ready(function(){           
+            $( '.mobileMenuButton').click(function() {
+                $('#mobileMenuContainer').toggleClass('mobileMenuContainerActive');
+            });
+        });  
+    </script>
+    
+
+    <!-- End javascript -->
+
+</body>
+</html>

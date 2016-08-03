@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="nl" prefix="og: http://ogp.me/ns#">
+<head>	
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>index - DailyFramework</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta property="og:image" content="/favicon.png">
+			
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- In case the website is not responsive, apply an static width <meta name="viewport" content="width=1024, maximum-scale=1.0"> -->
+
+    <!-- CSS -->
+    <link rel="Stylesheet" type="text/css" href="css/reset.css">
+    <link rel="Stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="Stylesheet" type="text/css" href="css/partContent.css"> 
+    <link rel="Stylesheet" type="text/css" href="css/index.css">
+	<!-- Load other css files after index.css, but always before responsive.css -->
+
+		<!-- Insert other css files here please -->
+
+    <!-- End load other css files after index.css, but always before responsive.css -->
+    <link rel="Stylesheet" type="text/css" href="css/responsive.css">
+    <!-- end CSS -->
+</head>
+<body>
+	
+	<div id="tableOfContents">
+		<a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a>
+		<ul>
+			<li><a href="partContent.html">partContent</a></li>
+			<li><a href="partNavigation.html">partNavigation</a></li>
+			<li><a href="partSlickSlider.html">partSlickSlider</a></li>
+			<li><a href="partAccordionMenu.html">partAccordionMenu</a></li>
+			<li><a href="partBreadcrumb.html">partBreadcrumb</a></li>
+			<li><a href="partGoogleMaps.html">partGoogleMaps</a></li>
+			<li><a href="partPagination.html">partPagination</a></li>
+			<li><a href="mobile-menu.html">mobile menu</a></li>
+			<li><a href="stickyScroll.html">stickyScroll</a></li>
+			<li><a href="searchResult.html">searchResult</a></li>
+			<li><a href="form.html">form</a></li>
+			<li><a href="shopping-cart.html">shopping cart</a></li>
+			<li><a href="range-slider.html">range slider</a></li>
+			<li><a href="svg.html">inline SVG icons</a></li>
+			<li><a href="social.html">social</a></li>
+		</ul>
+	</div>
+
+	<div class="basicContainer">
+		<h1>DailyCMS Front-end platform</h1>
+
+		<div class="partContentText">
+			<p>See the Parts and code examples on the right. Enjoy!</p>
+		</div>
+
+		<a class='linkButton' href='#' title='Button name'>Button name</a>
+		<a class='linkButton linkButtonAlternative' href='#' title='Button name'>Button name</a>
+
+		<!-- partClearBoth note 
+			- Can be used to stop elements floating. An alternative is overflow:hidden
+			- Optionally you can add a custom class
+		-->
+		<div class="partClearBoth"></div>
+		<div class="partClearBoth customClass"></div>
+					
+	    <!-- basic code for search field, possible to deviate -->
+	    <form id="searchBar">
+	    	<input type="search" id="searchBarInput" name="search" placeholder="Zoeken">
+	    	<a id="searchBarButton"></a>
+	    </form>
+	    <!-- end -->
+  </div>
+  
+</body>
+</html>

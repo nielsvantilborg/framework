@@ -1,0 +1,3 @@
+#cboxOverlay{background:#000;}
+#cboxClose{position:absolute; top:20px; right:20px; background:url(http://cdn.tvtweb.nl/img/colorbox/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxClose.hover{background-position:-25px -25px;}

@@ -1,0 +1,161 @@
+body							{margin:0px; padding:0px; width: 100%;}
+
+.partOrder a 								{outline:0; cursor: pointer;}
+.partOrder a:link, a:visited, a:active		{color: #000; text-decoration:underline;}
+.partOrder a:hover							{color: #000; text-decoration:none;}
+
+#partOrderContainerTop			{padding: 30px 20px; margin-bottom: 30px; min-width: 940px; border-bottom: 1px solid #ccc;}
+	#partOrderLogoContainer					{max-width: 960px; margin: 0px auto;}
+		#partOrderLogo							{background: url('/images/style/logo.png') no-repeat; background-size: contain; width: 205px; height: 54px;}
+
+.partOrderContainer				{font-family:arial; color:#000; font-size:14px; padding: 0px 20px;}
+	#partOrderContainerProcess		{padding: 0px 0px 20px 0px; position: relative; width: 960px; margin: 0px auto;}
+	#partOrderContainerOverview		{width: 265px; position: absolute; right: 0; top: 113px;}
+
+.button							{border: 1px solid #ccc; padding: 10px 12px 10px 12px; display: inline-block; background: #f0f0f0; font-weight: bold; transition:0.3s;}
+.button:link					{color: #000; text-decoration:none;}
+.button:visited					{color: #000; text-decoration:none;}
+.button:active					{color: #000; text-decoration:none;}
+.button:hover					{color: #000; text-decoration:none; background-color: #ccc;}
+
+.legendDescription				{margin: 0px 0px 19px 0px; display: block;}
+
+.informationBox					{border: 1px solid #ccc; padding: 15px; margin-bottom: 20px;}
+.informationBox h1				{font-size: 130%; padding: 0px; margin: 0px 0px 15px 0px;}
+.informationBox table                                       	{border-collapse: collapse; width: 100%; margin: 15px 0px 0px 0px;}
+.informationBox table th, table td             					{padding: 6px 0px; }
+.informationBox table span.productAmount						{margin-right: 10px;}
+.informationBox table span.productTitle							{}
+
+#shippingCostLabel							{border-bottom: 1px solid #ccc; padding-top: 15px; font-weight: bold;}
+#shippingCostValue							{border-bottom: 1px solid #ccc; text-align: right; padding-top: 15px; font-weight: bold;}
+#totalLabel									{font-weight: bold; padding-top: 15px;}
+#totalValue									{text-align: right; font-weight: bold; padding-top: 15px;}
+#productCostValue							{text-align: right;}
+
+.optionButton													{display: block; padding: 2px 20px 6px 20px; cursor: pointer; margin-bottom: 5px; border: 1px solid #ccc;}
+.optionButton label												{font-weight: bold;}
+.optionButton:hover												{background-color: #f0f0f0;}
+.optionButton span.paymentType 							{font-weight: bold; display: block;}
+.optionButton span.paymentTypeCost 						{display: block; margin-left: 21px;}
+
+form.partOrder .optionButton select  						{margin: 0px 0px 0px 0px; float: none;}
+form.partOrder .optionButton input[type="radio"]  			{margin-top: 19px;} 
+
+.optionButton img											{float: left;}
+.optionButton .floatedContainer								{float: left; margin-top: 10px; margin-right: 20px; padding-top: 10px;}
+.optionButton .floatedContainer:first-of-type				{width: 170px; padding-top: 0px;}
+
+span#orderAndPay											{background-color: #f0f0f0; border: 1px solid #ccc; padding: 25px 25px 15px 25px; display: block;}
+
+/* sub option grey block */
+.partOrder .optionAfterSelected, .partOrder .greyContainer						{background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px 10px 0px 10px; margin-bottom: 10px;}
+.partOrder .optionAfterSelected	label											{width: 240px;}
+/* end sub option grey block */
+
+.partOrder fieldset											 {margin:0px; padding:0px 0px 0px 0px; border:0px; text-align:left; max-width: 655px;}
+.partOrder fieldset, #partOrderTextContainer				 {margin:0px; padding:0px 0px 0px 0px; border:0px; text-align:left; max-width: 655px;}
+#partOrderTextContainer										 {margin-top: 20px; line-height: 150%;}
+
+
+.partContentForm	{}
+
+	form.partOrder			{padding: 0px; margin: 20px 0px 0px 0px;}
+		.partOrder fieldset			{padding: 0px; margin: 0px; border: none;} /* replacement for div */
+			
+			.partOrder label, .partOrder input, .partOrder select, .partOrder textarea, .partOrder .spanLegend	{font-family: arial; font-size: 100%; color: #000;}
+			.partOrder label, .partOrder input, .partOrder .spanAdditional, .partOrder .labelFirst, .partOrder select, .partOrder .spanLegend	{height: 30px; line-height: 30px; display: block;} 
+			.partOrder .spanLegend		{color: #e5322b; font-weight: bold; font-size: 120%; margin: 10px 0px 10px 0px;}
+		
+			.partOrder label				{width: 150px; float: left;}
+			.partOrder input				{-webkit-appearance: none; -webkit-border-radius:0; border-radius:0; width: 200px;}
+			
+			.partOrder input, .partOrder textarea		{float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #ccc; padding: 0px 6px; outline: 0;}
+			.partOrder textarea				{resize: none; -webkit-appearance: none; -webkit-border-radius:0; border-radius:0; padding-top: 6px; padding-bottom: 6px; width: 100%;}
+			
+			.partOrder span 				{display: block;}
+			.partOrder .spanFooter			{clear: both; height: 10px; display: block;}
+						
+			/* input */
+			.partOrder .formButton			{-webkit-appearance: none; height: 30px; line-height: 19px; cursor: pointer; padding: 0px; border: none; background-color: #00b900; color: #fff; height: 50px; padding: 0px 20px; font-weight: bold; font-size: 120%;}
+			.partOrder .greyContainer .labelError			{width: 100%;}
+			/* end input */
+			
+			/* radios & checkboxes */
+			.partOrder input[type="checkbox"], .partOrder input[type="radio"]  {display: none;}
+			.partOrder input[type="checkbox"] + label span, .partOrder input[type="radio"] + label span {float: left; cursor: pointer;}
+					
+			/* Custom styling */
+			.partOrder input[type="checkbox"] + label span, .partOrder input[type="radio"] + label span {background-color: #fff; width:13px; height:13px; margin:8px 6px 0 1px; border: 3px #fff solid; border-radius: 0px; box-shadow: 0 0 0 1px #ccc; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;} 
+			.partOrder input[type="checkbox"]:checked + label span, .partOrder input[type="radio"]:checked + label span {background: #000; } 
+
+			.partOrder input[type="radio"] + label span 			{border-radius: 50%;} 
+			/* end radio & inputs */
+								
+			/* input placeholder */
+			.partOrder input::-webkit-input-placeholder, .partOrder textarea::-webkit-input-placeholder {color: #999;}
+			.partOrder input:-moz-placeholder, .partOrder textarea:-moz-placeholder 					{color: #999; opacity: 1;}
+			.partOrder input::-moz-placeholder, .partOrder textarea::-moz-placeholder 					{color: #999; opacity: 1;}
+			.partOrder input:-ms-input-placeholder, .partOrder textarea:-ms-input-placeholder 			{color: #999;}
+			/* end input placeholder */
+			
+			/* error message */
+			.partOrder label.error, .partOrder .labelError	{color: #ec0000;}
+			.partOrder input.error, .partOrder textarea.error, .partOrder input[type="file"] + label.error  	{border: 1px solid #ec0000; background-color: #fae9e9;}
+			.partOrder .labelError						{float: none; height: auto; display: block; margin-bottom: 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 10px; color: #ec0000; border: 1px solid #ec0000; background-color: #fae9e9; line-height: 110%;}
+			/* end error message */
+			
+			.partOrder .spanAdditional					{float: left; margin-left: 10px;}
+			.partOrder .spanAdditionalNotition			{width: 100%;}
+			.partOrder .inputMultiple					{margin-right: 10px;}
+			.partOrder .inputPhonenumber				{width: 95px;}
+			.partOrder input[readonly="readonly"]		{color: #000; border: none; padding-left: 0px; background-color: transparent;}
+			
+			/* exceptions */
+			.partOrder .labeltypeBestellingprivate, .partOrder .labeltypeBestellingbusiness, .partOrder .labelGenderMan, .partOrder .labelGenderWoman, .partOrder .labelalternativeDeliveryreuseAddress, .partOrder .labelalternativeDeliveryalternativeDelivery		{width: auto; float: left;}
+			.partOrder .labeltypeBestellingprivate, .partOrder .labelGenderMan, .partOrder .labelalternativeDeliveryreuseAddress, .partOrder	{margin-right: 10px;}
+			.partOrder .spanFootertypeBestellingprivate, .partOrder .spanFooterGenderMan, .partOrder .spanFooteralternativeDelivery, .partOrder .spanFooterOrderSalutationAlternativeSir {display: none;}
+			.partOrder .spanFooteralternativeDeliveryalternativeDelivery	{display: block;}
+			.partOrder .labelMessage 					{float: none;}
+			.partOrder .labelNewsletterYes, .partOrder .greyContainer label.labelTermsAndConditionsAccepted {width: auto;}
+			
+			.partOrder .inputPostalCode, .partOrder .inputHouseNumber {width: 66px;}
+			.partOrder .floatedContainer label			{width: 200px;}
+			.partOrder .greyContainer label				{width: 140px;}
+			
+			/* end exceptions */
+
+			.partOrder .textareaNotition				{margin-left: 150px;}		
+			
+			/* IE6, IE7, IE8 */
+			.partOrder input[type="checkbox"], .partOrder input[type="radio"]  {display: block\9; width: auto\9; border: none\9; float: left\9;}
+			.partOrder input[type="checkbox"] + label span, .partOrder input[type="radio"] + label span {display: none\9;}
+			form.partOrder .optionButton input[type="radio"]  {margin-top: 2px\9;} 
+					
+/* color theme */
+form.partOrder fieldset legend, .informationBox h1 {color:#e33e36;}
+/* end color theme */
+
+@media only screen and (max-width : 768px) {
+	#partOrderContainerOverview 		{display: none;}
+	#partOrderContainerTop				{min-width: 280px;}
+	#partOrderContainerProcess			{width: 100%;}
+	form.partOrder fieldset				{max-width: 726px;}
+	#logoContainer						{width: 100%;}
+}
+
+@media only screen and (max-width : 767px) {
+	#partOrderContainerProcess						{margin-right: 0%; max-width: 728px; min-width: 280px;}
+	.partOrder label								{float: none;}
+	#partOrderContainerOverview						{display: block; width: 100%; position: static; margin-top: 20px;}
+}
+
+@media only screen and (max-width : 500px) {
+	.partOrder .labelTermsAndConditionsAccepted		{height: auto; line-height: 19px;}
+}
+
+@media only screen and (max-width : 454px) {
+	.partOrder .inputFirstName, .partOrder .inputStreetName	{margin-bottom: 5px;}
+	.partOrder .formButton	{width: 100%;}
+}
+	

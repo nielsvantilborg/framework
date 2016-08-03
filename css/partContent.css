@@ -1,0 +1,107 @@
+/* partContentText */
+.partContentText p, .partContentText ul, .partContentText ol, .partContentText table, .partContentCode, .partContentVideo, .partContentForm, .partGoogleMaps, .partContentFileAdmin, .partContentFileImageGallery {
+	margin-bottom: 30px;
+} 
+
+.partContentText p, .partContentText ul, .partContentText ol, .partContentText table {
+	line-height: 140%;
+}
+
+.partContentText p															{}
+.partContentText p a:link, .partContentText ul li a:link, .partContentText ol li a:link, .partContentText table a:link, .partContentText p a:visited, .partContentText ul li a:visited, .partContentText ol li a:visited, .partContentText table a:visited, .partContentText p a:active, .partContentText ul li a:active, .partContentText ol li a:active, .partContentText table a:active 
+{color: #000; text-decoration:underline;}
+.partContentText p a:hover, .partContentText ul li a:hover, .partContentText ol li a:hover, .partContentText table a:hover 
+{color: #000; text-decoration:underline;}
+
+.partContentText p a.readMore:link, .partContentText p a.readMore:visited, .partContentText p a.readMore:active 
+{color: #000; text-decoration:none;}
+.partContentText p a.readMore:hover                          			    
+{color: #000; text-decoration:underline;}
+		
+.partContentText ul															{}
+.partContentText ul li														{padding-left: 16px; position: relative;}
+.partContentText ul li:before 												{content:''; position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background-color: #000;}
+
+.partContentText ol 														{list-style-type:decimal; list-style-position:inside;}
+.partContentText ol li														{}
+
+.partContentText table                                       				{border-collapse: collapse; border-spacing: 0;}
+.partContentText table tr                                   	 			{}
+.partContentText table th, .partContentText table td               			{padding: 8px 9px; border: 1px solid #ccc;}
+
+@media (max-width: 800px) {
+	.partContentText table 													{overflow-x: auto; display: block;}
+}
+/* end partContentText */
+
+/* partContentFileImageGallery */
+.contentFileImageContainer 													{overflow: hidden;}
+.partContentFileImageGallery a 												{display: none;} /* used for contentFileImageContainerShowAmount */
+.partContentFileImageGallery .contentFileImageContainer	a					{display: block;}
+.partContentFileImageGallery a, .partContentFileImageGallery img			{float:left; border: none; box-sizing: border-box;}
+.partContentFileImageGallery img											{max-width: 100%;}
+.partContentFileImageGallery a img											{float: none; margin: 0px; display: block; width: 100%;}
+.contentFileImageGalleryDescription											{display: block; font-size: 80%; clear: both; padding: 10px 0px;}
+
+.partContentFileImageGallerySingle											{}
+.partContentFileImageGallerySingle img, .partContentFileImageGallerySingle a{display: block; float: none;}
+
+.imagesInRow2 .contentFileImageContainer *:nth-child(2n+1)					{margin-left: 0px;}
+.imagesInRow2 .contentFileImageContainer *:nth-child(-n+2) 					{margin-top: 0%;}
+.imagesInRow2 a, .imagesInRow2 img											{width: 49.8%; margin:0.4% 0% 0% 0.4%;}
+
+.imagesInRow3 .contentFileImageContainer *:nth-child(3n+1)					{margin-left: 0%;}
+.imagesInRow3 .contentFileImageContainer *:nth-child(-n+3) 					{margin-top: 0%;}
+.imagesInRow3 a, .imagesInRow3 img											{width: 33%; margin:0.5% 0% 0% 0.5%;}
+
+@media (max-width: 800px){
+	.imagesInRow3 .contentFileImageContainer *:nth-child(3) 				{margin-top: 0.4%;}
+	.imagesInRow3 .contentFileImageContainer *:nth-child(3n+1) 				{margin-left: 0.4%;}
+	.imagesInRow3 .contentFileImageContainer *:nth-child(2n+1)				{margin-left: 0%;}
+	.imagesInRow3 a, .imagesInRow3 img										{width: 49.8%; margin:0.4% 0% 0% 0.4%;}
+}
+
+.imagesInRow4 .contentFileImageContainer *:nth-child(4n+1)					{margin-left: 0%;}
+.imagesInRow4 .contentFileImageContainer *:nth-child(-n+4) 					{margin-top: 0%;}
+.imagesInRow4 a, .imagesInRow4 img											{width: 24.7%; margin: 0.4% 0% 0% 0.4%;}
+
+@media (max-width: 800px){
+	.imagesInRow4 .contentFileImageContainer *:nth-child(4) 				{margin-top: 0.5%;}
+	.imagesInRow4 .contentFileImageContainer *:nth-child(4n+1)				{margin-left: 0.5%;}
+	.imagesInRow4 .contentFileImageContainer *:nth-child(3n+1)				{margin-left: 0%;}
+	.imagesInRow4 a, .imagesInRow4 img										{width: 33%; margin:0.5% 0% 0% 0.5%;}
+}
+
+.contentFileImageContainerShowAmount a:last-child 							{background-color: #000; position: relative; text-decoration: none;}
+.contentFileImageContainerShowAmount a:last-child img						{opacity: 0.5;}
+.contentFileImageContainerShowAmount a:last-child:after						{content: attr(contentFileImageContainerShowAmount); position: absolute; width: 100%; color: #fff; top: 50%; margin-top: -25px; line-height: 50px; left: 0; text-align: center; font-size: 250%; font-weight: 700;}
+/* end partContentFileImageGallery */
+
+/* partContentFileAdmin - Use for files */
+.partContentFileAdmin ul li                                  				{margin-bottom: 10px; position: relative; padding-left: 45px;}
+.partContentFileAdmin ul li:last-child 										{margin-bottom: 0px;}
+.partContentFileAdmin ul li a                                				{}
+.partContentFileAdmin ul li a:link, .partContentFileAdmin ul li a:visited, .partContentFileAdmin ul li a:active {text-decoration:none;}           		
+.partContentFileAdmin ul li a:hover			                				{text-decoration:underline;}
+
+
+.partContentFileAdmin ul li a:before										{padding:4px 0px; width: 40px; background-color: #000; text-align: center; font-size: 12px; font-weight: 600; color: #fff; position: absolute; top: 50%; transform: translateY(-50%); left: 0;}
+
+.partContentFileAdmin ul li a.partContentFileAdminPDF:before				{content: 'PDF';}
+.partContentFileAdmin ul li a.partContentFileAdminDOC:before				{content: 'DOC';}
+.partContentFileAdmin ul li a.partContentFileAdminDOCX:before				{content: 'DOCX';}	
+.partContentFileAdmin ul li a.partContentFileAdminXLS:before				{content: 'XLS';}
+.partContentFileAdmin ul li a.partContentFileAdminXLSX:before				{content: 'XLSX';}
+.partContentFileAdmin ul li a.partContentFileAdminZIP:before				{content: 'ZIP';}
+/* end partContentFileAdmin - Use for files */
+
+/* partContentVideo - Use for video's */
+.partContentVideo 															{max-width: 560px;}
+.partContentVideo .contentVideoContainer									{position: relative; height: 0; padding-bottom: 56.25%; /* padding bottom is based on (video-height / video-width * container-width in percentages) */}
+.partContentVideo iframe 													{position: absolute;  left:0; top:0; height: 100%; width: 100%; border:none;}
+
+/* end partContentVideo - Use for video's */
+
+/* .partContentCode */
+.partContentCode 															{}
+/* end .partContentCode */

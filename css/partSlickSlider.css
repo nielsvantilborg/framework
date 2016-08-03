@@ -1,0 +1,88 @@
+/*  
+	Essentials
+ */
+.partSlickSlider
+{
+    position: relative; display: block; -moz-box-sizing: border-box; box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.partSlickSlider .slick-list                                             			{position: relative; display: block; overflow: hidden; margin: 0; padding: 0; z-index: 0;}
+.partSlickSlider .slick-list:focus                                       			{outline: none;}
+.partSlickSlider .slick-list.dragging                                    			{cursor: pointer; cursor: hand;}
+.partSlickSlider .slick-slider .slick-track, .partSlickSlider .slick-slider .slick-list   {-webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+.partSlickSlider .slick-track                                            			{position: relative; top: 0; left: 0; display: block;}
+.partSlickSlider .slick-track:before, .partSlickSlider .slick-track:after			{display: table; content: '';}
+.partSlickSlider .slick-track:after													{clear: both;}
+.partSlickSlider .slick-loading .slick-track										{visibility: hidden;}
+.partSlickSlider .slick-slide														{display: none; float: left; height: 100%; min-height: 1px; outline: 0; position: relative;}
+[dir='rtl'] .slick-slide															{float: right;}
+.partSlickSlider .slick-slide img													{display: block;}
+.partSlickSlider .slick-slide.slick-loading img 									{display: none;}
+.slick-slide.dragging img 															{pointer-events: none;}
+.partSlickSlider.slick-initialized .slick-slide										{display: block;}
+.partSlickSlider .slick-loading .slick-slide										{visibility: hidden;}
+.partSlickSlider .slick-arrow.slick-hidden 											{display: none;}
+
+/*  
+	Custom style
+ */
+.partSlickSlider 																	{background-color: #f0f0f0;}
+.slick-loading .slick-list															{background: url('//cdn.dailycms.com/img/ajax_loadingicon.gif') no-repeat center;}
+.partSlickSlider .slick-slide img													{width: 100%;}
+
+/* Next & Previous */
+.partSlickSlider .slick-prev, .partSlickSlider .slick-next 							{font-size: 0; line-height: 0; position: absolute; z-index: 1; display: block; height: 30px; width: 30px; cursor: pointer; background: red; top: 50%; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); padding: 0; border: none; outline: none; }
+.partSlickSlider .slick-prev:hover, .partSlickSlider .slick-prev:focus, .partSlickSlider .slick-next:hover, .partSlickSlider .slick-next:focus 		{outline: none; background: blue; color: transparent; }
+.partSlickSlider .slick-prev:hover:before, .partSlickSlider .slick-prev:focus:before, .partSlickSlider .slick-next:hover:before, .partSlickSlider .slick-next:focus:before { opacity: 1; }
+.partSlickSlider .slick-prev.slick-disabled:before, .partSlickSlider .slick-next.slick-disabled:before {opacity: 0.25; }
+
+.partSlickSlider .slick-prev:before, .partSlickSlider .slick-next:before 			{line-height: 1; opacity: 0.75;}
+.partSlickSlider .slick-prev 														{left: 0;}
+.partSlickSlider .slick-next						 								{right: 0;}
+
+/* Dots */
+.partSlickSlider .slick-dots 														{position: absolute; bottom: 16px; list-style: none; display: block; padding: 0; width: 100%; margin: 0px; text-align: center; z-index: 1000;}
+.partSlickSlider .slick-dots li 													{position: relative; display: inline-block; margin: 0px 5px; padding: 0; cursor: pointer;}
+.partSlickSlider .slick-dots li button 												{border: 0; font-size: 0; padding:0; background: lime; border:none; display: block; box-sizing: border-box; height: 16px; width: 16px; outline: none; line-height: 0; color: transparent; cursor: pointer; border-radius: 50%;}
+.partSlickSlider .slick-dots li button::-moz-focus-inner                            {border: 0;}
+.partSlickSlider .slick-dots li button:hover, .partSlickSlider .slick-dots li button:focus { outline: none; }
+.partSlickSlider .slick-dots li button:before 										{}
+.partSlickSlider .slick-dots li button:hover:before, .partSlickSlider .slick-dots li button:focus:before {opacity: 1;}
+.partSlickSlider .slick-dots li.slick-active button 								{background-color: red;}
+
+/* Custom additions */
+.partSlickSlider .sliderCaption														{height: 250px; position: absolute; left: 0; top: 0; width: 100%; background: rgba(255, 255, 255, .75);}
+.partSlickSlider .sliderCaption .sliderHeading										{}
+.partSlickSlider .sliderCaption .partContentText 									{}
+.partSlickSlider .sliderCaption .partContentText p 									{padding: 0px; margin: 0px;}
+
+/* Slider as navigation */
+.partSlickSliderSyncNavigationHorizontal 											{max-width: 1000px; margin: 0px auto; height: auto;}
+.partSlickSliderSyncNavigationHorizontal .slick-cloned 							    {max-width: 200px;}
+.partSlickSliderSyncNavigationHorizontal .slick-slide 							    {cursor: pointer;}
+
+/* Vertical slider */
+.partSlickSlider.slick-vertical                                                                     {width: 200px;}
+.partSlickSlider.slick-vertical .slick-slide                                                        {display: block; height: auto;}
+.partSlickSlider.slick-vertical .slick-prev, .partSlickSlider.slick-vertical .slick-next            {-webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0);}
+.partSlickSlider.slick-vertical .slick-prev                                                         {top: 0%; left:50%;}
+.partSlickSlider.slick-vertical .slick-next                                                         {top: auto; left:50%; bottom: 0%;}
+/* end vertical slider */
+
+/* Slider with logo's */
+.partSlickSliderLogos                                                               {}
+.partSlickSliderLogos div                                                           {height: 100px;}
+.partSlickSliderLogos .slick-slide img                                              {position: relative; top: 50%; transform: translateY(-50%); width: auto; max-height: 100%; max-width: 100%; margin:0px auto;}
+.partSlickSliderLogos .slick-prev                                                   {left: -30px;}
+.partSlickSliderLogos .slick-next                                                   {right: -30px;}

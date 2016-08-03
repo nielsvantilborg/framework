@@ -1,0 +1,118 @@
+/* Set font-family, color and size */
+.snippetLoginContainer fieldset input, .snippetLoginContainer fieldset label			{color:#555555; font-family: 'titilliumtext-medium'; }
+.snippetLoginContainer fieldset.webappForm label 										{width:110px;}  /* label width *//* label margin = (input left margin) - (label width) */ /* label margin */
+.snippetLoginContainer fieldset.webappForm input 										{width: 240px; padding: 4px; font-family: 'HelveticaNeueLTStd-Roman'; resize:none; outline: 0; color: #000; font-size: 14px;	} /* subjective, only applies to non-checkbox or radio inputs */        
+
+
+.fieldsetSubmit { width: 100% !important; padding-left: 0px !important;}
+#FormResetPassword #fieldSecond.webappForm input{ width: 240px !important;}
+#FormResetPassword fieldset#rememberMeTwo { top:10px; left: 450px;}
+#FormResetPassword .fieldsetSubmit { margin-top: 0px;}
+#FormResetPassword #fieldsetSecond { width: 358px;}
+#FormLoginResetInventation .fieldsetSubmit { margin-top: 0px;}
+#FormLoginResetInventation #field { width: 440px;}
+
+    
+/*=== Major Elements ======================================================================================================================================================*/
+
+*{padding: 0; margin: 0;}
+/* change font family */
+.snippetLoginContainer form																{padding:0px; margin:0px; position: relative;}
+.snippetLoginContainer fieldset.webappForm												{margin:0px; margin:20px 108px 0px 0px; border:0px; text-align:left; display:block;}
+
+.snippetLoginContainer fieldset#field													{border-radius: 0px; border: 1px solid #bbb; background-color: #fff; padding: 0px 0px 0px 11px; background-color: #fff; height: 38px;}
+.snippetLoginContainer fieldset#field input												{width: 317px; line-height: 28px;}
+.snippetLoginContainer fieldset#fieldSecond												{border-radius: 0px; border: 1px solid #bbb; background-color: #fff; padding: 0px 0px 0px 11px; background-color: #fff; height: 38px;}
+.snippetLoginContainer fieldset#fieldSecond input										{width: 236px; margin-left:0px;}
+
+/* disable IE10 remove and password preview */
+::-ms-clear, ::-ms-reveal {display: none;}
+
+.snippetLoginContainer fieldset#showPassword											{background-color: #ebebeb; border-radius: 0px 8px 8px 0px; border: 1px solid #bbb; position: absolute; padding:7px 0px 0px 10px; width: 70px; top: 60px; left: 366px; height: 31px;}
+.snippetLoginContainer fieldset#showPassword label										{font-size: 12px; font-family: 'HelveticaNeueLTStd-Roman'; margin-top: 3px;}
+
+/* used for resetting accesscode */
+.snippetLoginContainer fieldset#showPasswordTwo											{background-color: #ebebeb; border-radius: 0px 8px 8px 0px; border: 1px solid #bbb; position: absolute; padding:7px 0px 0px 10px; width: 70px;  left: 370px; height: 31px;}
+.snippetLoginContainer fieldset#showPasswordTwo label									{font-size: 12px; font-family: 'HelveticaNeueLTStd-Roman'; margin-top: 3px;}
+
+.snippetLoginContainer fieldset#rememberMe												{position: absolute; width: 200px; top: 110px; left: 1px;}
+.snippetLoginContainer fieldset#rememberMe label										{font-size: 12px; font-family: 'HelveticaNeueLTStd-Roman'; margin-top: 3px;}
+
+/* used for resetting accesscode */
+.snippetLoginContainer fieldset#rememberMeTwo											{position: absolute; width: 200px; top: 46px; left: 215px;}
+.snippetLoginContainer fieldset#rememberMeTwo label										{font-size: 12px; font-family: 'HelveticaNeueLTStd-Roman'; margin-top: 3px;}
+
+.snippetLoginContainer fieldset.webappForm input.formButton			                	{cursor:pointer; color:#ffffff; background:#17a345 url("/images/style/button-bg.png") repeat-x; border: 1px solid #76a600; border-radius: 0px; font-family:'titilliumtext-bold'; width:auto; padding: 4px 25px 7px 25px; margin-left: 0px; text-shadow: 0 1px 2px #395000; margin-top: 22px;}
+.snippetLoginContainer fieldset.webappForm input.formButton:hover		                {background:#0a7821 url("/images/style/button-bg.png") repeat-x;}
+
+.snippetLoginContainer #forgotPassword													{position: absolute; top: 10px; left: 95px; cursor: pointer;}
+.snippetLoginContainer #forgotPassword:link, .snippetLoginContainer #forgotPassword:visited, .snippetLoginContainer #forgotPassword:active		{color: #555555; text-decoration:none;}
+.snippetLoginContainer #forgotPassword:hover											{color: #000000; text-decoration:underline;}
+
+/* ie 8 + 9 + 10 */
+@media screen\0 {
+    .snippetLoginContainer fieldset#showPassword input									{margin-top: 2px;}
+    .snippetLoginContainer fieldset#showPassword label 									{margin-top: 5px;}
+    .snippetLoginContainer #forgotPassword												{margin-top: 2px;}
+    .snippetLoginContainer fieldset#rememberMe	input									{margin-top: 1px; margin-left: 0px;}
+    .snippetLoginContainer fieldset#rememberMe label									{margin-top: 4px;}
+} 
+
+/* ie 6 + 7 */
+@media screen\9 {
+	.snippetLoginContainer fieldset#showPassword input									{margin-top: 2px;}
+    .snippetLoginContainer fieldset#showPassword label 									{margin-top: 11px;}
+    .snippetLoginContainer #forgotPassword												{margin-top: 1px;}
+    .snippetLoginContainer fieldset#rememberMe	input									{margin-top: 3px;}									
+    .snippetLoginContainer fieldset#rememberMe label									{margin-top: 5px;} 
+    .snippetLoginContainer fieldset.webappForm input.formButton 						{border: none;}
+} 
+
+/*=== Default =============================================================================================================================================================*/
+
+.snippetLoginContainer form span.brFooter    		{/* Always include a span.brFooter at the end of a line of items -- generally immediately following one of an INPUT, SELECT or TEXTAREA.*/	display:block; height:1px;	clear:both;} 
+
+/*=== Input Elements ======================================================================================================================================================*/
+
+.snippetLoginContainer fieldset.webappForm input.addBorder								{border:none;}
+.snippetLoginContainer fieldset.webappForm input.addErrorBorder 						{border:none; color:#ec0000;}
+
+/*=== Radio buttons ==========================================================================================================================================================*/
+
+/* Radio name right, radiobutton left */
+
+.snippetLoginContainer fieldset.webappForm .checks label, .snippetLoginContainer fieldset.webappForm.checks label {
+	/*
+		Overrides for previously defined stuff and changes.
+		Left margin must be 10pixels more than "fieldset.webappForm input, fieldset.webappForm select" etc.
+	*/
+	float: none; width: auto; clear: none; display: block; text-align: left; padding-top: 0; margin-bottom: 0;padding-left:22px; 
+}
+
+.snippetLoginContainer fieldset.webappForm .checks input, .snippetLoginContainer fieldset.webappForm.checks input {
+	/*
+		Left margin is the same value as "fieldset.webappForm input, fieldset.webappForm select" etc.
+	*/
+	float: left; text-align: right; width: auto; margin-left:0px; margin-right:0px; }
+
+ 
+/*=== Form Elements - DO NOT EDIT BELOW THIS LINE =========================================================================================================================*/
+.snippetLoginContainer fieldset.webappForm label {
+	/* 
+		A label must precede the form element in the HTML
+		You must keep the top padding for some browsers to keep the label and the form element looking on the same line
+	*/
+	float: left; padding-top: 10px;}
+
+.snippetLoginContainer fieldset.webappForm label.errorLabel {margin-top: 20px; display: block; width: 426px; /* width depends on the width of the fieldset */ padding:9px 12px 10px 12px; color:#000000; border:solid 1px #d05555; background-color:#fae9e9;	font-size: 12px; font-family: 'HelveticaNeueLTStd-Roman';float:none; line-height:19px;	border-radius: 0px; margin-left:0px;}
+
+/* Margin fixes */
+.snippetLoginContainer fieldset.webappForm input[type="checkbox"]  {margin-top:5px;}
+.snippetLoginContainer fieldset.webappForm input[type="text"]      {margin-top:2px;}
+.snippetLoginContainer fieldset.webappForm input[type="password"]  {margin-top:2px;}
+
+/*=== IE Fixes ====================================================================================================================================================================*/
+* html .snippetLoginContainer fieldset.webappForm br {/*	For some crazy reason, IE lets me style its BR tag.*/ line-height: 1em;	font-size: 0.5em;}
+
+.contentDealers .partContentText  { padding-top: 20px; padding-bottom: 20px;}
+.contentDealers h2 { color: #91672b;}

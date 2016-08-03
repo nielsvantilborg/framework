@@ -1,0 +1,142 @@
+/* please start first with setting the width/marings of labels and inputs. When modifying use the replace function so you're sure you change the value everywhere. */
+
+.partContentForm	{}
+
+	form.form																					{padding: 0px; margin: 0px;}
+		.form fieldset																			{padding: 0px; margin: 0px; border: none;} /* replacement for div */
+			
+			.form label, .form input, .form select, .form textarea, .form .spanLegend			{font-family: 'Open Sans', sans-serif; font-size: 100%; color: #000;}
+			.form label, .form input, .form .spanAdditional										{line-height: 120%; min-height: 36px; display: block; border:solid 1px transparent;} 
+			.form .spanLegend																	{color: #000; font-weight: 700; font-size: 125%; display: block; margin-bottom: 10px;}
+		
+			.form label																			{width: 35%;}
+			
+			.form label, .form input, .form textarea  											{display: flex; align-items: center; flex-flow: row nowrap; float: left;}
+			.form .select2  																	{float: left;}
+
+			.form .labelFirst																	{width: auto; float: none; display: block; line-height: 34px;}
+			.form input, .form textarea															{-webkit-appearance: none; border-radius:0; outline: none;}
+			.form input:focus, .form textarea:focus												{border-color: #000;}
+
+			.form input, .form .inputLabel, .form textarea, .form .labelError 					{width: calc(100% - 35%); min-height: 36px;}
+			.form input, .form textarea															{border: 1px solid #ccc; padding: 0px 8px; outline: 0;}
+			.form textarea																		{resize: vertical; padding-top: 6px; padding-bottom: 6px; overflow: auto; vertical-align: top;}
+			
+			.form span																			{display: block;}
+			.form .spanFooter																	{clear: both; height: 10px; display: block;}
+						
+			/* input */
+			.form .formButton																	{white-space: normal; cursor: pointer; padding: 0px 10px; border: none; color: #fff; background-color: #57c34e; transition: 0.3s; font-weight: 700; -webkit-appearance: none; display: block;}
+			.form .formButton:hover																{background-color: #000; color: #fff;}
+			.form .formButton, .labelError														{margin-left: 35%;}
+			/* end input */
+			
+			/* error message */
+			.form label.error, .form .labelError												{color: #ec0000;}
+			.form .labelError 																	{line-height: 140%;}
+			.form input.error, .form textarea.error												{border: 1px solid #ec0000; background-color: #fae9e9;}
+			.form .labelError																	{color: #ec0000; border: 1px solid #ec0000; background-color: #fae9e9; float: none; height: auto; display: block; margin-bottom: 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 10px;}
+			/* end error message */
+
+			/* radios & checkboxes */
+			.form input[type="checkbox"], .form input[type="radio"]  							{display: none;}
+			.form input[type="checkbox"] + label span, .form input[type="radio"] + label span 	{cursor: pointer;}
+					
+			/* Custom styling */
+			.form input[type="checkbox"] + label span, .form input[type="radio"] + label span 	{background-color: #fff; min-width: 13px; height:13px; display: block; margin:0px 8px 0 1px; border: 3px #fff solid; border-radius: 0px; box-shadow: 0 0 0 1px #ccc;} 
+			.form input[type="checkbox"]:checked + label span, .form input[type="radio"]:checked + label span {background: #000; } 
+			.form input[type="radio"] + label span 												{border-radius: 50%;}
+
+				/* radios & checkboxes below each other / vertical */
+				.form input[type="checkbox"] + label, .form input[type="radio"] + label 			{width: auto;}
+				.form input[type="checkbox"] + label + span.spanFooter, .form input[type="radio"] + label + span.spanFooter {height: 1px;}
+				.form input[type="checkbox"] + label + span.spanFooterLast, .form input[type="radio"] + label + span.spanFooterLast {height: 10px;}
+				/* end radios & checkboxes below each other / vertical */
+
+				/* radios & checkboxes after each other / horizontal */
+				.form .spanFooterFruit, .form .spanFooterSport									{display: none;}
+				.form .labelFruit, .form .labelSport 											{margin-right: 20px;}
+				/* end radios & checkboxes after each other / horizontal */ 	
+		
+						
+			/* Select (dropdown) */
+			.form .select2-container .select2-selection--single 								{min-height: 36px;}
+			.form .select2-container															{width: calc(100% - 35%);}
+			/* end Select (dropdown) */
+
+			/* input placeholder */
+			.form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder 	{color: #999; opacity: 1;}
+			.form input:-moz-placeholder, .form textarea:-moz-placeholder 						{color: #999; opacity: 1;}
+			.form input::-moz-placeholder, .form textarea::-moz-placeholder 					{color: #999; opacity: 1;}
+			.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder 			{color: #999; opacity: 1;}
+			/* end input placeholder */
+			
+			/* unit/button behind input */
+			.form .spanAdditional																{float: left; display: flex; margin-left: 10px; flex-flow: column nowrap; line-height: 34px;}
+			.form .spanAdditionalNotition														{width: calc(100% - 45%); margin-left: 35%; flex-flow: row wrap;}
+			.form .spanAdditionalNotition strong    											{margin-right: 5px;}
+			.form .spanAdditionalCouponCode 													{background-color: #57c34e; color: #fff; font-size: 150%; width: 36px; font-weight: 700; cursor: pointer; transition: 0.3s; text-align: center;}
+			.form .spanAdditionalCouponCode:hover 												{background-color: #000;}
+			.form .inputCompany, .form .inputCouponCode 										{width: calc(100% - 42%);}
+			/* end unit/button behind input */
+			
+			/* mulitple inputs after each other */
+			.form .inputLeeftijdDag, .form .inputLeeftijdMaand, .form .inputLeeftijdJaar, .form .inputAddressZipcodeAddress, .form .inputAddressZipcodeZipcode {margin-right: 10px; width: auto;}
+			.form .inputLeeftijdDag, .form .inputLeeftijdMaand									{width: 40px;}
+			.form .spanAdditionalLeeftijd 														{margin-left: 0px;}
+			.form .inputLeeftijdJaar															{width: 58px;}
+			.form .inputAddressZipcodeAddress													{width: calc(100% - 55%);}
+			.form .inputAddressZipcodeZipcode 													{width: 85px;}
+			/* end mulitple inputs after each other */
+
+			/* textarea without label */
+			.form .textareaNotition																{margin-left: 35%;}	
+			/* end textarea without label */
+
+			/* placing fieldsets beside each other */
+			.form .fieldsetFloat																{float: left; width: 50%;}
+			/* end placing fieldsets beside each other */
+			
+			.form .spanFooterLast 																{clear: both; height: 10px; display: block;}
+			
+			/* read only input */
+			.form input[readonly="readonly"]													{color: #000;}
+			/* end read only input */
+
+			/*---------------------
+			
+			Responsive
+			
+			---------------------*/
+			@media (max-width: 767px){
+				.form label, .form .labelFirst 													{float: none; width: auto; min-height: auto;}
+				.form .textareaNotition, .form .spanAdditionalNotition, .form .formButton, .labelError {margin-left: 0px;}
+				.form input, .form .inputLabel, .form textarea, .form .labelError, .form .select2-container {width: 100%;}
+				.form .inputCompany, .form .inputCouponCode										{width: calc(100% - 46px);}
+			}
+
+			/*---------------------
+			
+			Common browser clears 
+			
+			---------------------*/
+
+			input::-ms-clear 																	{display: none;}
+			input[type=number] 																	{-moz-appearance: textfield;}
+			input[type=number]::-webkit-inner-spin-button 										{-webkit-appearance: none;}
+
+			/*---------------------
+			
+			Internet Explorer Hacks 
+			
+			---------------------*/
+
+			/* IE9 and IE10 */
+			@media screen and (min-width:0\0) {
+    			.form label, .form input, .form textarea  										{line-height: 36px;}
+    			.form .fieldsetFloat 															{display: block;}
+			}
+
+			/* IE8 and lower versions*/
+			.form input[type="checkbox"], .form input[type="radio"]  							{display/*\**/: block\9; border/*\**/: none\9; width: auto;}	
+			.form input[type="checkbox"] + label span, .form input[type="radio"] + label span	{display/*\**/: none\9;}

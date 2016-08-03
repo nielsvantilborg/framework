@@ -1,0 +1,50 @@
+﻿.partAccordionMenu 												{width: 100%;}
+.partAccordionMenu ul li.active > ul 							{display: block;} /* will colpase ul */
+
+/* selected lvl 1 */	
+.partAccordionMenu ul li.selected * 								{font-weight: 700;} 
+
+/* selected lvl 2 */
+.partAccordionMenu ul li.selected ul li * 							{font-weight: 400;} 
+.partAccordionMenu ul li.selected ul li.selected *					{font-weight: 700;} 
+
+/* selected lvl 3 */
+.partAccordionMenu ul li.selected ul li.selected ul li * 			{font-weight: 400;} 
+.partAccordionMenu ul li.selected ul li.selected ul li.selected *	{font-weight: 700;} 
+
+/*Hides the non active LI's by default*/
+.partAccordionMenu ul ul 										{display: none;}
+
+/* level 1 */
+.partAccordionMenu ul 											{padding: 0px; margin: 0px; list-style: none;}
+.partAccordionMenu li											{font-size: 100%; border-bottom: 1px solid #ccc; padding: 0px; margin: 0px;}
+.partAccordionMenu li .accordionMenuDropdown 					{font-size: 100%; padding: 0px; margin: 0px; display: table; width: 100%; font-weight: normal; line-height: 130%;}
+.partAccordionMenu li a, .partAccordionMenu li .linkTrigger		{color: #000; text-decoration: none; padding: 12px 15px 11px 15px; display: block; cursor: pointer; line-height: 130%;}
+.partAccordionMenu li span.buttonTrigger 						{width: 40px; display: table-cell; text-align: center; cursor:pointer; background-color: #000; color: #fff; }
+.partAccordionMenu li span.buttonTrigger:after					{content: '\25bc';}
+.partAccordionMenu li.active span.buttonTrigger:after			{content: '\25b2';}
+
+/* level 2 */
+.partAccordionMenu ul ul										{font-size: 87.5%;}
+.partAccordionMenu ul ul li										{background-color: #f0f0f0; border-bottom: none;}
+.partAccordionMenu ul li a, ul .partAccordionMenu li .linkTrigger		{padding:7px 15px 7px 25px;}
+.partAccordionMenu ul ul li span.buttonTrigger					{}
+.partAccordionMenu li.active li span.buttonTrigger:after		{content: '\25bc';}
+.partAccordionMenu li.active li.active span.buttonTrigger:after	{content: '\25b2';}
+
+/* level 3 */									
+.partAccordionMenu ul ul ul	li									{background-color: #e0e0e0;}
+.partAccordionMenu ul ul ul	li a 								{padding-left:35px;}
+
+/* level 1 accordion with content */
+.partAccordionMenu .partContentText								{padding: 20px; padding-bottom: 1px; margin: 0px;}
+.partAccordionMenu .partContentText p							{padding: 0px; margin: 0px 0px 20px 0px;}
+
+/* custom class used for mulitple instances */	
+.partAccordionMenuFAQ											{width: 100%;}
+
+/* partContentText - UL conflict fix when you use the accordion for content */
+.partAccordionMenu .partContentText ul                           {padding: 0px; margin-left:20px; list-style-type:disc; display:block!important; margin-bottom:20px;}
+.partAccordionMenu .partContentText ol                           {padding: 0px; margin-left:25px; list-style-type:decimal; margin-bottom:20px;}
+.partAccordionMenu .partContentText ul li, .partAccordionMenu .partContentText ol li  {font-size:inherit; border:none; background-color:transparent;}
+.partAccordionMenu .partContentText a 							 {padding:0px;}

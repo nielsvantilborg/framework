@@ -1,0 +1,8 @@
+/* Pagination */
+.partPagination											{}
+.partPagination ul										{text-align: left;}
+.partPagination ul li									{display: inline-block; vertical-align: top; margin-right: 6px; margin-bottom: 10px; /* Bugfix always calculate from 4px, so 6px = 10px */}
+.partPagination ul li:last-child 						{margin-right: 0px;}
+.partPagination ul li a									{padding: 11px 15px; border: 1px solid #ccc; text-decoration:none; color: #000; display: block; transition: background-color 0.3s;}
+.partPagination ul li a:hover							{background-color: blue; border-color: blue;}
+.partPagination ul li a.selected						{background-color: blue; color: #fff; border-color: blue; font-weight: 700;}

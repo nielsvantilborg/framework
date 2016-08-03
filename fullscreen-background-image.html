@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Background Stretcher Demo</title>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://cdn.tvtweb.nl/js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="js/bgstretcher-1.2.js"></script>
+<link rel="stylesheet" href="css/bgstretcher.css" />
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+        //  Initialize Backgound Stretcher	   
+		$(document).bgStretcher({
+			images: ['http://pipsum.com/1024x768.jpg?1', 'http://pipsum.com/1024x768.jpg?2', 'http://pipsum.com/1024x768.jpg?3', 'http://pipsum.com/1024x768.jpg?4'],
+			imageWidth: 1024, imageHeight: 768
+		});
+		
+		$('#toggleAnimation').click(function(){
+	       if($(this).val() == "Pause Animation"){
+	           $(this).val("Resume Animation");
+	           $(document).bgStretcher.pause();
+	       } else {
+	           $(this).val("Pause Animation");
+	           $(document).bgStretcher.play();
+	       }
+		});
+	});
+</script>
+
+<style type="text/css">
+    #page {
+        z-index: 2;
+        position: relative;
+        margin: auto;
+        width: 800px;
+        padding: 20px;
+        background-color: #fff;
+    }
+
+</style>
+
+</head>
+<body>
+
+    <div id="page">
+        <h1>Background Stretcher jQuery Plugin Demo</h1>
+        <form>
+            <input type="button" value="Pause Animation" id="toggleAnimation" name="toggleAnimation" />
+        </form>
+        <p>Te fabellas pericula incorrupte cum, qui odio elit menandri ex, et sea sonet takimata. Mel quod ipsum appetere ea, ex vis quod amet idque. Te fabellas pericula incorrupte cum, qui odio elit menandri ex, et sea sonet takimata.</p> 
+        <p>Usu timeam invenire moderatius cu, cum tale harum alterum ne, an pro senserit euripidis efficiendi. Vel ex ferri movet doming, an nam inani oporteat pertinacia.</p>
+        <p>Ne alterum labores reformidans vim, est id porro ponderum scriptorem, et quem congue cetero nam. Veniam maluisset definiebas per ne, adipisci elaboraret theophrastus cum cu. No vim dicit melius conceptam, delenit corpora erroribus qui eu. Quidam eligendi gloriatur ius ea. Ullum alienum accusata an nam, ea per stet altera scaevola, nostro appareat comprehensam eam ea. Te fabellas pericula incorrupte cum, qui odio elit menandri ex, et sea sonet takimata. Mel quod ipsum appetere ea, ex vis quod amet idque. Te fabellas pericula incorrupte cum, qui odio elit menandri ex, et sea sonet takimata.</p> 
+        <p>Usu timeam invenire moderatius cu, cum tale harum alterum ne, an pro senserit euripidis efficiendi. Vel ex ferri movet doming, an nam inani oporteat pertinacia. Ne alterum labores reformidans vim, est id porro ponderum scriptorem, et quem congue cetero nam. Veniam maluisset definiebas per ne, adipisci elaboraret theophrastus cum cu.</p> 
+        <p>No vim dicit melius conceptam, delenit corpora erroribus qui eu. Quidam eligendi gloriatur ius ea. Ullum alienum accusata an nam, ea per stet altera scaevola, nostro appareat comprehensam eam ea.</p>         
+        <p>Te fabellas pericula incorrupte cum, qui odio elit menandri ex, et sea sonet takimata. Mel quod ipsum appetere ea, ex vis quod amet idque. Te fabellas pericula incorrupte cum, qui odio elit menandri ex, et sea sonet takimata.</p> 
+        <p>Usu timeam invenire moderatius cu, cum tale harum alterum ne, an pro senserit euripidis efficiendi. Vel ex ferri movet doming, an nam inani oporteat pertinacia.</p>
+    </div>
+    
+</body>
+</html>

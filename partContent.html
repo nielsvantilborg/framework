@@ -1,0 +1,753 @@
+﻿<!DOCTYPE html>
+<html lang='nl' prefix='og: http://ogp.me/ns#'>
+<head>	
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <title>partContent - DailyFramework</title>
+		
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<!-- In case the website is not responsive, apply an static width <meta name='viewport' content='width=1024, maximum-scale=1.0'> -->
+
+    <!-- CSS -->
+    <link rel='Stylesheet' type='text/css' href='css/reset.css'>
+    <link rel='Stylesheet' type='text/css' href='css/fonts.css'>
+    <link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
+    <link rel='Stylesheet' type='text/css' href='http://cdn.dailycms.com/css/magnificpopup-2.css'>
+    <link rel='Stylesheet' type='text/css' href='css/index.css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <!-- end CSS -->
+
+</head>
+<body>
+
+	<div id='tableOfContents'>
+		
+        <div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
+        <div class="menu"><span class="mobileMenuButton mobileMenuOpen">Menu</span><a href='index.html'>&lt; Back to overview</a></div>
+        <div id="mobileMenuContainer">
+            <span class="mobileMenuButton mobileMenuClose">Sluiten</span><span class="back"><a href='index.html'>&lt; Back to overview</a></span>
+			<ul>
+				<li class="title">partContent</li>	
+				<li><a href='#setupAndUsage'>Setup &amp; Usage</a></li>
+				<li><a href='#partContentTextAnchor'>partContentText</a></li>
+				<li><a href='#partContentFileAdminAnchor'>partContentFileAdmin</a></li>
+				<li><a href='#partContentFileImageGallerySingleAnchor'>partContentFileImageGallerySingle</a></li>
+				<li><a href='#partContentFileImageGalleryAnchorImagesInRow2'>partContentFileImageGallery 2 images in a row</a></li>
+				<li><a href='#partContentFileImageGalleryAnchorImagesInRow3'>partContentFileImageGallery 3 images in a row</a></li>
+				<li><a href='#partContentFileImageGalleryAnchorImagesInRow4'>partContentFileImageGallery 4 images in a row</a></li>
+				<li><a href='#partContentFileImageGalleryAndSlingleAnchor'>partContentFileImageGallerySingle & partContentFileImageGallery combined</a></li>
+				<li><a href='#partContentFileImageGalleryLogoAnchor'>partContentFileImageGallery with logo's</a></li>
+				<li><a href='#partContentVideoAnchor'>partContentVideo</a></li>
+				<li><a href='#partContentCodeAnchor'>partContentCode</a></li>
+			</ul>
+		</div>
+		
+	</div>
+
+	<div class='basicContainer'>
+
+		<h1>partContent</h1>
+
+		<h2 id='setupAndUsage'>Setup &amp; Usage</h3>
+
+		<div class='partContentText'>
+			<ul>
+				<li>partContent.css is included on default in the index.html document</li>
+				<li>Including magnificpopup-2.css is optional</li>
+			</ul>
+		</div>
+
+<xmp class='prettyprint'>
+<link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
+<link rel='Stylesheet' type='text/css' href='http://cdn.dailycms.com/css/magnificpopup-2.css'>
+</xmp>
+
+
+		<h3>Javascript</h3>
+		<div class='partContentText'>
+			<ul>
+				<li>jquery-1.12.2.js only needed for popup</li>
+				<li>jquerymagnificpopup-1.1.0.js is optional</li>
+			</ul>
+		</div>
+
+
+<xmp class='prettyprint'>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/jquerymagnificpopup-1.1.0.js'></script>
+</xmp>
+
+		<h2 id='partContentTextAnchor'>partContentText</h3>
+
+		<h3>Note</h3>
+		<div class='partContentText'>	
+			<ul>
+				<li>It's possible to add an 'h1, h2, h3, etc' as first element within the 'partContent' container. Most common is 'h2'. This depends on what is best for SEO</li>
+				<li>It's allowed to apply an 'a' element with the property 'href' witin the h2. The 'a' can not be manually linked so there should be logic behind it. For example you apply the 'h2' in an overview and you link to a detail page. In that case it's almost always better and more clear to place the 'h2' outside the 'partContentText' but sometimes it's more efficient for CSS styling.</li>
+				<li>readMore iniside P: Optionally you can add a 'readMore' within the element 'p' at the end</li>
+			</ul>
+		</div>
+
+		<h3>Demo</h3>
+
+		<div class='partContentText'>
+			<h3>Heading 2 inside partContentText</h3> 
+
+			<p>Lorem ipsum dolor sit amet, <a href='https://www.dailycms.com'>dailycms.com</a> adipiscing elit. <sub>Maecenas enim</sub>, in iaculis <sup>velit amet</sup>. Cras congue dui <strong>strong</strong> nec quam egestas <em>em</em> tincidunt. <a class='readMore' href='#'>Lees meer</a></p>
+
+		    <ol>
+		        <li>li A</li>
+		        <li>li B</li>
+		        <li>li C</li>
+		        <li>li D</li>
+		        <li>li E</li>
+		        <li>li F</li>
+		        <li>li G</li>
+		        <li>li H</li>
+		        <li>li I</li>
+		        <li>li J</li>
+		    </ol>
+
+		    <ul>
+		        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+		        <li>Praesent elementum sodales dolor id scelerisque.</li>
+		    </ul>
+
+		    <table>
+		        <thead>
+			        <tr>
+		    	        <th scope='col'>Column 1</th>
+		                <th scope='col'>Column 2</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+			        <tr>
+		    	        <td>Hello</td>
+		                <td>It's me</td>
+		            </tr>
+		            <tr>
+		    	        <td>Hey</td>
+		                <td>How do ya do</td>
+		            </tr>
+		        </tbody>
+		    </table>
+		</div>
+
+		<h3>Code</h3>
+
+<xmp class='prettyprint'>
+<div class='partContentText'>
+	<h3>Heading 2</h3>
+
+	<p>Lorem ipsum dolor sit amet, <a href='https://www.dailycms.com'>dailycms.com</a> adipiscing elit. <sub>Maecenas enim</sub>, in iaculis <sup>velit amet</sup>. Cras congue dui <strong>strong</strong> nec quam egestas <em>em</em> tincidunt. <a class='readMore' href='#'>Lees meer</a></p>
+
+	<ol>
+	    <li>li A</li>
+	    <li>li B</li>
+	    <li>li C</li>
+	    <li>li D</li>
+	    <li>li E</li>
+	    <li>li F</li>
+	    <li>li G</li>
+	    <li>li H</li>
+	    <li>li I</li>
+	    <li>li J</li>
+	</ol>
+
+	<ul>
+	    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+	    <li>Praesent elementum sodales dolor id scelerisque.</li>
+	</ul>
+
+	<table>
+	    <thead>
+	        <tr>
+		        <th scope='col'>Column 1</th>
+	            <th scope='col'>Column 2</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+		        <td>Hello</td>
+	            <td>It's me</td>
+	        </tr>
+	        <tr>
+		        <td>Hey</td>
+	            <td>How do ya do</td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
+</xmp>
+
+		<h2 id='partContentFileAdminAnchor'>partContentFileAdmin</h3>
+
+		<h3>Note</h3>
+		<div class='partContentText'>		
+			<ul>
+				<li>On every 'a' we generate an unique ID that can be tracked for analytics</li>
+				<li>It's possible to show the file name with or without file extension</li>
+				<li>It's possible to show the file size after the file name</li>
+				<li>Supports more filetypes than shown bellow</li>
+			</ul>
+		</div>
+
+		<h3>Demo</h3>
+
+		<div class='partContentFileAdmin'> 
+			<h3>Heading 2 inside partContentFileAdmin</h3> 
+		    <ul>
+		    	<li><a class='partContentFileAdminPDF' href='#'>File name</a></li>
+		        <li><a class='partContentFileAdminDOC' href='#'>File name with file extensions.pdf</a></li>
+		        <li><a class='partContentFileAdminDOCX' href='#'>File name with file size (123kb)</a></li>
+		    </ul>
+		</div> 
+
+			<div class='partContentFileAdmin'> 
+		    <ul>
+		        <li><a class='partContentFileAdminXLS' href='#'>File name with a very long file name which can happen</a></li>
+		        <li><a class='partContentFileAdminXLSX' href='#'>File name</a></li>
+		        <li><a id='uniqueIdForTracking' class='partContentFileAdminZIP' href='#'>File name</a></li>
+		    </ul>
+		</div> 
+
+
+
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partContentFileAdmin'> 
+	<h3>Heading 2 inside partContentFileAdmin</h3> 
+    <ul>
+    	<li><a class='partContentFileAdminPDF' href='#'>File name</a></li>
+        <li><a class='partContentFileAdminDOC' href='#'>File name with file extensions.pdf</a></li>
+        <li><a class='partContentFileAdminDOCX' href='#'>File name with file size (123kb)</a></li>
+    </ul>
+</div> 
+
+<div class='partContentFileAdmin'> 
+    <ul>
+        <li><a class='partContentFileAdminXLS' href='#'>File name with a very long file name which can happen</a></li>
+        <li><a class='partContentFileAdminXLSX' href='#'>File name</a></li>
+        <li><a id='uniqueIdForTracking' class='partContentFileAdminZIP' href='#'>File name</a></li>
+    </ul>
+</div>
+</xmp>
+
+		<h2 id='partContentFileImageGallerySingleAnchor'>partContentFileImageGallerySingle</h3>
+
+		<h3>Note</h3>
+		<div class='partContentText'>		
+			<ul>
+				<li>Can be used with or without &lt;a href='#'&gt;&lt;/a&gt; around the img</li>
+				<li>Optionally 'contentFileImageGalleryDescription' can be applied</li>
+				<li>Optionally you can show a higher resolution of the image in a popup</li>
+				<li>It's possible to use 'partContentFileImageGallery' with only one image without using 'partContentFileImageGallerySingle'</li>
+			</ul>
+		</div>
+
+		<h3>Demo</h3>
+
+		<div class='partContentFileImageGallery partContentFileImageGallerySingle'>
+		    <img src='http://pipsum.com/800x300.jpg?1' alt='Image description'>
+		</div>
+
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partContentFileImageGallery partContentFileImageGallerySingle'>
+    <img src='http://pipsum.com/800x300.jpg?1' alt='Image description'>
+</div>
+</xmp>
+
+		<h2 id='partContentFileImageGallerySingleAnchor'>partContentFileImageGallerySingle + description</h3>
+
+		<h3>Demo</h3>
+
+		<div class='partContentFileImageGallery partContentFileImageGallerySingle'>
+		    <img src='http://pipsum.com/800x300.jpg?1' alt='Image description'>
+		    <span class='contentFileImageGalleryDescription'>Great looking photo generated by pipsum.com</span>
+		</div>
+
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partContentFileImageGallery partContentFileImageGallerySingle'>
+    <img src='http://pipsum.com/800x300.jpg?1' alt='Image description'>
+	<span class='contentFileImageGalleryDescription'>Great looking photo generated by pipsum.com</span>
+</div>
+</xmp>
+
+		<h2 id='partContentFileImageGallerySingleAnchor'>partContentFileImageGallerySingle + link/popup</h3>
+
+		<h3>Demo</h3>
+
+		<div class='partContentFileImageGallery partContentFileImageGallerySingle magnificpopup1'>
+		    <a href='http://pipsum.com/1200x600.jpg?2' title='Image titel'><img src='http://pipsum.com/800x300.jpg?2' alt='Image description'></a>
+		</div>
+
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partContentFileImageGallery partContentFileImageGallerySingle magnificpopup1'>
+    <a href='http://pipsum.com/1200x600.jpg?2' title='Image titel'><img src='http://pipsum.com/800x300.jpg?2' alt='Image description'></a>
+</div>
+</xmp>
+
+		<h3>jQuery</h3>
+
+<xmp class='prettyprint'>
+<script type='text/javascript'>
+    $(document).ready(function () {
+        // Magnific popup
+        $('.magnificpopup1').magnificPopup({
+	        delegate: 'a',
+	        type: 'image',
+	        tClose: 'Sluiten',
+	        tLoading: 'Laden...',
+	        mainClass: 'mfp-img-mobile',
+	        gallery: {
+	            tCounter: '%curr% / %total%',
+	            enabled: true,
+	            navigateByImgClick: true,
+	            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+	        },
+	        callbacks:
+            {
+                beforeOpen: function() {    
+                    this.st.mainClass += ' magnificpopup1';
+                }   
+            },
+	        image: {
+	            tError: 'Sorry, de afbeelding kan niet worden ingeladen.',
+	        },
+	        zoom: {
+	            enabled: true,
+	            duration: 300 // don't foget to change the duration also in CSS
+    		}
+        });
+    });
+</script>
+</xmp>
+
+
+		<h2 id='partContentFileImageGalleryAnchorImagesInRow2'>partContentFileImageGallery imagesInRow2</h3>
+
+		<h3>Notes</h3>
+		<div class='partContentText'>		
+			<ul>
+				<li>Can be used with or without '<a href='#'></a>'</li>
+				<li>Can be sued with or without popup</li>
+				<li>Optionally you can show a higher resolution of the image in a popup</li>
+				<li>Optionally you can apply a more label on the latest images and hide the rest. Use contentFileImageContainerShowAmount for that</li>
+				<li>Class imagesInRow2, imagesInRow3, imagesInRow4 defines how many pictures will be shown in a row</li>
+				<li>partContentFileImageGalleryFooter is depreciated. You need a overflow:hidden on partContentFileImageGallery</li>
+			</ul>
+		</div>
+
+		<h3>Demo</h3>
+
+		<div class='partContentFileImageGallery imagesInRow2 magnificpopup1'>
+		    <div class='contentFileImageContainer'>
+		        <a href='http://pipsum.com/1280x1024.jpg?1' title='Image titel'><img src='http://pipsum.com/400x300.jpg?1' alt='Image description'></a>
+		        <a href='http://pipsum.com/1280x1024.jpg?2' title='Image titel'><img src='http://pipsum.com/400x300.jpg?2' alt='Image description'></a>      
+		    </div>
+		</div> 
+
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partContentFileImageGallery imagesInRow2 magnificpopup1'>
+    <div class='contentFileImageContainer'>
+        <a href='http://pipsum.com/1280x1024.jpg?1' title='Image titel'><img src='http://pipsum.com/400x300.jpg?1' alt='Image description'></a>
+        <a href='http://pipsum.com/1280x1024.jpg?2' title='Image titel'><img src='http://pipsum.com/400x300.jpg?2' alt='Image description'></a>      
+    </div>
+</div> 
+</xmp>
+
+		<h3>jQuery</h3>
+
+<xmp class='prettyprint'>
+<script type='text/javascript'>
+    $(document).ready(function () {
+        // Magnific popup
+        $('.magnificpopup1').magnificPopup({
+	        delegate: 'a',
+	        type: 'image',
+	        tClose: 'Sluiten',
+	        tLoading: 'Laden...',
+	        mainClass: 'mfp-img-mobile',
+	        gallery: {
+	            tCounter: '%curr% / %total%',
+	            enabled: true,
+	            navigateByImgClick: true,
+	            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+	        },
+	        callbacks:
+            {
+                beforeOpen: function() {    
+                    this.st.mainClass += ' magnificpopup1';
+                }   
+            },
+	        image: {
+	            tError: 'Sorry, de afbeelding kan niet worden ingeladen.',
+	        },
+	        zoom: {
+	            enabled: true,
+	            duration: 300 // don't foget to change the duration also in CSS
+    		}
+        });
+    });
+</script>
+</xmp>
+
+		<h2 id='partContentFileImageGalleryAnchorImagesInRow3'>partContentFileImageGallery imagesInRow3</h2>
+
+		<h3>Notes</h3>
+		<div class='partContentText'>		
+			<ul>
+				<li>Can be used with or without '<a href='#'></a>'</li>
+				<li>Can be sued with or without popup</li>
+				<li>Optionally you can show a higher resolution of the image in a popup</li>
+				<li>Optionally you can apply a more label on the latest images and hide the rest. Use contentFileImageContainerShowAmount for that</li>
+				<li>Class imagesInRow2, imagesInRow3, imagesInRow4 defines how many pictures will be shown in a row</li>
+				<li>partContentFileImageGalleryFooter is depreciated. You need a overflow:hidden on partContentFileImageGallery</li>
+			</ul>
+		</div>
+
+		<h3>Demo</h3>
+		
+		<div class='partContentFileImageGallery imagesInRow3 magnificpopup1'>
+		    <div class='contentFileImageContainer'>
+		    	<a href='http://pipsum.com/1280x1024.jpg?1' title='Image titel 1' class='galleryItem'><img src='http://pipsum.com/264x200.jpg?1' alt='Image description'></a>
+		        <a href='http://pipsum.com/1280x1024.jpg?2' title='Image titel 2' class='galleryItem'><img src='http://pipsum.com/264x200.jpg?2' alt='Image description'></a>
+		        <a href='http://pipsum.com/1280x1024.jpg?3' title='Image titel 3' class='galleryItem'><img src='http://pipsum.com/264x200.jpg?3' alt='Image description'></a>
+		    </div>
+		</div>
+
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partContentFileImageGallery imagesInRow3 magnificpopup1'>
+    <div class='contentFileImageContainer'>
+    	<a href='http://pipsum.com/1280x1024.jpg?1' title='Image titel 1' class='galleryItem'><img src='http://pipsum.com/264x200.jpg?1' alt='Image description'></a>
+        <a href='http://pipsum.com/1280x1024.jpg?2' title='Image titel 2' class='galleryItem'><img src='http://pipsum.com/264x200.jpg?2' alt='Image description'></a>
+        <a href='http://pipsum.com/1280x1024.jpg?3' title='Image titel 3' class='galleryItem'><img src='http://pipsum.com/264x200.jpg?3' alt='Image description'></a>
+    </div>
+</div> 
+</xmp>
+
+		<h3>jQuery</h3>
+
+<xmp class='prettyprint'>
+<script type='text/javascript'>
+    $(document).ready(function () {
+        // Magnific popup
+        $('.magnificpopup1').magnificPopup({
+	        delegate: 'a',
+	        type: 'image',
+	        tClose: 'Sluiten',
+	        tLoading: 'Laden...',
+	        mainClass: 'mfp-img-mobile',
+	        gallery: {
+	            tCounter: '%curr% / %total%',
+	            enabled: true,
+	            navigateByImgClick: true,
+	            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+	        },
+	        callbacks:
+            {
+                beforeOpen: function() {    
+                    this.st.mainClass += ' magnificpopup1';
+                }   
+            },
+	        image: {
+	            tError: 'Sorry, de afbeelding kan niet worden ingeladen.',
+	        },
+	        zoom: {
+	            enabled: true,
+	            duration: 300 // don't foget to change the duration also in CSS
+    		}
+        });
+    });
+</script>
+</xmp>
+
+		<h2 id='partContentFileImageGalleryAnchorImagesInRow4'>partContentFileImageGallery imagesInRow4</h2>
+
+		<h3>Notes</h3>
+		<div class='partContentText'>		
+			<ul>
+				<li>Can be used with or without '<a href='#'></a>'</li>
+				<li>Can be sued with or without popup</li>
+				<li>Optionally you can show a higher resolution of the image in a popup</li>
+				<li>Optionally you can apply a more label on the latest images and hide the rest. Use contentFileImageContainerShowAmount for that</li>
+				<li>Class imagesInRow2, imagesInRow3, imagesInRow4 defines how many pictures will be shown in a row</li>
+				<li>partContentFileImageGalleryFooter is depreciated. You need a overflow:hidden on partContentFileImageGallery</li>
+			</ul>
+		</div>
+
+		<h3>Demo</h3>
+
+		<div class='partContentFileImageGallery contentFileImageContainerShowAmount imagesInRow4 magnificpopup2'> <!-- number after magnificpopup is a generated id number -->
+		    <div class='contentFileImageContainer'>
+		        <a href='http://pipsum.com/1280x1024.jpg?1' title='Image titel 1 ' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?1' alt='Image description'></a>
+		        <a href='http://pipsum.com/1280x1024.jpg?2' title='Image titel 2' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?2' alt='Image description'></a>
+		        <a href='http://pipsum.com/1280x1024.jpg?3' title='Image titel 3' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?3' alt='Image description'></a>
+		        <a href='http://pipsum.com/1280x1024.jpg?4' title='Image titel 4' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?4' alt='Image description'></a>
+		        <a href='http://pipsum.com/1280x1024.jpg?5' title='Image titel 5' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?5' alt='Image description'></a>
+		        <a href='http://pipsum.com/1280x1024.jpg?6' title='Image titel 6' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?6' alt='Image description'></a>
+				<a href='http://pipsum.com/1280x1024.jpg?7' title='Image titel 7' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?6' alt='Image description'></a>
+		        <a contentFileImageContainerShowAmount='+3' href='http://pipsum.com/1280x1024.jpg?8' title='Image titel 8' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?8' alt='Image description'></a>
+		    </div>
+
+		    <a href='http://pipsum.com/1280x1024.jpg?9' title='Image titel 9' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?9' alt='Image description'></a>
+		    <a href='http://pipsum.com/1280x1024.jpg?10' title='Image titel 10' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?10' alt='Image description'></a>
+		    <a href='http://pipsum.com/1280x1024.jpg?11' title='Image titel 11' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?11' alt='Image description'></a> 
+		</div>
+
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partContentFileImageGallery contentFileImageContainerShowAmount imagesInRow4 magnificpopup2'> <!-- number after magnificpopup is a generated id number -->
+    <div class='contentFileImageContainer'>
+        <a href='http://pipsum.com/1280x1024.jpg?1' title='Image titel 1 ' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?1' alt='Image description'></a>
+        <a href='http://pipsum.com/1280x1024.jpg?2' title='Image titel 2' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?2' alt='Image description'></a>
+        <a href='http://pipsum.com/1280x1024.jpg?3' title='Image titel 3' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?3' alt='Image description'></a>
+        <a href='http://pipsum.com/1280x1024.jpg?4' title='Image titel 4' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?4' alt='Image description'></a>
+        <a href='http://pipsum.com/1280x1024.jpg?5' title='Image titel 5' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?5' alt='Image description'></a>
+        <a href='http://pipsum.com/1280x1024.jpg?6' title='Image titel 6' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?6' alt='Image description'></a>
+		<a href='http://pipsum.com/1280x1024.jpg?7' title='Image titel 7' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?6' alt='Image description'></a>
+        <a contentFileImageContainerShowAmount='+3' href='http://pipsum.com/1280x1024.jpg?8' title='Image titel 8' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?8' alt='Image description'></a>
+    </div>
+
+    <a href='http://pipsum.com/1280x1024.jpg?9' title='Image titel' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?9' alt='Image description'></a>
+    <a href='http://pipsum.com/1280x1024.jpg?10' title='Image titel' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?10' alt='Image description'></a>
+    <a href='http://pipsum.com/1280x1024.jpg?11' title='Image titel' class='galleryItem'><img src='http://pipsum.com/200x150.jpg?11' alt='Image description'></a> 
+</div>
+</xmp>
+
+		<h3>jQuery</h3>
+
+<xmp class='prettyprint'>
+<script type='text/javascript'>
+    $(document).ready(function () {
+        // Magnific popup
+        $('.magnificpopup2').magnificPopup({
+	        delegate: 'a',
+	        type: 'image',
+	        tClose: 'Sluiten',
+	        tLoading: 'Laden...',
+	        mainClass: 'mfp-img-mobile',
+	        gallery: {
+	            tCounter: '%curr% / %total%',
+	            enabled: true,
+	            navigateByImgClick: true,
+	            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+	        },
+	        callbacks:
+            {
+                beforeOpen: function() {    
+                    this.st.mainClass += ' magnificpopup1';
+                }   
+            },
+	        image: {
+	            tError: 'Sorry, de afbeelding kan niet worden ingeladen.',
+	        },
+	        zoom: {
+	            enabled: true,
+	            duration: 300 // don't foget to change the duration also in CSS
+    		}
+        });
+    });
+</script>
+
+</xmp>
+
+		<h2 id='partContentFileImageGalleryAndSlingleAnchor'>partContentFileImageGallerySingle &amp; partContentFileImageGallery combined</h3>
+
+		<h3>Notes</h3>
+		<div class='partContentText'>		
+			<ul>
+				<li>The normal options you got for partContentFileImageGallery and partContentFileImageGallerySingle.</li>
+				<li>You can apply ajax to change the single (bigger) image when clicking on a image within the gallery.</li>
+			</ul>
+		</div>
+
+		<h3>Demo</h3>
+
+		<div class='partContentFileImageGallery partContentFileImageGallerySingle'>
+		    <img src='http://pipsum.com/800x600.jpg' alt='Image description 1'>
+		</div>
+
+		<div class='partContentFileImageGallery imagesInRow3'>
+		    <div class='contentFileImageContainer'>
+		        <img src='http://pipsum.com/264x200.jpg?2' alt='Image description 2'>
+		        <img src='http://pipsum.com/264x200.jpg?3' alt='Image description 3'> 
+		        <img src='http://pipsum.com/264x200.jpg?4' alt='Image description 4'>    
+		    </div>
+		</div>
+
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partContentFileImageGallery partContentFileImageGallerySingle'>
+	<img src='http://pipsum.com/800x600.jpg' alt='Image description 1'>
+</div>
+
+<div class='partContentFileImageGallery imagesInRow3'>
+	<div class='contentFileImageContainer'>
+	    <img src='http://pipsum.com/264x200.jpg?2' alt='Image description 2'>
+	    <img src='http://pipsum.com/264x200.jpg?3' alt='Image description 3'> 
+	    <img src='http://pipsum.com/264x200.jpg?4' alt='Image description 4'>    
+	</div>
+</div>
+</xmp>
+
+		<h2 id='partContentFileImageGalleryLogoAnchor'>partContentFileImageGallery with and without the 'a' element (used for logo's)</h3>
+		<h3>Demo</h3>
+		<div class='partContentFileImageGallery imagesInRow4'>
+		    <div class='contentFileImageContainer'>
+		        <a href='#'><img src='http://pipsum.com/200x150.jpg?1' alt='Image description'></a>
+		        <img src='http://pipsum.com/200x150.jpg?2' alt='Image description'>
+		        <img src='http://pipsum.com/200x150.jpg?3' alt='Image description'>
+		        <a href='#'><img src='http://pipsum.com/200x150.jpg?4' alt='Image description'></a>
+		        <img src='http://pipsum.com/200x150.jpg?3' alt='Image description'>
+		        <a href='#'><img src='http://pipsum.com/200x150.jpg?4' alt='Image description'></a>
+		    </div>
+		</div> 
+
+<xmp class='prettyprint'>
+<div class='partContentFileImageGallery imagesInRow4'>
+    <div class='contentFileImageContainer'>
+        <a href='#'><img src='http://pipsum.com/200x150.jpg?1' alt='Image description'></a>
+        <img src='http://pipsum.com/200x150.jpg?2' alt='Image description'>
+        <img src='http://pipsum.com/200x150.jpg?3' alt='Image description'>
+        <a href='#'><img src='http://pipsum.com/200x150.jpg?4' alt='Image description'></a>
+        <img src='http://pipsum.com/200x150.jpg?3' alt='Image description'>
+		<a href='#'><img src='http://pipsum.com/200x150.jpg?4' alt='Image description'></a>
+    </div>
+</div> 
+</xmp>
+
+		<h2 id='partContentVideoAnchor'>partContentVideo</h3>
+
+		<h3>Notes</h3>
+		<div class='partContentText'>		
+			<p>iframe width defines max-width and height defines max-height together they define the ratio</p>
+		</div>
+
+		<h3>Demo</h3>
+		<div class='partContentVideo'>
+		    <div class='contentVideoContainer'>
+		        <iframe width='560' height='315' src='http://www.youtube.com/embed/qp0HIF3SfI4'></iframe>
+		    </div>
+		</div>    
+
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partContentVideo'>
+    <div class='contentVideoContainer'>
+        <iframe width='560' height='315' src='http://www.youtube.com/embed/qp0HIF3SfI4'></iframe>
+    </div>
+</div>
+</xmp>
+
+		<h2 id='partContentCodeAnchor'>partContentCode</h3>
+
+		<div class='partContentCode'>
+			Custom code can be applied within the div 'partContentCode'. For example an iFrame, a button or something else...
+		</div>
+
+		<h3>partContentCode note</h3>
+		<div class='partContentText'>
+			<ul>
+				<li>Can be used for mulitple purposes like a iFrame or a button. The idea is that you can edit/modify this in the CMS</li>
+			</ul>
+		</div>
+
+		<h3>partContentCode code</h3>
+
+<xmp class='prettyprint'>
+<div class='partContentCode'>
+	<a class='linkButton' href='#' title='Button name'>Button name</a>
+</div>
+</xmp>
+
+	</div>
+  	<!-- Javascript -->
+  	<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+    <script type='text/javascript' src='http://cdn.dailycms.com/js/jquerymagnificpopup-0.9.9.js'></script> <!-- http://dimsemenov.com/plugins/magnific-popup/ -->
+    
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            // Magnific popup
+            $('.magnificpopup1').magnificPopup({
+		        delegate: 'a',
+		        type: 'image',
+		        tClose: 'Sluiten',
+		        tLoading: 'Laden...',
+		        mainClass: 'mfp-img-mobile',
+		        gallery: {
+		            tCounter: '%curr% / %total%',
+		            enabled: true,
+		            navigateByImgClick: true,
+		            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+		        },
+		        callbacks:
+                {
+                    beforeOpen: function() {    
+                        this.st.mainClass += ' magnificpopup1';
+                    }   
+                },
+		        image: {
+		            tError: 'Sorry, de afbeelding kan niet worden ingeladen.',
+		        },
+		        zoom: {
+		            enabled: true,
+		            duration: 300 // don't foget to change the duration also in CSS
+        		}
+            });
+            $('.magnificpopup2').magnificPopup({
+		        delegate: 'a',
+		        type: 'image',
+		        tClose: 'Sluiten',
+		        tLoading: 'Laden...',
+		        mainClass: 'mfp-img-mobile',
+		        gallery: {
+		            tCounter: '%curr% / %total%',
+		            enabled: true,
+		            navigateByImgClick: true,
+		            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+		        },
+		        callbacks:
+                {
+                    beforeOpen: function() {    
+                        this.st.mainClass += ' magnificpopup2';
+                    }   
+                },
+		        image: {
+		            tError: 'Sorry, de afbeelding kan niet worden ingeladen.',
+		        },
+		        zoom: {
+		            enabled: true,
+		            duration: 300 // don't foget to change the duration also in CSS
+        		}
+            });
+        });
+	</script>
+
+	
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
+    <script type='text/javascript'>
+        $(document).ready(function(){           
+            $( '.mobileMenuButton').click(function() {
+                $('#mobileMenuContainer').toggleClass('mobileMenuContainerActive');
+            });
+        });  
+    </script>
+
+	<!-- end Javascript -->
+  
+</body>
+</html>

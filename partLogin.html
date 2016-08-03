@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html lang="nl" prefix="og: http://ogp.me/ns#">
+<head>	
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>partLogin</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script><!-- jQuery needed for password strenght and other functions -->
+
+    <!-- CSS -->
+    <link href="css/partLogin.css" rel="Stylesheet" type="text/css" >
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <!-- <link href="css/form.css" rel="Stylesheet" type="text/css" > Er kan een situatie ontstaan waar naast de partLogin ook een reguliere form aanwezig is op de zelfde pagina. Deze  heeft geen invloed op elkaar en form.css is dus niet nodig voor partLogin.css. Hij staat hier wel om te testen -->
+    
+    <style type="text/css">
+        body    					{padding: 20px; margin: 0px; font-family: arial;}
+        p       					{padding:0px 0px 15px 0px;}    
+        h1							{padding:0px 0px 15px 0px;}
+        h2 							{margin-top: 50px;}
+    </style>
+        
+</head>
+<body>
+
+	<!-- in principe zijn alle velden verplicht behalve waar "optional" achter staat genoteerd -->
+
+	<h1>Inloggen</h1> <!-- login page is natural, in most caes it will show a h1 with the title. This has nothing to do with the partLogin. -->
+	
+    <h2>Login with placehold (default)</h2> <!-- optional -->
+    
+    <form method="post" action="#" id="%generatedUniqueID%" class="form FormLogin">
+		<fieldset>  
+		    <span class="spanLegend">Accountgegevens</span>
+			
+			<span class="spanRelativeContainer">
+				<svg class="svgIcon" viewBox="0 0 511.626 511.626">
+				<!-- Change icon color with inline style="fill:red;" or in CSS, this should be used for showing password strenght -->
+					<path d="M49.106,178.729c6.472,4.567,25.981,18.131,58.528,40.685c32.548,22.554,57.482,39.92,74.803,52.099
+						c1.903,1.335,5.946,4.237,12.131,8.71c6.186,4.476,11.326,8.093,15.416,10.852c4.093,2.758,9.041,5.852,14.849,9.277
+						c5.806,3.422,11.279,5.996,16.418,7.7c5.14,1.718,9.898,2.569,14.275,2.569h0.287h0.288c4.377,0,9.137-0.852,14.277-2.569
+						c5.137-1.704,10.615-4.281,16.416-7.7c5.804-3.429,10.752-6.52,14.845-9.277c4.093-2.759,9.229-6.376,15.417-10.852
+						c6.184-4.477,10.232-7.375,12.135-8.71c17.508-12.179,62.051-43.11,133.615-92.79c13.894-9.703,25.502-21.411,34.827-35.116
+						c9.332-13.699,13.993-28.07,13.993-43.105c0-12.564-4.523-23.319-13.565-32.264c-9.041-8.947-19.749-13.418-32.117-13.418H45.679
+						c-14.655,0-25.933,4.948-33.832,14.844C3.949,79.562,0,91.934,0,106.779c0,11.991,5.236,24.985,15.703,38.974
+						C26.169,159.743,37.307,170.736,49.106,178.729z"/>
+					<path d="M483.072,209.275c-62.424,42.251-109.824,75.087-142.177,98.501c-10.849,7.991-19.65,14.229-26.409,18.699
+						c-6.759,4.473-15.748,9.041-26.98,13.702c-11.228,4.668-21.692,6.995-31.401,6.995h-0.291h-0.287
+						c-9.707,0-20.177-2.327-31.405-6.995c-11.228-4.661-20.223-9.229-26.98-13.702c-6.755-4.47-15.559-10.708-26.407-18.699
+						c-25.697-18.842-72.995-51.68-141.896-98.501C17.987,202.047,8.375,193.762,0,184.437v226.685c0,12.57,4.471,23.319,13.418,32.265
+						c8.945,8.949,19.701,13.422,32.264,13.422h420.266c12.56,0,23.315-4.473,32.261-13.422c8.949-8.949,13.418-19.694,13.418-32.265
+						V184.437C503.441,193.569,493.927,201.854,483.072,209.275z"/>
+				</svg>
+			    <input class="inputEmailAddress" type="email" name="mail" placeholder="E-mailadres"> <!-- type email -->
+		    </span>
+
+		    <span class="spanFooter spanFooterEmailAddress"></span>
+		    
+		    <span class="spanRelativeContainer">
+			    <span class="spanShowPassword">Tonen</span>
+		    	<svg class="svgIcon" viewBox="0 0 401.998 401.998">
+					<path d="M357.45,190.721c-5.331-5.33-11.8-7.993-19.417-7.993h-9.131v-54.821c0-35.022-12.559-65.093-37.685-90.218
+						C266.093,12.563,236.025,0,200.998,0c-35.026,0-65.1,12.563-90.222,37.688C85.65,62.814,73.091,92.884,73.091,127.907v54.821
+						h-9.135c-7.611,0-14.084,2.663-19.414,7.993c-5.33,5.326-7.994,11.799-7.994,19.417V374.59c0,7.611,2.665,14.086,7.994,19.417
+						c5.33,5.325,11.803,7.991,19.414,7.991H338.04c7.617,0,14.085-2.663,19.417-7.991c5.325-5.331,7.994-11.806,7.994-19.417V210.135
+						C365.455,202.523,362.782,196.051,357.45,190.721z M274.087,182.728H127.909v-54.821c0-20.175,7.139-37.402,21.414-51.675
+						c14.277-14.275,31.501-21.411,51.678-21.411c20.179,0,37.399,7.135,51.677,21.411c14.271,14.272,21.409,31.5,21.409,51.675V182.728
+						z"/>
+				</svg>
+			    <input class="inputPassword" type="password" name="password" placeholder="Toegangscode"> <!-- type password -->
+		    </span>
+		    <span class="spanFooter spanFooterPassword"></span>
+		    
+		    <input class="inputRememberMe" type="checkbox" id="%generatedUniqueID%RememberMe" name="%generatedUniqueID%RememberMe">    
+		    <label class="labelRememberMe" for="%generatedUniqueID%RememberMe"><span></span>Blijf ingelogd</label>
+		    <span class="spanFooter spanFooterRememberMe spanFooterLast"></span>
+		    			    
+		    <label class="labelError">Not all the fields are filled in correctly, please correct the red marked fields.</label>
+		    <input class="formButton" type="submit" value="Inloggen">	<!-- redirect to relevant page -->
+		   
+		    <a class="aForgotPassword" href="#">Toegangscode vergeten?</a> <!-- optional -->
+		    <span class="spanFooter spanFooterFormButton spanFooterLast"></span> <!-- this spanFooter is not optional, always add this after formButton -->
+		    
+		    <a class="aForgotEmailAddress" href="#">E-mailadres vergeten?</a> <!-- optional -->
+		    <span class="spanFooter spanFooterEmailAddress spanFooterLast"></span> 
+		    
+		    <a class="aCreateAccount" href="#">Nieuw account aanmaken?</a> <!-- optional -->
+		    <span class="spanFooter spanFooterCreateAccount spanFooterLast"></span> 
+		    
+         </fieldset> 
+	</form>
+
+	<h2>Login with labels for input (alternative)</h2> <!-- optional -->
+	
+    <form method="post" action="#" id="%generatedUniqueID%" class="form FormLogin">
+		<fieldset>     
+		    <span class="spanLegend">Accountgegevens</span>
+ 			
+ 			<label class="labelEmailAddress" for="%generatedID%MailAddress">E-mailadres</label>
+ 			<span class="spanRelativeContainer">
+			    <svg class="svgIcon" viewBox="0 0 511.626 511.626">
+				<!-- Change icon color with inline style="fill:red;" or in CSS, this should be used for showing password strenght -->
+					<path d="M49.106,178.729c6.472,4.567,25.981,18.131,58.528,40.685c32.548,22.554,57.482,39.92,74.803,52.099
+						c1.903,1.335,5.946,4.237,12.131,8.71c6.186,4.476,11.326,8.093,15.416,10.852c4.093,2.758,9.041,5.852,14.849,9.277
+						c5.806,3.422,11.279,5.996,16.418,7.7c5.14,1.718,9.898,2.569,14.275,2.569h0.287h0.288c4.377,0,9.137-0.852,14.277-2.569
+						c5.137-1.704,10.615-4.281,16.416-7.7c5.804-3.429,10.752-6.52,14.845-9.277c4.093-2.759,9.229-6.376,15.417-10.852
+						c6.184-4.477,10.232-7.375,12.135-8.71c17.508-12.179,62.051-43.11,133.615-92.79c13.894-9.703,25.502-21.411,34.827-35.116
+						c9.332-13.699,13.993-28.07,13.993-43.105c0-12.564-4.523-23.319-13.565-32.264c-9.041-8.947-19.749-13.418-32.117-13.418H45.679
+						c-14.655,0-25.933,4.948-33.832,14.844C3.949,79.562,0,91.934,0,106.779c0,11.991,5.236,24.985,15.703,38.974
+						C26.169,159.743,37.307,170.736,49.106,178.729z"/>
+					<path d="M483.072,209.275c-62.424,42.251-109.824,75.087-142.177,98.501c-10.849,7.991-19.65,14.229-26.409,18.699
+						c-6.759,4.473-15.748,9.041-26.98,13.702c-11.228,4.668-21.692,6.995-31.401,6.995h-0.291h-0.287
+						c-9.707,0-20.177-2.327-31.405-6.995c-11.228-4.661-20.223-9.229-26.98-13.702c-6.755-4.47-15.559-10.708-26.407-18.699
+						c-25.697-18.842-72.995-51.68-141.896-98.501C17.987,202.047,8.375,193.762,0,184.437v226.685c0,12.57,4.471,23.319,13.418,32.265
+						c8.945,8.949,19.701,13.422,32.264,13.422h420.266c12.56,0,23.315-4.473,32.261-13.422c8.949-8.949,13.418-19.694,13.418-32.265
+						V184.437C503.441,193.569,493.927,201.854,483.072,209.275z"/>
+				</svg>
+			    <input class="inputEmailAddress" type="email" id="%generatedID%EmailAddress" name="%generatedID%EmailAddress"> <!-- type email -->   
+		    </span>
+
+		    <span class="spanFooter spanFooterEmailAddress"></span> 
+		    
+		    <label class="labelEmailAddress" for="%generatedID%EmailAddress">Toegangscode</label>
+		    <span class="spanRelativeContainer">
+			    <span class="spanShowPassword spanShowPasswordActive">Tonen</span>
+			    <svg class="svgIcon" viewBox="0 0 401.998 401.998">
+					<path d="M357.45,190.721c-5.331-5.33-11.8-7.993-19.417-7.993h-9.131v-54.821c0-35.022-12.559-65.093-37.685-90.218
+						C266.093,12.563,236.025,0,200.998,0c-35.026,0-65.1,12.563-90.222,37.688C85.65,62.814,73.091,92.884,73.091,127.907v54.821
+						h-9.135c-7.611,0-14.084,2.663-19.414,7.993c-5.33,5.326-7.994,11.799-7.994,19.417V374.59c0,7.611,2.665,14.086,7.994,19.417
+						c5.33,5.325,11.803,7.991,19.414,7.991H338.04c7.617,0,14.085-2.663,19.417-7.991c5.325-5.331,7.994-11.806,7.994-19.417V210.135
+						C365.455,202.523,362.782,196.051,357.45,190.721z M274.087,182.728H127.909v-54.821c0-20.175,7.139-37.402,21.414-51.675
+						c14.277-14.275,31.501-21.411,51.678-21.411c20.179,0,37.399,7.135,51.677,21.411c14.271,14.272,21.409,31.5,21.409,51.675V182.728
+						z"/>
+				</svg>
+			    <input class="inputPassword" type="password" id="%generatedID%Password" name="%generatedID%Password"> <!-- type password -->
+		    </span>
+		     <span class="spanFooter spanFooterPassword"></span>
+		    
+		    <input class="inputRememberMe" type="checkbox" id="%generatedUniqueID%RememberMe" name="%generatedUniqueID%RememberMe">    
+		    <label class="labelRememberMe" for="%generatedUniqueID%RememberMe"><span></span>Blijf ingelogd</label>
+		    <span class="spanFooter spanFooterRememberMe spanFooterLast"></span>
+		    
+		    			    
+		    <label class="labelError">Not all the fields are filled in correctly, please correct the red marked fields.</label>
+		    <input class="formButton" type="submit" value="Inloggen"> <!-- redirect to relevant page -->
+		     <a class="aForgotPassword" href="#">Toegangscode vergeten?</a> <!-- optional -->
+		    <span class="spanFooter spanFooterFormButton spanFooterLast"></span>  <!-- this spanFooter is not optional, always add this after formButton -->  
+		    
+		    <a class="aForgotEmailAddress" href="#">E-mailadres vergeten?</a> <!-- optional -->
+		    <span class="spanFooter spanFooterEmailAddress spanFooterLast"></span>
+		    
+		    <a class="aCreateAccount" href="#">Nieuw account aanmaken?</a> <!-- optional -->
+		    <span class="spanFooter spanFooterCreateAccount spanFooterLast"></span>
+		    
+         </fieldset> 
+	</form>	
+
+    <h2>Forgot password (default)</h2> <!-- optional -->
+    
+    <form method="post" action="#" id="%generatedUniqueID%" class="form FormLogin">
+		<fieldset> 			    
+		   	<span class="spanLegend">Toegangscode vergeten</span>
+		    <p class="pForgotPassword">Vul hieronder uw e-mailadres in om een nieuwe toegangscode in te stellen.</p> <!-- this text can be modified -->
+			
+			<span class="spanRelativeContainer">
+				<svg class="svgIcon" viewBox="0 0 401.998 401.998">
+					<path d="M357.45,190.721c-5.331-5.33-11.8-7.993-19.417-7.993h-9.131v-54.821c0-35.022-12.559-65.093-37.685-90.218
+						C266.093,12.563,236.025,0,200.998,0c-35.026,0-65.1,12.563-90.222,37.688C85.65,62.814,73.091,92.884,73.091,127.907v54.821
+						h-9.135c-7.611,0-14.084,2.663-19.414,7.993c-5.33,5.326-7.994,11.799-7.994,19.417V374.59c0,7.611,2.665,14.086,7.994,19.417
+						c5.33,5.325,11.803,7.991,19.414,7.991H338.04c7.617,0,14.085-2.663,19.417-7.991c5.325-5.331,7.994-11.806,7.994-19.417V210.135
+						C365.455,202.523,362.782,196.051,357.45,190.721z M274.087,182.728H127.909v-54.821c0-20.175,7.139-37.402,21.414-51.675
+						c14.277-14.275,31.501-21.411,51.678-21.411c20.179,0,37.399,7.135,51.677,21.411c14.271,14.272,21.409,31.5,21.409,51.675V182.728
+						z"/>
+				</svg>
+			    <input class="inputEmailAddress" type="email" name="mail" placeholder="E-mailadres"> <!-- type email -->
+			</path>
+
+		    <span class="spanFooter spanFooterEmailAddress"></span>
+		        			    
+		    <label class="labelError">Not all the fields are filled in correctly, please correct the red marked fields.</label>
+		    <input class="formButton" type="submit" value="Toegangscode opnieuw instellen">
+		    <span class="spanFooter spanFooterFormButton spanFooterLast"></span>  <!-- this spanFooter is not optional, always add this after formButton -->  
+		    
+		    <a class="aBackToLogin" href="#">Terug naar inloggen</a> <!-- optional -->
+		    <span class="spanFooter spanFooterBackToLogin spanFooterLast"></span>
+		    
+		    <a class="aForgotEmailAddress" href="#">E-mailadres vergeten?</a> <!-- optional -->
+		    <span class="spanFooter spanFooterEmailAddress spanFooterLast"></span>
+		    
+		    <a class="aCreateAccount" href="#">Nieuw account aanmaken?</a> <!-- optional -->
+		    <span class="spanFooter spanFooterCreateAccount spanFooterLast"></span>
+		    
+         </fieldset> 
+	</form>
+
+
+    <h2>Forgot password feedback after submit (default)</h2> <!-- optional -->
+    
+    <form method="post" action="#" id="%generatedUniqueID%" class="form FormLogin">
+		<fieldset> 		
+			<span class="spanLegend">Toegangscode vergeten</span> 	    
+		    <p class="pForgotPassword">Een e-mail is naar [e-mailadres] gestuurd. Hierin staat een link waarmee u een nieuwe toegangscode kan worden ingesteld.</p> <!-- this text can be modified -->  
+         </fieldset> 
+	</form>
+
+    <h2>Forgot e-mailadres feedback after clicking on button "E-mailadres vergeten" (default)</h2> <!-- optional -->
+    
+    <form method="post" action="#" id="%generatedUniqueID%" class="form FormLogin">
+		<fieldset> 			    
+		    <span class="spanLegend">E-mailadres vergeten?</span>
+		    <p class="pForgotEmail">Bent u het e-mailaders van uw account vergeten? Neem dan contact op met onze klantenservice. Wij achterhalen uw e-mailders door middel van uw gegevens, zodat u weer kunt inloggen.</p> <!-- this text can be modified -->  
+		    
+		    <a class="aBackToLogin" href="#">Terug naar inloggen</a>
+		    <span class="spanFooter spanFooterBackToLogin spanFooterLast"></span>
+         </fieldset> 
+	</form>
+	
+    <h2>Reset password (default)</h2> <!-- optional -->
+    
+    <form method="post" action="#" id="%generatedUniqueID%" class="form FormLogin">
+		<fieldset>  
+		    <span class="spanLegend">Nieuwe toegangscode instellen</span>
+		    <p class="pSetPassword">Stel hieronder uw nieuwe toegangscode in. Probeer een sterke toegangscode te maken door hoofdletters, kleine letters, cijfers, speciale karakters en minimaal 8 karakters te gebruiken.</p> <!-- this text can be modified -->
+		    
+		    <span class="spanRelativeContainer">
+			    <svg class="svgIcon" viewBox="0 0 401.998 401.998" style="fill:green";>
+					<path d="M357.45,190.721c-5.331-5.33-11.8-7.993-19.417-7.993h-9.131v-54.821c0-35.022-12.559-65.093-37.685-90.218
+						C266.093,12.563,236.025,0,200.998,0c-35.026,0-65.1,12.563-90.222,37.688C85.65,62.814,73.091,92.884,73.091,127.907v54.821
+						h-9.135c-7.611,0-14.084,2.663-19.414,7.993c-5.33,5.326-7.994,11.799-7.994,19.417V374.59c0,7.611,2.665,14.086,7.994,19.417
+						c5.33,5.325,11.803,7.991,19.414,7.991H338.04c7.617,0,14.085-2.663,19.417-7.991c5.325-5.331,7.994-11.806,7.994-19.417V210.135
+						C365.455,202.523,362.782,196.051,357.45,190.721z M274.087,182.728H127.909v-54.821c0-20.175,7.139-37.402,21.414-51.675
+						c14.277-14.275,31.501-21.411,51.678-21.411c20.179,0,37.399,7.135,51.677,21.411c14.271,14.272,21.409,31.5,21.409,51.675V182.728
+						z"/>
+				</svg>
+			    <span class="spanShowPassword spanShowPasswordActive">Tonen</span>
+			    <input class="inputPassword" type="password" name="password" placeholder="Nieuwe toegangscode"> <!-- type password -->
+		    </span>
+		    <span class="spanFooter spanFooterPassword"></span>
+		    
+		    <input class="inputRememberMe" type="checkbox" id="%generatedUniqueID%RememberMe" name="%generatedUniqueID%RememberMe">    
+		    <label class="labelRememberMe" for="%generatedUniqueID%RememberMe"><span></span>Blijf ingelogd</label>
+		    <span class="spanFooter spanFooterRememberMe spanFooterLast"></span>
+		    			    
+		    <label class="labelError">Not all the fields are filled in correctly, please correct the red marked fields.</label>
+		    <input class="formButton" type="submit" value="Toegangscode instellen + Inloggen"> <!-- redirect to relevant page -->
+		    <span class="spanFooter spanFooterFormButton spanFooterLast"></span> <!-- this spanFooter is not optional, always add this after formButton -->    
+		    
+		   	<a class="aBackToLogin" href="#">Terug naar inloggen</a>
+		  	<span class="spanFooter spanFooterBackToLogin spanFooterLast"></span>
+		   
+		    <a class="aCreateAccount" href="#">Nieuw account aanmaken?</a> <!-- optional -->
+		    <span class="spanFooter spanFooterCreateAccount spanFooterLast"></span> 
+		    
+         </fieldset> 
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'> 
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <title>partNavigation</title>
+        
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- In case the website is not responsive, apply an static width <meta name='viewport' content='width=1024, maximum-scale=1.0'> -->
+
+    <!-- CSS -->
+    <link rel='Stylesheet' type='text/css' href='css/reset.css'>
+    <link rel='Stylesheet' type='text/css' href='css/fonts.css'>
+    <link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
+    <link rel='Stylesheet' type='text/css' href='css/index.css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <link rel='Stylesheet' type='text/css' href='css/partNavigation-h.css'>
+    <link rel='Stylesheet' type='text/css' href='css/partNavigation-v.css'>
+    <link rel='Stylesheet' type='text/css' href='css/partNavigation-hvbvr.css'>
+    <link rel='Stylesheet' type='text/css' href='css/partNavigation-vvb.css'>
+    <link rel='Stylesheet' type='text/css' href='css/partNavigation-vvbvb.css'>
+    <link rel='Stylesheet' type='text/css' href='css/partNavigation-hhbvb.css'>
+    <!-- end CSS -->
+</head>
+<body>
+
+    <div id='tableOfContents'>
+        <div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
+        <div class="menu"><span class="mobileMenuButton mobileMenuOpen">Menu</span><a href='index.html'>&lt; Back to overview</a></div>
+        <div id="mobileMenuContainer">
+            <span class="mobileMenuButton mobileMenuClose">Sluiten</span><span class="back"><a href='index.html'>&lt; Back to overview</a></span>
+            <ul>
+                <li class="title">partNavigation</li>  
+                <li><a href='#partNavigation-hAnchor'>partNavigation-h</a></li>
+                <li><a href='#partNavigation-vAnchor'>partNavigation-v</a></li>
+                <li><a href='#partNavigation-hvbvrAnchor'>partNavigation-hvbvr</a></li>
+                <li><a href='#partNavigation-vvbAnchor'>partNavigation-vvb</a></li>
+                <li><a href='#partNavigation-vvbvbAnchor'>partNavigation-vvbvb</a></li>
+                <li><a href='#partNavigation-hhbvbAnchor'>partNavigation-hhbvb</a></li>            
+            </ul>
+        </div>
+    </div>
+
+    <div class='basicContainer'>
+
+        <h1>partNavigation</h1>
+        <h3>Note</h3>
+        <div class="partContentText">
+            <ul>
+                <li>Optionally you can add an ID or Class to the 'li' element. For example: custom icons on background</li>
+            </ul>
+        </div>
+
+        <h2 id='partNavigation-hAnchor'>partNavigation-h (horizontal)</h2>
+
+        <ul class='partNavigation-h'>
+            <li><a href=''>menubutton</a></li>
+            <li class='selected' ><a href='#'>menubutton</a></li>
+            <li><a href='#'>menubutton</a></li>
+            <li><a href='#'>menubutton</a></li>
+            <li><a href=''>menubutton</a></li>	
+        </ul>
+
+        <h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<ul class='partNavigation-h'>
+    <li><a href=''>menubutton</a></li>
+    <li class='selected' ><a href='#'>menubutton</a></li>
+    <li><a href='#'>menubutton</a></li>
+    <li><a href='#'>menubutton</a></li>
+    <li><a href=''>menubutton</a></li>	
+</ul>
+</xmp>
+
+	<h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<link rel='Stylesheet' type='text/css' href='css/partNavigation-h.css'>
+</xmp>
+
+    <h2 id='partNavigation-vAnchor'>partNavigation-v (vertical)</h2>
+        
+    <ul class='partNavigation-v'>
+	    <li><a href=''>menubutton</a></li>
+	    <li class='selected' ><a href='#'>menubutton</a></li>
+        <li><a href='#'>menubutton</a></li>
+        <li><a href='#'>menubutton</a></li>
+        <li><a href=''>menubutton</a></li>	
+    </ul>
+
+    <h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<ul class='partNavigation-v'>
+    <li><a href=''>menubutton</a></li>
+    <li class='selected' ><a href='#'>menubutton</a></li>
+    <li><a href='#'>menubutton</a></li>
+    <li><a href='#'>menubutton</a></li>
+    <li><a href=''>menubutton</a></li>	
+</ul>
+</xmp>
+
+	<h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<link rel='Stylesheet' type='text/css' href='css/partNavigation-v.css'>
+</xmp>
+
+    <h2 id='partNavigation-hvbvrAnchor'>partNavigation-hvbvr (horizontal / vertical bottom / vertical right)</h2>
+    
+    <ul class='partNavigation-hvbvr'>
+        <li class='selected'>
+            <a href='#'>menu button</a>
+        </li>
+        <li>
+            <a href='#'>menu button</a>
+            <ul>
+                <li>
+                    <a href='#'>sub menu button</a>
+                </li>
+                <li class='selected'>
+                    <a href='#'>sub menu button</a>
+                    <ul>
+                        <li class='selected'><a href='#'>sub sub menu button</a></li>
+                        <li><a href='#'>sub sub menu button</a></li>
+                        <li><a href='#'>sub sub menu button</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='#'>sub menu item</a>
+                    <ul>
+                        <li><a href='#'>sub sub menu item</a></li>
+                        <li><a href='#'>sub sub menu item</a></li>
+                        <li><a href='#'>sub sub menu item</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        
+        <li>
+            <a href='#'>menu button</a>
+        </li>
+        
+        <li>
+            <a href='#'>menu button</a>
+        </li>   
+    </ul>
+
+   	<h3>Javascript/jQuery</h3>
+
+<xmp class='prettyprint'>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='http://cdn.tvtweb.nl/js/jquerymenu-1.7.4.js'></script>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        $('ul.partNavigation-hvbvr').superfish({
+            autoArrows:true
+        });
+    });
+</script> 
+Superfish options: http://users.tpg.com.au/j_birch/plugins/superfish/options/
+</xmp>
+
+    <h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<ul class='partNavigation-hvbvr'>
+    <li class='selected'>
+        <a href='#'>menu button</a>
+    </li>
+    <li>
+        <a href='#'>menu button</a>
+        <ul>
+            <li>
+                <a href='#'>sub menu button</a>
+            </li>
+            <li class='selected'>
+                <a href='#'>sub menu button</a>
+                <ul>
+                    <li class='selected'><a href='#'>sub sub menu button</a></li>
+                    <li><a href='#'>sub sub menu button</a></li>
+                    <li><a href='#'>sub sub menu button</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href='#'>sub menu item</a>
+                <ul>
+                    <li><a href='#'>sub sub menu item</a></li>
+                    <li><a href='#'>sub sub menu item</a></li>
+                    <li><a href='#'>sub sub menu item</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href='#'>menu button</a>
+    </li>
+    
+    <li>
+        <a href='#'>menu button</a>
+    </li>   
+</ul>
+</xmp>
+
+	<h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<link rel='Stylesheet' type='text/css' href='css/partNavigation-hvbvr.css'>
+</xmp>
+
+    <h2 id='partNavigation-vvbAnchor'>partNavigation-vvb (vertical / vertical bottom)</h2>
+
+    <ul class='partNavigation-vvb'>
+	    <li><a href=''>menu button</a></li>
+	    <li class='selected' ><a href='#'>menu button</a>
+	    	<ul>
+	    		<li><a href='#'>sub menu button</a></li>
+	    		<li class='selected'><a href='#'>sub menu button</a></li>
+	    		<li><a href='#'>sub menu button</a></li>
+	    		<li><a href='#'>sub menu button</a></li>
+	    	</ul>
+	    </li>
+        <li><a href='#'>menu button</a></li>
+        <li><a href='#'>menu button</a></li>
+        <li><a href='#'>menu button</a></li>	
+    </ul>
+
+    <h3>Javascript/jQuery</h3>
+<xmp class='prettyprint'>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='http://cdn.tvtweb.nl/js/jquerymenu-1.7.4.js'></script>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        $('ul.partNavigation-vvb').superfish({
+            autoArrows:true
+        });
+    });
+</script> 
+
+Superfish options: http://users.tpg.com.au/j_birch/plugins/superfish/options/
+</xmp>
+
+    <h3>HTML</h3>
+<xmp class='prettyprint'>
+<ul class='partNavigation-vvb'>
+    <li><a href=''>menu button</a></li>
+    <li class='selected' ><a href='#'>menu button</a>
+    	<ul>
+    		<li><a href='#'>sub menu button</a></li>
+    		<li class='selected'><a href='#'>sub menu button</a></li>
+    		<li><a href='#'>sub menu button</a></li>
+    		<li><a href='#'>sub menu button</a></li>
+    	</ul>
+    </li>
+    <li><a href='#'>menu button</a></li>
+    <li><a href='#'>menu button</a></li>
+    <li><a href='#'>menu button</a></li>	
+</ul>
+</xmp>
+
+
+    <h3>CSS</h3>
+<xmp class='prettyprint'>
+<link rel='Stylesheet' type='text/css' href='css/partNavigation-vvb.css'>
+</xmp>
+
+    <h2 id='partNavigation-vvbvbAnchor'>partNavigation-vvbvb (vertical / vertical bottom / vertical bottom)</h2>
+
+    <ul class='partNavigation-vvbvb'>
+	    <li><a href=''>menubutton</a></li>
+	    <li class='selected' ><a href='#'>menubutton</a>
+	    	<ul>
+	    		<li><a href='#'>menubutton</a></li>
+	    		<li class='selected'><a href='#'>menubutton</a>
+	    			<ul>
+	    				<li><a href='#'>menubutton</a></li>
+	    				<li class='selected'><a href='#'>menubutton</a></li>
+	    				<li><a href='#'>menubutton</a></li>
+	    				<li><a href='#'>menubutton</a></li>
+	    			</ul>
+	    		</li>
+	    		<li><a href='#'>menubutton</a></li>
+	    		<li><a href='#'>menubutton</a></li>
+	    	</ul>
+	    </li>
+        <li><a href='#'>level 0</a></li>
+        <li><a href='#'>level 0</a></li>
+        <li><a href=''>level 0 last</a></li>	
+    </ul>
+
+	<h3>Javascript/jQuery</h3>
+<xmp class='prettyprint'>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='http://cdn.tvtweb.nl/js/jquerymenu-1.7.4.js'></script>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        $('ul.partNavigation-vvbvb').superfish({
+            autoArrows:true
+        });
+    });
+</script> 
+
+Superfish options: http://users.tpg.com.au/j_birch/plugins/superfish/options/
+</xmp>
+
+	<h3>HTML</h3>
+<xmp class='prettyprint'>
+<ul class='partNavigation-vvbvb'>
+    <li><a href=''>menubutton</a></li>
+    <li class='selected' ><a href='#'>menubutton</a>
+    	<ul>
+    		<li><a href='#'>menubutton</a></li>
+    		<li class='selected'><a href='#'>menubutton</a>
+    			<ul>
+    				<li><a href='#'>menubutton</a></li>
+    				<li class='selected'><a href='#'>menubutton</a></li>
+    				<li><a href='#'>menubutton</a></li>
+    				<li><a href='#'>menubutton</a></li>
+    			</ul>
+    		</li>
+    		<li><a href='#'>menubutton</a></li>
+    		<li><a href='#'>menubutton</a></li>
+    	</ul>
+    </li>
+    <li><a href='#'>level 0</a></li>
+    <li><a href='#'>level 0</a></li>
+    <li><a href=''>level 0 last</a></li>	
+</ul>
+</xmp>
+
+	<h3>CSS</h3>
+<xmp class='prettyprint'>
+<link rel='Stylesheet' type='text/css' href='css/partNavigation-vvbvb.css'>
+</xmp>
+
+		<h2 id='partNavigation-hhbvbAnchor'>partNavigation-hhbvb (horizontal / horizontal bottom / vertical bottom)</h2>
+
+		<ul class='partNavigation-hhbvb'>
+			<li>
+				<a href="#">Menu button 1</a>
+			</li>
+
+			<li class="selected">
+				<a href='#'>Menu button 2</a>
+				<div class='sf-mega'>
+					<div class='sf-mega-section'>
+						<h2><a href='#'>Menu button heading 2.1</a></h2>
+						<ul>
+							<li class='selected'><a href='#'>Menu button 2.1.1</a></li>
+							<li><a href='#'>Menu button 2.1.2</a></li>
+							<li><a href='#'>Menu button 2.1.3</a></li>
+							<li><a href='#'>Menu button 2.1.4</a></li>
+							<li><a href='#'>Menu button 2.1.5</a></li>
+						</ul>
+					</div>
+					<div class='sf-mega-section'>
+						<h2><a href='#'>Menu button heading 2.2</a></h2>
+						<ul>
+							<li><a href='#'>Menu button 2.2.1</a></li>
+							<li><a href='#'>Menu button 2.2.2</a></li>
+							<li><a href='#'>Menu button 2.2.3</a></li>
+							<li><a href='#'>Menu button 2.2.4</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<a href="#">Menu button 3</a>
+			</li>
+
+			 <li>
+				<a href="#">Menu button 4</a>
+			</li>
+		</ul>
+
+		<h3>Javascript/jQuery</h3>
+<xmp class='prettyprint'>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='http://cdn.tvtweb.nl/js/jquerymenu-1.7.4.js'></script>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        $('ul.partNavigation-hhbvb').superfish({
+            autoArrows:true
+        });
+    });
+</script> 
+
+Superfish options: http://users.tpg.com.au/j_birch/plugins/superfish/options/
+</xmp>
+
+		<h3>HTML</h3>
+<xmp class='prettyprint'>
+<ul class='partNavigation-hhbvb'>
+	<li>
+		<a href="#">Menu button 1</a>
+	</li>
+
+	<li>
+		<a href='#'>Menu button 2</a>
+		<div class='sf-mega'>
+			<div class='sf-mega-section'>
+				<h2><a href='#'>Menu button heading 2.1</a></h2>
+				<ul>
+					<li class='selected'><a href='#'>Menu button 2.1.1</a></li>
+					<li><a href='#'>Menu button 2.1.2</a></li>
+					<li><a href='#'>Menu button 2.1.3</a></li>
+					<li><a href='#'>Menu button 2.1.4</a></li>
+					<li><a href='#'>Menu button 2.1.5</a></li>
+				</ul>
+			</div>
+			<div class='sf-mega-section'>
+				<h2><a href='#'>Menu button heading 2.2</a></h2>
+				<ul>
+					<li><a href='#'>Menu button 2.2.1</a></li>
+					<li><a href='#'>Menu button 2.2.2</a></li>
+					<li><a href='#'>Menu button 2.2.3</a></li>
+					<li><a href='#'>Menu button 2.2.4</a></li>
+				</ul>
+			</div>
+		</div>
+	</li>
+
+	<li>
+		<a href="#">Menu button 3</a>
+	</li>
+
+	 <li>
+		<a href="#">Menu button 4</a>
+	</li>
+</ul>
+</xmp>
+
+		<h3>CSS</h3>
+<xmp class='prettyprint'>
+<link rel='Stylesheet' type='text/css' href='css/partNavigation-hhbvb.css'>
+</xmp>
+
+
+    </div>
+
+    <!-- Javascript -->
+    <script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+    <script type='text/javascript' src='http://cdn.tvtweb.nl/js/jquerymenu-1.7.7.js'></script> <!-- http://users.tpg.com.au/j_birch/plugins/superfish/options/ -->
+    <!-- End Javascript -->
+    
+    <!-- Only apply this code when the navigation has subs -->
+    <script type='text/javascript'>
+        jQuery(document).ready(function(){
+            $('ul.partNavigation-vvb').superfish({
+                autoArrows:true
+            });
+             $('ul.partNavigation-vvbvb').superfish({
+                autoArrows:true
+            });
+            $('ul.partNavigation-hvbvr').superfish({
+                autoArrows:true
+            });
+            $('ul.partNavigation-vvbvb').superfish({
+                autoArrows:true
+            });
+            $('ul.partNavigation-hhbvb').superfish({
+                autoArrows:true
+            });
+        });
+    </script> 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+   
+=======
+>>>>>>> master
+=======
+>>>>>>> master
+=======
+>>>>>>> master
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
+    <script type='text/javascript'>
+        $(document).ready(function(){           
+            $( '.mobileMenuButton').click(function() {
+                $('#mobileMenuContainer').toggleClass('mobileMenuContainerActive');
+            });
+        });  
+    </script>
+
+</body>
+</html>

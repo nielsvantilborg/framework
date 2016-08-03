@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html lang='nl' prefix='og: http://ogp.me/ns#'>
+<head>  
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <title>partAccordionMenu - dailycms framework</title>
+        
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- In case the website is not responsive, apply an static width <meta name='viewport' content='width=1024, maximum-scale=1.0'> -->
+
+    <!-- CSS -->
+    <link rel='Stylesheet' type='text/css' href='css/reset.css'>
+    <link rel='Stylesheet' type='text/css' href='css/fonts.css'>
+    <link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
+    <link rel='Stylesheet' type='text/css' href='css/index.css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <link rel='Stylesheet' type='text/css' href='css/partAccordionMenu.css'>
+    <!-- end CSS -->
+</head>
+<body>
+    <div id='tableOfContents'>
+        <div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
+        <div class="menu"><span class="mobileMenuButton mobileMenuOpen">Menu</span><a href='index.html'>&lt; Back to overview</a></div>
+        <div id="mobileMenuContainer">
+            <span class="mobileMenuButton mobileMenuClose">Sluiten</span><span class="back"><a href='index.html'>&lt; Back to overview</a></span>
+            <ul>
+                <li class="title">partAccordionMenu</li>  
+                <li><a href='#parentNaturalAnchor'>Parent is always natural</a></li>
+                <li><a href='#parentNotNaturalAnchor'>Parent is always not natural</a></li>
+                <li><a href='#accordionContentAnchor'>Accordion with content</a></li>          
+            </ul>
+        </div>
+    </div>
+
+    <div class='basicContainer'>
+
+        <h1>partAccordionMenu</h1>
+
+        <div class='partContentText'>
+            <ul>
+                <li><a href='slidebars.html'>Often used in combination with slidebars</a></li>
+            </ul>
+        </div>
+
+        <h2 id='parentNaturalAnchor'>Parent is always natural</h2>
+        <div class='partContentText'>
+            <ul>
+                <li>Parent means it has childs</li>
+                <li>Natural means that page has content. A not natural page does not exist.</li>
+                <li>The class 'active' on a 'li' element is applied when the parent is showing childs</li>
+                <li>The class 'selected' on a 'li' element is applied when a parent with a natural is selected</li>
+                <li>Childs will only show when clicked the dropdown arrow</li>
+                <li>Besides the class 'partAccordionMenu', you can add more classes.</li>
+            </ul>
+        </div>
+
+        <div class='partAccordionMenu partAccordionMenuParentIsNatural'>
+            <ul>
+                <li>
+                    <a href='http://www.dailycms.com'>Menu item 1</a>
+                </li>
+                <li class='selected active'>
+                    <span class="accordionMenuDropdown">
+                        <a href='#'>Menu item 2</a><span class='buttonTrigger'></span>
+                    </span>
+                    <ul>
+                        <li><a href='#'>Menu item 2.1</a></li>
+                        <li><a href='#'>Menu item 2.2</a></li>
+                        <li class="selected">
+                            <span class="accordionMenuDropdown">
+                                <a href='#'>Menu item 2.3</a><span class='buttonTrigger'></span>
+                            </span>
+                            <ul>
+                                <li><a href='#'>Menu item 2.3.1</a></li>
+                                <li class="selected"><a href='#'>Menu item 2.3.2</a></li>
+                                <li><a href='#'>Menu item 2.3.3</a></li>
+                                <li><a href='#'>Menu item 2.3.4</a></li>
+                                <li><a href='#'>Menu item 2.3.5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='#'>Menu item 2.4</a></li>
+                        <li><a href='#'>Menu item 2.5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='http://www.dailycms.com'>Menu item 3 with a not so convenient long name Menu item 3 with a not so convenient long name Menu item 3 with a not so convenient long name</a>
+                </li>
+                <li>
+                    <a href='http://www.dailycms.com'>Menu item 4</a>
+                </li>
+            </ul>
+        </div>
+
+        <h3>HTML</h3>
+<xmp class='prettyprint'>
+<div class='partAccordionMenu partAccordionMenuParentIsNatural'>
+    <ul>
+        <li>
+            <a href='http://www.dailycms.com'>Menu item 1</a>
+        </li>
+        <li class='selected active'>
+            <span class="accordionMenuDropdown">
+                <a href='#'>Menu item 2</a><span class='buttonTrigger'></span>
+            </span>
+            <ul>
+                <li><a href='#'>Menu item 2.1</a></li>
+                <li><a href='#'>Menu item 2.2</a></li>
+                <li class="selected">
+                    <span class="accordionMenuDropdown">
+                        <a href='#'>Menu item 2.3</a><span class='buttonTrigger'></span>
+                    </span>
+                    <ul>
+                        <li><a href='#'>Menu item 2.3.1</a></li>
+                        <li class="selected"><a href='#'>Menu item 2.3.2</a></li>
+                        <li><a href='#'>Menu item 2.3.3</a></li>
+                        <li><a href='#'>Menu item 2.3.4</a></li>
+                        <li><a href='#'>Menu item 2.3.5</a></li>
+                    </ul>
+                </li>
+                <li><a href='#'>Menu item 2.4</a></li>
+                <li><a href='#'>Menu item 2.5</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href='http://www.dailycms.com'>Menu item 3 with a not so convenient long name Menu item 3 with a not so convenient long name Menu item 3 with a not so convenient long name</a>
+        </li>
+        <li>
+            <a href='http://www.dailycms.com'>Menu item 4</a>
+        </li>
+    </ul>
+</div>
+</xmp>
+
+        <h3>CSS</h3>
+<xmp class='prettyprint'>
+<link rel='Stylesheet' type='text/css' href='css/partAccordionMenu.css'>
+</xmp>
+
+        <h3>Javascript/jQuery</h3>
+<xmp class='prettyprint'>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/partAccordionMenu-2.js'></script>
+
+<script type='text/javascript'>
+    $(document).ready(function () {
+        $('.partAccordionMenu').partAccordionMenu();
+    });
+</script>
+</xmp>
+
+        <h2 id='parentNotNaturalAnchor'>Parent is always not natural</h2>
+        <div class='partContentText'>
+            <ul>
+                <li>Parent means it has childs</li>
+                <li>Natural means that page has content. A not natural page does not exist.</li>
+                <li>The class 'active' on a 'li' element is applied when the parent is showing childs</li>
+                <li>The class 'selected' on a 'li' element is applied when a parent with a natural is selected</li>
+                <li>Childs will show when clicked on the parent or the dropdown arrow</li>
+                <li>Besides the class 'partAccordionMenu', you can add more classes.</li>
+            </ul>
+        </div>
+
+        <div class='partAccordionMenu partAccordionMenuParentIsNotNatural'>
+            <ul>
+                <li>
+                    <a href='http://www.dailycms.com'>Menu item 1</a>
+                </li>
+                <li class='selected active'>
+                    <span class="accordionMenuDropdown">
+                        <span class="linkTrigger">Menu item 2</span><span class='buttonTrigger'></span>
+                    </span>
+                    <ul>
+                        <li><a href='#'>Menu item 2.1</a></li>
+                        <li class="selected"><a href='#'>Menu item 2.2</a></li>
+                        <li>
+                        <span class="accordionMenuDropdown">
+                            <span class="linkTrigger">Menu item 2.3</span><span class='buttonTrigger'></span>
+                        </span>
+                            <ul>
+                                <li><a href='#'>Menu item 2.3.1</a></li>
+                                <li><a href='#'>Menu item 2.3.2</a></li>
+                                <li class="selected"><a href='#'>Menu item 2.3.3</a></li>
+                                <li><a href='#'>Menu item 2.3.4</a></li>
+                                <li><a href='#'>Menu item 2.3.5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='#'>Menu item 2.4</a></li>
+                        <li><a href='#'>Menu item 2.5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='http://www.dailycms.com'>Menu item 3 with a not so convenient long name</a>
+                </li>
+                <li>
+                    <a href='http://www.dailycms.com'>Menu item 4</a>
+                </li>
+            </ul>
+        </div>
+
+        <h3>HTML</h3>
+<xmp class='prettyprint'>
+<div class='partAccordionMenu partAccordionMenuParentIsNotNatural'>
+    <ul>
+        <li>
+            <a href='http://www.dailycms.com'>Menu item 1</a>
+        </li>
+        <li class='selected active'>
+            <span class="accordionMenuDropdown">
+                <span class="linkTrigger">Menu item 2</span><span class='buttonTrigger'></span>
+            </span>
+            <ul>
+                <li><a href='#'>Menu item 2.1</a></li>
+                <li class="selected"><a href='#'>Menu item 2.2</a></li>
+                <li>
+                    <span class="accordionMenuDropdown">
+                        <a href='#'>Menu item 2.3</a><span class='buttonTrigger'></span>
+                    </span>
+                    <ul>
+                        <li><a href='#'>Menu item 2.3.1</a></li>
+                        <li><a href='#'>Menu item 2.3.2</a></li>
+                        <li class="selected"><a href='#'>Menu item 2.3.3</a></li>
+                        <li><a href='#'>Menu item 2.3.4</a></li>
+                        <li><a href='#'>Menu item 2.3.5</a></li>
+                    </ul>
+                </li>
+                <li><a href='#'>Menu item 2.4</a></li>
+                <li><a href='#'>Menu item 2.5</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href='http://www.dailycms.com'>Menu item 3 with a not so convenient long name</a>
+        </li>
+        <li>
+            <a href='http://www.dailycms.com'>Menu item 4</a>
+        </li>
+    </ul>
+</div>
+</xmp>
+
+        <h3>CSS</h3>
+<xmp class='prettyprint'>
+<link rel='Stylesheet' type='text/css' href='css/partAccordionMenu.css'>
+</xmp>
+
+        <h3>Javascript/jQuery</h3>
+<xmp class='prettyprint'>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/partAccordionMenu-2.js'></script>
+
+<script type='text/javascript'>
+    $(document).ready(function () {
+        $('.partAccordionMenu').partAccordionMenu();
+    });
+</script>
+</xmp>
+  
+             <h2 id='accordionContentAnchor'>Accordion with content</h2>  
+             <div class='partContentText'>
+                <ul>
+                    <li>Childs show when click on the parent or the arrow.</li>
+                    <li>Class 'accordionMenuDropdown' can be applied with a span, h1, h2 or h3 element</li>
+                    <li>Most commmon to use when you have a navigation with mutiple levels and the parrent doesn't have content in most cases.</li>
+                    <li>The class 'active' on a 'li' element is applied when the parent is showing childs</li>
+                    <li>Besides the class 'partAccordionMenu', you can add more classes.</li>
+                </ul>
+            </div>
+             
+            <div class='partAccordionMenu partAccordionMenuContent'>
+                <ul>
+                    <li class='active'>
+                        <h2 class="accordionMenuDropdown">
+                            <a class='linkTrigger'>Item 1</a><span class='buttonTrigger'></span>
+                        </h2>
+                        <ul>
+                            <li>
+                                <div class='partContentText'>
+                                    <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis. Nulla lacinia lacus nec ligula feugiat eget sagittis metus lobortis. Aenean eget velit leo, et euismod risus. Pellentesque molestie hendrerit velit at gravida. Integer nec mauris urna, vel gravida est.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="accordionMenuDropdown">
+                            <a class='linkTrigger'>Item 2</a><span class='buttonTrigger'></span>
+                        </h2>
+                        <ul>
+                            <li>
+                                <div class='partContentText'>       
+                                    <h3>Heading 2</h3>
+
+                                    <p>Notitie: H2 element is standaard, mogelijk ook met H1, H3 etc... optioneel kan er ook een A element binnen de H elementen worden toegepast. Dat moet de A wel fungeren als link naar andere pagina met logica erachter. Dus bij een nieuwsoverzicht of zoiets dergelijks.</p>
+                                    
+                                    <p>Lorem ipsum dolor sit amet, <a href='https://www.dailycms.com'>https://www.dailycms.com</a> consectetur adipiscing elit. <sub>Maecenas volutpat tempor enim</sub>, in iaculis <sup>velit accumsan sit amet</sup>. Cras congue dui nec quam egestas tincidunt. Nullam laoreet, massa vel imperdiet tristique, lorem purus fermentum lorem, dictum lacinia odio enim vel nisi. Suspendisse porta tristique lacinia. Quisque vitae vestibulum elit. Nulla vitae dui ante, quis tempor eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In laoreet euismod volutpat. Nam facilisis ultricies ligula, ac volutpat mauris rhoncus ut.</p>
+                                    
+                                    <ol>
+                                        <li>li A</li>
+                                        <li>li B</li>
+                                    </ol>
+                              
+                                    <ul>
+                                        <li>li A</li>
+                                        <li>li B</li>
+                                    </ul>
+                            
+                                    <p>Lorem ipsum dolor sit amet, <a href='https://www.dailycms.com'>https://www.dailycms.com</a> consectetur adipiscing elit. Maecenas volutpat tempor enim, in iaculis velit accumsan sit amet. Cras congue dui nec quam egestas tincidunt. Nullam laoreet, massa vel imperdiet tristique, lorem purus fermentum lorem</p>
+                            
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope='col'>Employee</th>
+                                                <th scope='col'>Salary</th>
+                                                <th scope='col'>Bonus</th>
+                                                <th scope='col'>Supervisor</th>
+                                                <th scope='col'>Free days</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Stephen C. Cox</td>
+                                                <td>$300</td>
+                                                <td>$50</td>
+                                                <td>Bob</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Josephin Tan</td>
+                                                <td>$150</td>
+                                                <td>-</td>
+                                                <td>Annie</td>
+                                                <td>1.5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Joyce Ming</td>
+                                                <td>$200</td>
+                                                <td>$35</td>
+                                                <td>Andy</td>
+                                                <td>12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>James A. Pentel</td>
+                                                <td>$175</td>
+                                                <td>$25</td>
+                                                <td>Annie</td>
+                                                <td>9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                            
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas volutpat tempor enim, in iaculis velit accumsan sit amet. Cras congue dui nec quam egestas tincidunt. Nullam laoreet, massa vel imperdiet tristique, lorem purus fermentum lorem, dictum lacinia odio enim vel nisi. Suspendisse porta tristique lacinia. Quisque vitae vestibulum elit. Nulla vitae dui ante, quis tempor eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In laoreet euismod volutpat. Nam facilisis ultricies ligula, ac volutpat mauris rhoncus ut. <a class='readMore' href='#'>Lees meer</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <h2 class="accordionMenuDropdown">
+                                    <a class='linkTrigger'>Item 2.1</a><span class='buttonTrigger'></span>
+                                </h2>
+                                <ul>
+                                    <li>
+                                        <div class='partContentText'>
+                                            <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis. Nulla lacinia lacus nec ligula feugiat eget sagittis metus lobortis. Aenean eget velit leo, et euismod risus. Pellentesque molestie hendrerit velit at gravida. Integer nec mauris urna, vel gravida est.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2 class="accordionMenuDropdown">
+                                    <a class='linkTrigger'>Item 2.2</a><span class='buttonTrigger'></span>
+                                </h2>
+                                <ul>
+                                    <li>
+                                        <div class='partContentText'>
+                                            <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis. Nulla lacinia lacus nec ligula feugiat eget sagittis metus lobortis. Aenean eget velit leo, et euismod risus. Pellentesque molestie hendrerit velit at gravida. Integer nec mauris urna, vel gravida est.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="accordionMenuDropdown">
+                            <a class='linkTrigger'>Item 3</a><span class='buttonTrigger'></span>
+                        </h2>
+                        <ul>
+                            <li>
+                                <div class='partContentText'>
+                                    <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis. Nulla lacinia lacus nec ligula feugiat eget sagittis metus lobortis. Aenean eget velit leo, et euismod risus. Pellentesque molestie hendrerit velit at gravida. Integer nec mauris urna, vel gravida est.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+             </div> 
+
+            <h3>HTML</h3>
+<xmp class='prettyprint'>
+<div class='partAccordionMenu partAccordionMenuContent'>
+    <ul>
+        <li class='active'>
+            <h2 class="accordionMenuDropdown">
+                <a class='linkTrigger'>Item 1</a><span class='buttonTrigger'></span>
+            </h2>
+            <ul>
+                <li>
+                    <div class='partContentText'>
+                        <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis. Nulla lacinia lacus nec ligula feugiat eget sagittis metus lobortis. Aenean eget velit leo, et euismod risus. Pellentesque molestie hendrerit velit at gravida. Integer nec mauris urna, vel gravida est.</p>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h2 class="accordionMenuDropdown">
+                <a class='linkTrigger'>Item 2</a><span class='buttonTrigger'></span>
+            </h2>
+            <ul>
+                <li>
+                    <div class='partContentText'>       
+                        <h3>Heading 2</h3>
+
+                        <p>Notitie: H2 element is standaard, mogelijk ook met H1, H3 etc... optioneel kan er ook een A element binnen de H elementen worden toegepast. Dat moet de A wel fungeren als link naar andere pagina met logica erachter. Dus bij een nieuwsoverzicht of zoiets dergelijks.</p>
+                        
+                        <p>Lorem ipsum dolor sit amet, <a href='https://www.dailycms.com'>https://www.dailycms.com</a> consectetur adipiscing elit. <sub>Maecenas volutpat tempor enim</sub>, in iaculis <sup>velit accumsan sit amet</sup>. Cras congue dui nec quam egestas tincidunt. Nullam laoreet, massa vel imperdiet tristique, lorem purus fermentum lorem, dictum lacinia odio enim vel nisi. Suspendisse porta tristique lacinia. Quisque vitae vestibulum elit. Nulla vitae dui ante, quis tempor eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In laoreet euismod volutpat. Nam facilisis ultricies ligula, ac volutpat mauris rhoncus ut.</p>
+                        
+                        <ol>
+                            <li>li A</li>
+                            <li>li B</li>
+                        </ol>
+                  
+                        <ul>
+                            <li>li A</li>
+                            <li>li B</li>
+                        </ul>
+                
+                        <p>Lorem ipsum dolor sit amet, <a href='https://www.dailycms.com'>https://www.dailycms.com</a> consectetur adipiscing elit. Maecenas volutpat tempor enim, in iaculis velit accumsan sit amet. Cras congue dui nec quam egestas tincidunt. Nullam laoreet, massa vel imperdiet tristique, lorem purus fermentum lorem</p>
+                
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope='col'>Employee</th>
+                                    <th scope='col'>Salary</th>
+                                    <th scope='col'>Bonus</th>
+                                    <th scope='col'>Supervisor</th>
+                                    <th scope='col'>Free days</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Stephen C. Cox</td>
+                                    <td>$300</td>
+                                    <td>$50</td>
+                                    <td>Bob</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Josephin Tan</td>
+                                    <td>$150</td>
+                                    <td>-</td>
+                                    <td>Annie</td>
+                                    <td>1.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Joyce Ming</td>
+                                    <td>$200</td>
+                                    <td>$35</td>
+                                    <td>Andy</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>James A. Pentel</td>
+                                    <td>$175</td>
+                                    <td>$25</td>
+                                    <td>Annie</td>
+                                    <td>9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas volutpat tempor enim, in iaculis velit accumsan sit amet. Cras congue dui nec quam egestas tincidunt. Nullam laoreet, massa vel imperdiet tristique, lorem purus fermentum lorem, dictum lacinia odio enim vel nisi. Suspendisse porta tristique lacinia. Quisque vitae vestibulum elit. Nulla vitae dui ante, quis tempor eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In laoreet euismod volutpat. Nam facilisis ultricies ligula, ac volutpat mauris rhoncus ut. <a class='readMore' href='#'>Lees meer</a></p>
+                    </div>
+                </li>
+                <li>
+                    <h2 class="accordionMenuDropdown">
+                        <a class='linkTrigger'>Item 2.1</a><span class='buttonTrigger'></span>
+                    </h2>
+                    <ul>
+                        <li>
+                            <div class='partContentText'>
+                                <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis. Nulla lacinia lacus nec ligula feugiat eget sagittis metus lobortis. Aenean eget velit leo, et euismod risus. Pellentesque molestie hendrerit velit at gravida. Integer nec mauris urna, vel gravida est.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="accordionMenuDropdown">
+                        <a class='linkTrigger'>Item 2.2</a><span class='buttonTrigger'></span>
+                    </h2>
+                    <ul>
+                        <li>
+                            <div class='partContentText'>
+                                <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis. Nulla lacinia lacus nec ligula feugiat eget sagittis metus lobortis. Aenean eget velit leo, et euismod risus. Pellentesque molestie hendrerit velit at gravida. Integer nec mauris urna, vel gravida est.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h2 class="accordionMenuDropdown">
+                <a class='linkTrigger'>Item 3</a><span class='buttonTrigger'></span>
+            </h2>
+            <ul>
+                <li>
+                    <div class='partContentText'>
+                        <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis. Nulla lacinia lacus nec ligula feugiat eget sagittis metus lobortis. Aenean eget velit leo, et euismod risus. Pellentesque molestie hendrerit velit at gravida. Integer nec mauris urna, vel gravida est.</p>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    </div> 
+</xmp>
+
+            <h3>CSS</h3>
+<xmp class='prettyprint'>
+<link rel='Stylesheet' type='text/css' href='css/partAccordionMenu.css'>
+</xmp>
+
+            <h3>Javascript/jQuery</h3>
+<xmp class='prettyprint'>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/partAccordionMenu-2.js'></script>
+
+<script type='text/javascript'>
+    $(document).ready(function () {
+        $('.partAccordionMenu').partAccordionMenu();
+    });
+</script>
+</xmp>
+    </div>
+
+    <!-- Javascript -->
+    <script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+    <script type='text/javascript' src='http://cdn.dailycms.com/js/partAccordionMenu-2.js'></script>
+    
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            $('.partAccordionMenu.partAccordionMenuParentIsNatural').partAccordionMenu();
+            $('.partAccordionMenu.partAccordionMenuParentIsNotNatural').partAccordionMenu();
+            $('.partAccordionMenu.partAccordionMenuContent').partAccordionMenu();
+        });
+    </script>
+
+   
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
+    <script type='text/javascript'>
+        $(document).ready(function(){           
+            $( '.mobileMenuButton').click(function() {
+                $('#mobileMenuContainer').toggleClass('mobileMenuContainerActive');
+            });
+        });  
+    </script>
+    <!-- end Javascript -->
+    
+</body>
+</html>

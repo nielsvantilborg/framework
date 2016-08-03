@@ -1,0 +1,32 @@
+/* Partnavigation hvbvr styling*/
+/* Level 0 */
+.partNavigation-hvbvr 							{margin:0; padding:0; height: 46px;}
+.partNavigation-hvbvr li 						{list-style-type:none; float: left; margin:0; padding:0; position: relative; background: silver; }
+.partNavigation-hvbvr li a 						{padding: 15px 20px; display: block; text-decoration: none; color: #000; }
+
+/* Level 1 */
+.partNavigation-hvbvr ul 						{display: none; position: absolute; left:0; top: 100%; min-width: 200px; z-index: 99; padding:0;}
+.partNavigation-hvbvr ul li 					{float: none; background: #AABDE6;}
+.partNavigation-hvbvr ul li a 					{padding: 10px 20px;}
+
+/* Level 2 */
+.partNavigation-hvbvr ul ul 					{display: none; top:0; left: 100%;}
+.partNavigation-hvbvr ul ul li 					{background: #d1dcf3;}
+.partNavigation-hvbvr ul ul li a 				{}
+
+/* Selected & Hover effects */
+/* Same hover effect at all levels */
+.partNavigation-hvbvr li a:hover, .partNavigation-hvbvr li.selected a:hover {background: red; color: #fff;}
+
+.partNavigation-hvbvr li.selected a 			{background: blue; color: #fff;}
+.partNavigation-hvbvr li.selected ul a 			{background: inherit; color: inherit;}
+.partNavigation-hvbvr ul li.selected a 			{background: blue; color: #fff;}
+.partNavigation-hvbvr ul li.selected ul a 		{background: inherit; color: inherit;}
+.partNavigation-hvbvr ul ul li.selected a 		{background: blue; color: #fff;}
+
+/* Arrows */
+.partNavigation-hvbvr.sf-arrows .sf-with-ul 	{padding-right: 28px; }
+.partNavigation-hvbvr.sf-arrows .sf-with-ul:after {content: ''; position: absolute; top: 50%; right: 10px; margin-top: -2px; height: 0; width: 0; border: 5px solid transparent; border-top-color: rgba(255,255,255,.5); }
+.partNavigation-hvbvr.sf-arrows ul .sf-with-ul:after {margin-top: -5px; margin-right: -2px; border-color: transparent; border-left-color: rgba(255,255,255,.5);}
+.partNavigation-hvbvr.sf-arrows .sf-with-ul:hover:after { border-top-color: white; }
+.partNavigation-hvbvr.sf-arrows ul .sf-with-ul:hover:after { border-top-color: transparent; border-left-color: white; }

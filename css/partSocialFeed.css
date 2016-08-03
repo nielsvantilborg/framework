@@ -1,0 +1,83 @@
+﻿/* ---- .grid-item ---- */
+
+.partSocialFeed  {
+  overflow:hidden;
+  font-size: 88%; /* 14px */}
+
+.partSocialFeed a                                                       {transition:0.3s;}
+.partSocialFeed a:link, .partSocialFeed a:visited, .partSocialFeed a:active     {color: #0088cc; text-decoration: underline;}
+.partSocialFeed a:hover                                                 {color: #005580; text-decoration: underline;}
+
+  .socialFeedItem {
+    float: left;
+    margin:1.25%; /* use margin left and right to create space */
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 30.86%;
+  }
+
+  .socialFeedItem svg        {width: 20px; height: 48px;}
+  .socialFeedItemYoutube     {}
+  .socialFeedItemVimeo       {}
+  .socialFeedItemFacebook    {}
+  .socialFeedItemTwitter     {}
+  .socialFeedItemInstagram   {}
+  .socialFeedItemPinterest   {}
+  .socialFeedItemGoogleplus  {}
+  .socialFeedItemRss         {}
+
+    .socialFeedItemContent  {
+      position: relative; 
+      margin:15px; 
+      padding-left: 63px; 
+      overflow: hidden;
+      min-height: 48px;
+    }
+    
+    .socialFeedItemContent.socialFeedItemContentNoAvatar {padding-left: 0px;}
+
+  .socialFeedItem:after       {content: ''; display: block; clear: both;}
+
+  .socialFeedItemAvatar           {position: absolute; left: 0; top:0;}
+  .socialFeedItemAvatar img       {display: block; border-radius: 50%; width: 48px;}
+
+  .socialFeedItemPlatform         {margin-right: 3px;}
+  
+  .socialFeedItemSource           {font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: calc(100% - 110px);}
+  a.socialFeedItemSource:link, a.socialFeedItemSource:visited, a.socialFeedItemSource:active  {text-decoration: none; color: #000;}
+  
+
+  .socialFeedItemPlatform, .socialFeedItemSource, .socialFeedItemDateTime {display: inline-block; vertical-align: middle; height: 48px; line-height: 48px; margin-bottom: 10px;}
+  .socialFeedItemDateTime         {float: right; color: #999; font-size: 80%; margin-top: 1px; margin-bottom: 0px;}
+  
+  .socialFeedItemHeading                                {font-weight: bold; display: block;}
+  .partSocialFeed .partContentText                  {word-wrap: break-word;}
+  .partSocialFeed .partContentText p                {padding:0px; margin:0px 0px 15px 0px;}
+  .partSocialFeed .partContentText p:last-child     {margin-bottom: 0px;}
+  .partSocialFeed .partContentText p .readMore      {word-wrap: break-word;}
+
+  .socialFeedItemImage            {display: block;}
+  .socialFeedItemImage img        {width: 100%; display: block;}
+
+@media (max-width: 1023px){
+  .socialFeedItem {
+    margin:1.25%; /* use margin left and right to create space */
+    width: 47.54%;
+  }
+  .socialFeedItem:nth-child(n+5) {display: none;} /* select all but the first 4 */
+}
+
+@media (max-width: 667px){
+  .socialFeedItem {
+    margin:0 0 20px 0;
+    width: 100%;
+  }
+  .socialFeedItem:nth-child(n+3) {display: none;} /* select all but the first 2 */
+}
+
+@media (max-width: 479px){
+  .socialFeedItemDateTime {display: none;}
+  .socialFeedItemSource  {width: calc(100% - 30px);}
+}
+
+

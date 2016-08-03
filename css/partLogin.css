@@ -1,0 +1,71 @@
+/* please start first with setting the width/marings of labels and inputs. When modifying use the replace function so you're sure you change the value everywhere. */
+
+.partContentForm	{}
+
+	.form.FormLogin														{padding: 0px; margin: 0px; max-width: 400px;}
+		.form.FormLogin fieldset													{padding: 0px; margin: 0px; border: none;} /* replacement for div */
+			
+			.form.FormLogin p															{padding: 0px; margin: 0px 0px 20px 0px;}
+			.form.FormLogin label, .form.FormLogin input, .form.FormLogin .spanLegend	{font-family: arial; font-size: 100%; color: #000;}
+			.form.FormLogin label														{height: 40px; line-height: 40px; display: block; width: auto; float: none;} 
+			.form.FormLogin input														{height: 40px;}
+			.form.FormLogin .spanLegend													{color: #000; font-weight: bold; font-size: 120%; margin-bottom: 10px; line-height: 110%; height: auto;}
+			.form.FormLogin .spanRelativeContainer										{position: relative; overflow: hidden;}
+			
+			/* show password button */
+			.form.FormLogin .spanShowPassword											{position: absolute; right: 0; background-color: #999; margin:5px; padding: 7px 7px 8px 7px; font-size: 80%; color: #fff; cursor: pointer;}
+			.form.FormLogin .spanShowPassword.spanShowPasswordActive 					{background-color: black;}
+			/* end show password button */
+		
+			.form.FormLogin input														{-webkit-appearance: none; -webkit-border-radius:0; border-radius:0; outline: none; padding-left: 57px; border: 1px solid #ccc; padding-left: 40px; padding-right: 6px; outline: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+			.form.FormLogin input, .form.FormLogin .inputLabel, .form.FormLogin .spanRelativeContainer, .form.FormLogin .labelError	{width: 100%;}
+			
+			.form.FormLogin span														{display: block;}
+			.form.FormLogin .spanFooter													{clear: both; height: 10px; display: block;}
+			.form.FormLogin .spanFooterFormButton										{height: 40px;}
+						
+			/* input */
+			.form.FormLogin .formButton													{-webkit-appearance: none; height: 40px; line-height: 19px; cursor: pointer; padding: 0px; border: none; background-color: #00b7c7; width: auto; padding: 0px 13px; color: #fff; transition:background-color 0.3s;}
+			.form.FormLogin .formButton:hover											{background-color: blue;}
+			.form.FormLogin .formButton, .form.FormLogin .labelError					{margin-left: 0px;}
+			/* end input */
+			
+			.form.FormLogin .aForgotPassword											{height: 40px; line-height: 40px; margin-left: 10px;}
+			
+			/* radios & checkboxes */
+			.form.FormLogin input[type="checkbox"] 										{display: none;}
+			.form.FormLogin input[type="checkbox"] + label span							{cursor: pointer; float: left;}
+
+			/* Custom styling */
+			.form.FormLogin input[type="checkbox"] + label span  						{width:15px; height:15px; margin:12px 10px 0 1px; border: 3px #fff solid; border-radius: 0px; box-shadow: 0 0 0 1px #ccc; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;} 
+			.form.FormLogin input[type="checkbox"]:checked + label span					{background: #000;} 
+			
+			/* IE8 and below hack */
+			.form.FormLogin input[type="checkbox"] 										{display/*\**/: block\9; border/*\**/: none\9; width: auto;}	
+			.form.FormLogin input[type="checkbox"] + label span							{display/*\**/: none\9;}
+			/* end radio & inputs */
+	
+			/* input placeholder */
+			.form.FormLogin input::-webkit-input-placeholder, .form.FormLogin textarea::-webkit-input-placeholder 	{color: #ccc; opacity: 1;}
+			.form.FormLogin input:-moz-placeholder, .form.FormLogin textarea:-moz-placeholder 						{color: #ccc; opacity: 1;}
+			.form.FormLogin input::-moz-placeholder, .form.FormLogin textarea::-moz-placeholder 					{color: #ccc; opacity: 1;}
+			.form.FormLogin input:-ms-input-placeholder, .form.FormLogin textarea:-ms-input-placeholder 			{color: #ccc; opacity: 1;}
+			/* end input placeholder */
+			
+			/* error message */
+			.form.FormLogin label.error, .form.FormLogin .labelError					{color: #ec0000;}
+			.form.FormLogin input.error, .form.FormLogin textarea.error, .form.FormLogin input[type="file"] + label.error  	{border: 1px solid #ec0000; background-color: #fae9e9;}
+			.form.FormLogin .labelError													{float: none; height: auto; display: block; margin-bottom: 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 10px; color: #ec0000; border: 1px solid #ec0000; background-color: #fae9e9; line-height: 110%;}
+			/* end error message */
+			
+			/* input field icons */
+			.form.FormLogin .svgIcon													{position: absolute; height: 40px; width: 40px; padding: 12px; box-sizing:border-box; left: 0;}
+			/* end input field icons */
+			
+			.form.FormLogin .aBackToLogin												{}
+
+@media (max-width: 400px){
+	.form.FormLogin .formButton 														{width: 100%; margin-bottom: 20px;}
+	.form.FormLogin .aForgotPassword													{margin-left: 0px; clear: both; height: auto; line-height: 100%;}
+	.form.FormLogin .spanFooterFormButton												{height: 10px;}
+}

@@ -1,0 +1,121 @@
+
+/* Container Width - Use the predefined size in the table "Description" */
+#snippetCarousel1 .jcarousel-clip-horizontal,
+#snippetCarousel1 .jcarousel-container-horizontal,
+.abstract-container-width{width:860px;} /* zie tabel voor standaard maten*/
+
+/* Div Size - Use the predefined size in the table "Description" */
+#snippetCarousel1 .jcarousel-item,
+#snippetCarousel1 .jcarousel-clip-horizontal,
+.jcarousel-list li,.jcarousel-item,
+.abstract-item-height{height:256px;} /* zie tabel voor standaard maten*/
+
+/* Div Size - Use the predefined size in the table "Description" */
+#snippetCarousel1 .jcarousel-item,
+.jcarousel-list li,.jcarousel-item,
+.abstract-item-width{width:860px;} /* zie tabel voor standaard maten*/
+
+/* Next/Prev button - Use the predefined size in the table "Description" */
+#snippetCarousel1 .jcarousel-next-horizontal,
+#snippetCarousel1 .jcarousel-prev-horizontal,
+.abstract-item-top {top:105px;} /* zie tabel voor standaard maten*/
+
+/* Description /*
+___________________________________________________________________________________
+|	  Aantal	|	 Container Width	|		Div Size		| Next/Prev button|
+=================================================================================== 
+|		2		|	  110px width		|	 div 50px x 50px	|		30px	  |
+|		3		|	  170px width		|	 div 50px x 50px	| 		30px	  |
+|		4		|	  230px width		|    div 50px x 50px	| 		30px	  |
+|		5		|	  290px width		|    div 50px x 50px	| 		30px	  |
+|		6		|	  350px width		|    div 50px x 50px	| 		30px	  |
+|		7		|	  410px width		|    div 50px x 50px	| 		30px	  |
+|		8		|	  470px width		|    div 50px x 50px	| 		30px	  |
+|		9		|	  530px width		|    div 50px x 50px	| 		30px	  |
+|		10		|     590px width		|    div 50px x 50px	| 		30px	  |
+===================================================================================
+___________________________________________________________________________________
+|	  Aantal	|		  Width			|		Div Size	   	| Next/Prev button|
+===================================================================================
+|		2		|		170px width		|    div 75px x 75px	| 		43px	  |
+|		3		|		245px width		|    div 75px x 75px	| 		43px	  |
+|		4		|		330px width		|    div 75px x 75px	| 		43px	  |
+|		5		|		415px width		|    div 75px x 75px	| 		43px	  |
+|		6		|		500px width		|    div 75px x 75px	| 		43px	  |
+|		7		|		585px width		|    div 75px x 75px	| 		43px	  |
+|		8		|		670px width		|    div 75px x 75px	| 		43px	  |
+|		9		|		755px width		|    div 75px x 75px	| 		43px	  |
+|		10		|		840px width		|    div 75px x 75px	|		43px	  |
+ 
+___________________________________________________________________________________
+|	  Aantal	|		  Width			|		Div Size	   	| Next/Prev button|
+=================================================================================== 
+|		2		|		210px width		|	div 100px x 100px	| 		55px	  |
+|		3		|		320px width		| 	div 100px x 100px	| 		55px	  |
+|		4		|		430px width		| 	div 100px x 100px	| 		55px	  |
+|		5		|		540px width		| 	div 100px x 100px	| 		55px	  |
+|		6		|		650px width		|	div 100px x 100px	| 		55px	  |
+|		7		|		760px width		|	div 100px x 100px	| 		55px	  |
+|		8		|		870px width		|	div 100px x 100px	| 		55px	  |
+|		9		|		980px width		|	div 100px x 100px	| 		55px	  |
+|		10		|		1090px width	|   div 100px x 100px	| 		55px	  |
+
+___________________________________________________________________________________
+|	  Aantal	|		  Width			|		Div Size	   	| Next/Prev button|
+=================================================================================== 
+|		2		|		310px width		|   div 150px x 150px	| 		80px	  |
+|		3		|		460px width		|   div 150px x 150px	| 		80px	  |
+|		4		|		620px width		|   div 150px x 150px	| 		80px	  |
+|		5		|		780px width		|   div 150px x 150px	| 		80px	  |
+|		6		|		940px width		|   div 150px x 150px	| 		80px	  |
+|		7		|		1100px width	|   div 150px x 150px	| 		80px	  |
+
+___________________________________________________________________________________
+|	  Aantal	|		  Width			|		Div Size	   	| Next/Prev button|
+=================================================================================== 
+|		1		|		400px width		|   div 400px x 400px	| 		205px	  |
+|		1		|		500px width		|   div 500px x 500px	| 		255px	  |
+|		1		|		600px width		|   div 600px x 600px	| 		305px	  |
+|		1		|		700px width		|   div 700px x 700px	| 		355px	  |
+|		1		|		800px width		|   div 800px x 800px	| 		405px	  |
+|		1		|		900px width		|   div 900px x 900px	| 		455px	  |
+
+
+Als er andere marges zijn voor deze div's, en u wilt de top berekenen dan is dit de formule:
+" Hoogte div + 10 = .. "       
+" .. x 0,5 = top afstand "
+
+*/
+
+/* Container */
+#snippetCarousel1 .jcarousel-container							{background-color:silver;}
+#snippetCarousel1 .jcarousel-container-horizontal				{padding: 9px 40px 0px 40px;}
+#snippetCarousel1 .jcarousel-item-horizontal					{}
+#snippetCarousel1 .jcarousel-item-placeholder					{background:#fff; color: #000;}
+#snippetCarousel1 li a img  									{border:solid 0px black;}
+
+/* Slide Button vorige */											
+.jcarousel-prev-horizontal						{position:absolute; left:0px; width:30px; height:30px; cursor:pointer; background:red;}
+.jcarousel-prev-horizontal:hover				{background-position: -30px 0;}
+.jcarousel-prev-horizontal:active				{background-position: -60px 0;}
+.jcarousel-prev-disabled-horizontal,
+.jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-prev-disabled-horizontal:active		{cursor: default; background-position: -90px 0;}
+																					
+/* Slide Button volgende */											
+.jcarousel-next-horizontal						{position:absolute; right:0px; width:30px; height:30px; cursor:pointer; background:red;}
+.jcarousel-next-horizontal:hover				{background-position: -30px 0;}
+.jcarousel-next-horizontal:active				{background-position: -60px 0;}
+.jcarousel-next-disabled-horizontal,
+.jcarousel-next-disabled-horizontal:hover,
+.jcarousel-next-disabled-horizontal:active		{cursor: default; background-position: -90px 0;}
+
+/* jquery code */
+.jcarousel-container												{position: relative;}
+.jcarousel-clip														{z-index:2; padding:0; margin:0; overflow:hidden; position:relative;}
+.jcarousel-list														{z-index: 1; overflow:hidden; position:relative; top:0; left:0; margin:0; padding:0;}
+.jcarousel-list li,.jcarousel-item									{float:left; list-style:none;}
+.jcarousel-next														{z-index:3; display:none;}
+.jcarousel-prev														{z-index:3; display:none;}
+
+

@@ -1,0 +1,20 @@
+﻿/* partSearchResult */
+
+#searchResult                                                  		{}
+#searchResult h2													{}
+#searchResult ul                                               		{list-style:none; padding:0px; margin:0px;}
+#searchResult ul li                                            		{padding:0px; margin:0px 0px 20px 0px;}
+ 
+#searchResult span.searchTitle                             			{font-size: 200%;}
+#searchResult span.searchLink                              			{}
+#searchResult span.searchTitle, #searchResult span.searchLink		{display: block;}
+#searchResult div.partContentText p									{padding:0px; margin:0px;}                                                
+   
+#searchResult ul li span.searchTitle a:link, #searchResult ul li span.searchTitle a:visited, #searchResult ul li span.searchTitle a:active 	{color: #1a0dab; text-decoration:none;}
+#searchResult ul li span.searchTitle a:hover																										{color: #1a0dab; text-decoration:underline;}    
+
+#searchResult span.searchLink a:link, #searchResult span.searchLink a:visited, #searchResult span.searchLink a:active 		{color: #006621; text-decoration:none;}				   
+#searchResult span.searchLink a:hover																								{color: #006621; text-decoration:none;}
+/* end partSearchResult */
+
+#searchResultFeedback												{display: block; margin-bottom: 20px;}

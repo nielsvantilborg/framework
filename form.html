@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html lang="nl" prefix="og: http://ogp.me/ns#">
+<head>	
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>form - dailycms framework</title>
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- In case the website is not responsive, apply an static width <meta name="viewport" content="width=1024, maximum-scale=1.0"> -->
+
+    <!-- CSS -->
+    <link rel="Stylesheet" type="text/css" href="css/reset.css">
+    <link rel="Stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="Stylesheet" type="text/css" href="css/partContent.css"> 
+    <link rel="Stylesheet" type="text/css" href="css/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+	<!-- Load other css files after index.css, but always before responsive.css -->
+
+		<!-- Insert other css files here please -->
+
+    <!-- End load other css files after index.css, but always before responsive.css -->
+    <link rel="Stylesheet" type="text/css" href="css/form.css">
+    <link rel="Stylesheet" type="text/css" href="css/select2.css">
+    <!-- end CSS -->
+
+</head>
+<body>
+
+	<div id="tableOfContents">
+		<div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
+         <div class="menu"></div><div class="top"><a href='index.html'>&lt; Back to overview</a></div>
+	</div>
+
+	<div class="basicContainer">
+
+		<h1>Form</h1>
+
+		<h3>Notes</h3>
+
+		<div class="partContentText">
+			<p>Do not apply this front-end code to a project. Takes too much time to do right. Just show the programmer which fields he need with what data and type</p>
+		</div>
+
+		<h3>To do</h3>
+	
+		<div class="partContentText">
+			<ul>
+				<li>Select type custom value or choose from dropdown sorting!</li>
+				<li>Mulitple language support for select2</li>
+				<li>Feedback message standaard maken/uitwerken partContentText met H2</li>
+				<li>Input with popup calandar</li>
+				<li>iOS keyboard</li>
+				<li>inlog part</li>
+			</ul>
+		</div>
+
+		<div class="partContentForm"> <!-- can be used for making a content item in CMS -->
+		    <form method="post" action="#" id="%generatedUniqueID%" class="form %generatedUniqueID%"> <!-- examples of generated ID's: formContact, formVacature, formRegistreren, etc -->
+				<fieldset> 
+				    <span class="spanLegend">Personal information</span>  
+				            	
+					<label class="labelName" for="formContactName">Name</label> <!-- Generated ID is applied on the "for" -->
+					<input class="inputName" type="text" id="formContactName" value="First name Surname" name="formContactName"> <!-- Generated ID is applied for the unique "id" -->
+		            <span class="spanFooter spanFooterName"></span>
+		            
+		            <label class="labelLocation error" for="%generatedID%Location">Location</label>
+		            <input class="inputLocation error" type="text" id="%generatedID%Location" value="Input text" name="%generatedID%Location">
+		            <span class="spanFooter spanFooterLocation"></span>
+		            
+		            <label class="labelTelephone" for="%generatedID%Telephone">Telephone</label>
+		            <input class="inputTelephone" type="tel" id="%generatedID%Telephone" name="%generatedID%Telephone"> <!-- type tel -->
+		            <span class="spanFooter spanFooterTelephone "></span>
+		            
+		            <label class="labelUrl error" for="%generatedID%Url">URL</label>
+		            <input class="inputUrl error" type="url" id="%generatedID%Url" name="%generatedID%Url"> <!-- type tel -->
+		            <span class="spanFooter spanFooterLocation"></span>
+					
+					<label class="labelCompany" for="%generatedID%Company">Company *</label>
+					<input class="inputCompany" id="%generatedID%Company" type="text" name="%generatedID%Company">
+	                <span class="spanAdditional spanAdditionalCompany">€</span>
+		            <span class="spanFooter spanFooterCompany"></span>
+
+		            <label class="labelCouponCode" for="%generatedID%CouponCode">Coupon code</label>
+					<input class="inputCouponCode" id="%generatedID%CouponCode" type="text" name="%generatedID%CouponCode">
+	                <span class="spanAdditional spanAdditionalCouponCode">+</span>
+		            <span class="spanFooter spanFooterCouponCode"></span>
+		            
+		            <input class="inputMail" type="email" name="mail" placeholder="E-mailadres"> <!-- type email -->
+		            <span class="spanFooter spanFooterMail"></span>
+		            
+		            <label class="labelMail" for="%generatedID%Mail">Email address</label>
+		            <input class="inputMail" type="email" id="%generatedID%Mail" name="%generatedID%Mail"> <!-- type tel -->
+		            <span class="spanFooter spanFooterMail"></span>
+		            
+					<span class="spanLegend">Example of various code inside a form</span>
+
+					<div class="partContentText">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia incidunt repellat aut praesentium nemo, qui nihil accusamus facilis? Similique debitis magni, repudiandae asperiores aut odit quo quaerat amet quis accusamus.</p>
+					</div> 
+
+
+
+					<label class="labelPreviousName" for="%generatedID%PreviousName">Previous name</label>
+					<input class="inputPreviousName" id="%generatedID%PreviousName" readonly="readonly" type="text" value="Read only input text" name="%generatedID%PreviousName">
+		            <span class="spanFooter spanFooterPreviousName"></span>
+			
+					<label class="labelLeeftijd" for="dag">Age</label>
+					<input class="inputMultiple inputLeeftijdDag" type="number" name="dag" id="dag">
+					<input class="inputMultiple inputLeeftijdMaand" type="number" name="maand">
+					<input class="inputMultiple inputLeeftijdJaar" type="number" name="jaar">
+					<span class="spanAdditional spanAdditionalLeeftijd">dd mm jjjj</span>
+		            <span class="spanFooter spanFooterLeeftijd"></span>
+		            
+		            <label class="labelAddressZipcode" for="dag">Address + Zipcode</label>
+		            <input class="inputMultiple inputAddressZipcodeAddress" type="text" name="%generatedID%AddressZipcodeAddress" id="%generatedID%labelAddressZipcode">
+		            <input class="inputMultiple inputAddressZipcodeZipcode" type="text" name="%generatedIDAddressZipcodeZipcode">
+		            <span class="spanFooter spanFooterAddressZipcode"></span>
+
+		            <span class="spanLegend">Radios below each other / vertical</span> 
+		            
+		            <label class="labelFirst labelFirstSex">What is your sex?</label>
+		            <input class="inputSex inputSexMan" type="radio" value="man" id="%generatedID%SexMan" name="sex">
+		            <label class="labelSex labelSexMan" for="%generatedID%SexMan"><span></span>Man</label> <!-- new span within label, need to graphicly modify the radio and checkboxes -->
+		           	<span class="spanFooter spanFooterSex spanFooterSexMan"></span>
+		           	<input class="inputSex inputSexFemale" type="radio" value="female" id="%generatedID%SexFemale" name="sex">
+		            <label class="labelSex labelSexFemale" for="%generatedID%SexFemale"><span></span>Female</label>
+		            <span class="spanFooter spanFooterSex spanFooterSexFemale"></span>
+		            <input class="inputSex inputSexNoClue" type="radio" value="noclue" id="%generatedID%SexNoClue" name="sex">
+		            <label class="labelSex labelSexNoClue" for="%generatedID%SexNoClue"><span></span>No clue</label>
+		            <span class="spanFooter spanFooterSex spanFooterSexNoClue spanFooterLast"></span>
+
+		            <span class="spanLegend">Checkboxes below each other / vertical</span> 
+		            
+		            <label class="labelFirst labelFirstDrink">What kind of drink do you like?</label>
+		            <input class="inputDrink inputDrinkCola" type="checkbox" value="cola" id="%generatedID%DrinkCola" name="drink">
+		            <label class="labelDrink labelDrinkCola" for="%generatedID%DrinkCola"><span></span>Cola</label> <!-- new span within label, need to graphicly modify the radio and checkboxes -->
+		          	<span class="spanFooter spanFooterDrink spanFooterDrinkCola"></span>
+		            <input class="inputDrink inputDrinkTea" type="checkbox" value="tea" id="%generatedID%DrinkTea" name="drink">
+		            <label class="labelDrink labelDrinkTea" for="%generatedID%DrinkTea"><span></span>Tea</label>
+		            <span class="spanFooter spanFooterDrink spanFooterDrinkTea"></span>
+		            <input class="inputDrink inputDrinkCoffee" type="checkbox" value="coffee" id="%generatedID%DrinkCoffee" name="drink">
+		            <label class="labelDrink labelDrinkCofee" for="%generatedID%DrinkCoffee"><span></span>Coffee</label>
+		            <span class="spanFooter spanFooterDrink spanFooterDrinkCoffee spanFooterLast"></span>
+		             	
+		            <fieldset class="fieldsetContainer">  <!-- you're free to choose a fieldset class name when you need one -->
+		            	<span class="spanLegend">Form beside each other</span>
+		            
+		            	<fieldset class="fieldsetFloat"> <!-- you're free to choose a fieldset class name when you need one -->
+		            	    <label class="labelFirst labelFirstMusic error">What genre music do you like?</label>
+		            	    <input class="inputMusic inputMusicDance" type="radio" value="dance" id="dance" name="music">
+		            	   	<label class="labelMusic labelMusicDance error" for="dance"><span></span>Dance</label> <!-- new span within label, need to graphicly modify the radio and checkboxes -->
+		            	   	<span class="spanFooter spanFooterMusic spanFooterMusicDance"></span>
+		            	    <input class="inputMusic inputMusicRock" type="radio" value="rock" id="rock" name="music">
+		            	  	<label class="labelMusic labelMusicRock error" for="rock"><span></span>Rock</label>
+		            	    <span class="spanFooter spanFooterMusic spanFooterMusicRock"></span>
+		            	    <input class="inputMusic inputMusicPop" type="radio" value="pop" id="pop" name="music">
+		            	    <label class="labelMusic labelMusicPop error" for="pop"><span></span>Pop</label>
+		            	    <span class="spanFooter spanFooterMusic spanFooterMusicPop"></span>
+		            	    <input class="inputMusic inputMusicr&amp;b" type="radio" value="r&amp;b" id="r&amp;b" name="music">
+		            	    <label class="labelMusic labelMusicr&amp;b error" for="r&amp;b"><span></span>R&amp;B</label>
+		            	    <span class="spanFooter spanFooterMusic spanFooterMusicr&amp;b spanFooterLast"></span> <!-- Do not apply specific footer name on the last one -->
+		            	</fieldset>
+		            	           
+			            <fieldset class="fieldsetFloat"> <!-- you're free to choose a fieldset class name when you need one -->
+				            <label class="labelFirst labelFirstPhone">Favorite brand smartphone?</label>
+				            <input class="inputPhone inputPhoneApple" type="checkbox" value="phoneApple" id="phoneApple" name="phone">
+				            <label class="labelPhone labelPhoneApple" for="phoneApple"><span></span>Apple</label> <!-- new span within label, need to graphicly modify the radio and checkboxes -->
+				            <span class="spanFooter spanFooterPhone spanFooterPhoneApple"></span>
+				            <input class="inputPhone inputPhoneSamsung" type="checkbox" value="samsung" id="samsung" name="phone">
+				            <label class="labelPhone labelPhoneSamsung" for="samsung"><span></span>Samsung</label>
+				            <span class="spanFooter spanFooterPhone spanFooterPhoneSamsung"></span>
+				            <input class="inputPhone inputLg" type="checkbox" value="lg" id="lg" name="phone">
+				            <label class="labelPhone labelPhoneLg" for="lg"><span></span>LG</label>
+				            <span class="spanFooter spanFooterPhone spanFooterPhoneLg"></span>
+				            <input class="inputPhone inputNokia" type="checkbox" value="nokia" id="nokia" name="phone">
+				            <label class="labelPhone labelPhoneNokia" for="nokia"><span></span>Nokia</label>
+				            <span class="spanFooter spanFooterPhone spanFooterPhoneNokia spanFooterLast"></span> <!-- Do not apply specific footer name on the last one -->
+			            </fieldset>  
+	                </fieldset>
+	                
+	                <span class="spanLegend">Radios after each other / horizontal</span> 
+
+	                <label class="labelFirst labelFirstFruit">What fruit do you like the most?</label>
+	                <input class="inputFruit inputFruitApple" type="radio" value="apple" id="apple" name="fruit">
+	                <label class="labelFruit labelFruitApple" for="apple"><span></span>Apple</label>
+	                <span class="spanFooter spanFooterFruit spanFooterFruitApple"></span>
+	                <input class="inputFruit inputFruitBanana" type="radio" value="banana" id="banana" name="fruit">
+	                <label class="labelFruit labelFruitBanana" for="banana"><span></span>Banana</label>
+	                <span class="spanFooter spanFooterFruit spanFooterFruitBanana"></span>
+	                <input class="inputFruit inputFruitPineapple" type="radio" value="pineapple" id="pineapple" name="fruit">
+	                <label class="labelFruit labelFruitPineapple" for="pineapple"><span></span>Pineapple</label>
+	                <span class="spanFooter spanFooterFruit spanFooterFruitPineapple spanFooterLast"></span>
+
+					<span class="spanLegend">Checkboxes after each other / horizontal</span>        
+	                <label class="labelFirst labelFirstSport error">What sport do you fancy?</label>
+	                <input class="inputSport inputSportFootball" type="checkbox" id="football" name="sport">
+	                <label class="labelSport labelSportFootball error" for="football"><span></span>Football</label>
+	                <span class="spanFooter spanFooterSport spanFooterSportFootball"></span>
+	                <input class="inputSport inputSportHockey" type="checkbox" id="hockey" name="sport">
+	                <label class="labelSport labelSportHockey error" for="hockey"><span></span>Hockey</label>
+	                <span class="spanFooter spanFooterSport spanFooterSportHockey"></span>
+	                <input class="inputSport inputSportBasketball" type="checkbox" id="basketball" name="sport">
+	                <label class="labelSport labelSportBasketball error" for="basketball"><span></span>Basketball</label>
+	                <span class="spanFooter spanFooterSport spanFooterSportBasketball spanFooterLast"></span>
+
+	                <span class="spanLegend">Single checkbox</span>       
+	               	<label class="labelFirst labelFirstNewsletter">Wanna receive a newsletter?</label>   
+	               	<input class="inpupNewsletter" type="checkbox" id="%generatedUniqueID%Newsletter" name="%generatedUniqueID%Newsletter">    
+	                <label class="labelNewsletter" for="%generatedUniqueID%Newsletter"><span></span>Yes, please send me a wonderful message.</label>
+	                <span class="spanFooter spanFooterNewsletter spanFooterLast"></span>
+
+					<span class="spanLegend">Select dropdown</span>
+
+	    			<label class="labelBeer">How much beer can you drink?</label>
+	    			<select class="selectBeer">
+						<option value="1">1 is more than enough</option>
+						<option value="2">More than 2</option>
+						<option value="3">Depends on how much beer there is</option>
+					</select>
+					<span class="spanFooter spanFooterBeer"></span>
+
+					<span class="spanLegend">Select dropdown with placeholder</span>
+
+	    			<label class="labelBeer2">How much beer can you drink?</label>
+	    			<select class="selectBeer2">
+						<option></option>
+						<option value="1">1 is more than enough</option>
+						<option value="2">More than 2</option>
+						<option value="3">Depends on how much beer there is</option>
+					</select>
+					<span class="spanFooter spanFooterBeer2"></span>
+
+					<span class="spanLegend">Select dropdown with placeholder + search</span>
+
+	    			<label class="labelBeer3">How much beer can you drink?</label>
+	    			<select class="selectBeer3">
+						<option value="1">1 is more than enough</option>
+						<option value="2">More than 2</option>
+						<option value="3">Depends on how much beer there is</option>
+					</select>
+					<span class="spanFooter spanFooterBeer3"></span>
+
+					<span class="spanLegend">Select dropdown with placeholder + search + add if result is null</span>
+
+	    			<label class="labelAddSomething">Add a user</label>
+	    			<select class="selectAddSomething">
+						<option></option>
+						<option value="Niels van Tilborg">Niels van Tilborg</option>
+						<option value="Jonathan van Rijswijk">Jonathan van Rijswijk</option>
+						<option value="Timo van Tilborg">Timo van Tilborg</option>
+						<option value="Robin van Brakel">Robin van Brakel</option>
+					</select>
+					<span class="spanFooter spanFooterAddSomething"></span>
+
+					<span class="spanLegend">Select type custom value or choose from dropdown</span>
+
+					<label class="labelTag">Let's tag your 3 most favorite TV series</label>
+	    			<select class="selectTag" multiple="multiple">
+						<option value="Game of Thrones">Game of Thrones</option>
+						<option value="Orange is the new Black">Orange is the new Black</option>
+						<option value="The blacklist">The Blacklist</option>
+						<option value="Mr. Robot">Mr. Robot</option>
+						<option value="Suits">Suits</option>
+					</select>
+					<span class="spanFooter spanFooterTag"></span>
+	    			
+	    			<label class="labelMessage">Message</label>
+	    			<textarea class="textareaMessage" rows="5" name="message"></textarea>
+	    			<span class="spanFooter spanFooterMessage"></span>
+	    			
+	    			<textarea class="textareaNotition" rows="5" name="notition" placeholder="Type a great notition..."></textarea>
+	    			<span class="spanAdditional spanAdditionalNotition"><strong>500</strong> characters</span> 
+	    			<span class="spanFooter spanFooterNotition"></span>
+	    				    			
+	    			<label class="labelError">Not all the fields are filled in correctly, please correct the red marked fields.</label>
+	    			<input class="formButton" type="submit" value="Submit form">
+	    			<span class="spanFooter"></span> 
+		         </fieldset> 
+			</form>
+		</div>
+	</div>
+
+	<!-- Javascript -->
+	<script type="text/javascript" src="http://cdn.dailycms.com/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src="js/select2.js"></script>
+
+	<script>
+	    $( document ).ready(function() {
+		  	$(".selectBeer").select2({
+		  		minimumResultsForSearch: Infinity, // Disables the search option
+		  		width: 'style'
+		  	});
+		  	$(".selectBeer2").select2({
+		  		placeholder: "Select an answer",
+		  		width: 'style',
+  				allowClear: true,
+  				minimumResultsForSearch: Infinity // Disables the search option
+		  	});
+
+		  	$(".selectBeer3").select2({
+		  		width: 'style',
+		  		maximumInputLength: 3 // only allow terms up to 3 characters long
+		  	});
+
+		  	$(".selectAddSomething").select2({
+		  		placeholder: "Select a user",
+		  		width: 'style',
+		  		templateResult: userImage,
+		  		language: {
+		  		    "noResults": function () {
+		  		        return '<a href="#" class="button">Add new user</a>';
+		  		    }
+		  		},
+		  		escapeMarkup: function (markup) {
+		  		    return markup;
+		  		}
+		  	});
+
+		  	function userImage (state){
+			  var $user = $('<div class="userItem"><img class="userItemImage" src="http://pipsum.com/50x50.jpg"><span class="userItemText">' + state.text + '</span></div>');
+			  return $user;
+			};
+
+		  	$(".selectTag").select2({
+		  		tags: true,
+		  		width: 'style',
+		  		tokenSeparators: [',', ' '],
+		  		maximumSelectionLength: 3
+		  	});
+		});
+
+    </script>
+    <!-- end Javascript -->
+
+</body>
+</html>

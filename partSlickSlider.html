@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang='nl' prefix='og: http://ogp.me/ns#'>
+<head>  
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <title>partSlickSlider</title>
+    
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- In case the website is not responsive, apply an static width <meta name='viewport' content='width=1024, maximum-scale=1.0'> -->
+
+    <!-- CSS -->
+    <link rel='Stylesheet' type='text/css' href='css/reset.css'>
+    <link rel='Stylesheet' type='text/css' href='css/fonts.css'>
+    <link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
+    <link rel='Stylesheet' type='text/css' href='css/index.css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' type='text/css' href='css/partSlickSlider.css'>
+    <!-- end CSS -->
+
+</head>
+<body>
+
+    <div id='tableOfContents'>
+        <div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
+        <div class="menu"><span class="mobileMenuButton mobileMenuOpen">Menu</span><a href='index.html'>&lt; Back to overview</a></div>
+        <div id="mobileMenuContainer">
+            <span class="mobileMenuButton mobileMenuClose">Sluiten</span><span class="back"><a href='index.html'>&lt; Back to overview</a></span>
+            <ul>
+                <li class="title">partSlickSlider</li>
+                <li><a href='#partSlickSliderHeaderAnchor'>partSlickSliderHeader</a></li>
+                <li><a href='#partSlickSliderNavigationAnchor'>partSlickSliderNavigation</a></li>
+                <li><a href='#partSlickSliderCarouselAnchor'>partSlickSliderCarousel</a></li> 
+                <li><a href='#partSlickSliderLogosAnchor'>partSlickSliderLogos</a></li>     
+            </ul>
+        </div>
+    </div>
+
+    <div class='basicContainer'>
+
+        <h1>partSlickSlider</h1>
+
+        <h3>Notes</h3>
+
+        <div class='partContentText'>
+            <ul>
+                <li>You always need the class partSlickSlider</li> 
+                <li>If you use multiple slick slickers, apply an extra class. For example 'partSlickSliderHeader', where you can apply CSS on and diviate on JS code.</li>
+                <li>Within the clean 'div' for every slide you can add HTML code to your desire. The image and div with class 'sliderCaption' are just examples what you can do.</li>
+            </ul>
+        </div>
+
+        <h3>Source</h3>
+        <div class='partContentText'>
+            <p><a href='https://kenwheeler.github.io/slick/' target='_blank'>http://kenwheeler.github.io/slick/</a></p>
+        </div>
+      
+        <h2 id='partSlickSliderHeaderAnchor'>partSlickSliderHeader</h2>
+
+    	<div class='partSlickSlider partSlickSliderHeader'>
+    		<div>
+                <img data-lazy='https://pipsum.com/800x550.jpg?id=1' alt='alt text'>
+                <div class='sliderCaption'>
+                    <span class='sliderHeading'>Prachtige header titel 1</span>
+                    <div class='partContentText'>
+                       <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis.</p>
+                    </div>  
+                </div>
+    		</div>
+    		<div>
+                <img data-lazy='https://pipsum.com/800x550.jpg?id=2' alt='alt text'>
+                <div class='sliderCaption'>
+                    <span class='sliderHeading'>Prachtige header titel 2</span>
+                    <div class='partContentText'>
+                       <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis.</p>
+                    </div>  
+                </div>
+            </div>
+            <div>
+                <img data-lazy='https://pipsum.com/800x550.jpg?id=3' alt='alt text'>
+                <div class='sliderCaption'>
+                    <span class='sliderHeading'>Prachtige header titel 2</span>
+                    <div class='partContentText'>
+                       <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis.</p>
+                    </div>  
+                </div>
+            </div>
+    	</div>
+
+        <h3>Javascript/jQuery</h3>
+
+<xmp class='prettyprint'>
+<script type='text/javascript' src='https://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='https://cdn.dailycms.com/js/jqueryslick-1.5.9.js'></script>
+
+<script type='text/javascript'>     
+  $(document).ready(function(){          
+      $('.partSlickSliderHeader').slick({
+          lazyLoad: 'progressive', // with the 'ondemand' value it is impossible to determine the height
+          fade: true,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 6000,
+          pauseOnHover: false
+      });
+  }); 
+</script>
+</xmp>
+
+        <h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partSlickSlider partSlickSliderHeader'>
+    <div>
+        <img data-lazy='http://pipsum.com/800x400.jpg?id=1' alt='alt text'>
+        <div class='sliderCaption'>
+            <span class='sliderHeading'>Prachtige header titel 1</span>
+            <div class='partContentText'>
+               <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis.</p>
+            </div>  
+        </div>
+    </div>
+    <div>
+        <img data-lazy='http://pipsum.com/800x400.jpg?id=2' alt='alt text'>
+        <div class='sliderCaption'>
+            <span class='sliderHeading'>Prachtige header titel 2</span>
+            <div class='partContentText'>
+               <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis.</p>
+            </div>  
+        </div>
+    </div>
+</div>
+</xmp>
+
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<link rel='stylesheet' type='text/css' href='css/partSlickSlider.css'>
+</xmp>
+
+    
+        <h2 id='partSlickSliderNavigationAnchor'>partSlickSliderSyncNavigation horizontal & vertical</h2>
+
+        <h3>Note</h3>
+
+        <div class='partContentText'>
+            <ul>
+                <li>Sliders are linked/synced with each other</li> 
+            </ul>
+        </div>
+        
+    	<div class='partSlickSlider partSlickSliderSync'>
+    		<div><img data-lazy='http://pipsum.com/800x400.jpg?id=1' alt='alt text'></div>
+    		<div><img data-lazy='http://pipsum.com/800x400.jpg?id=2' alt='alt text'></div>
+    		<div><img data-lazy='http://pipsum.com/800x400.jpg?id=3' alt='alt text'></div>
+    		<div><img data-lazy='http://pipsum.com/800x400.jpg?id=4' alt='alt text'></div>
+    		<div><img data-lazy='http://pipsum.com/800x400.jpg?id=5' alt='alt text'></div>
+    	</div>
+
+        <div class='partSlickSlider partSlickSliderSyncNavigationHorizontal'>
+            <div><img data-lazy='http://pipsum.com/200x100.jpg?id=1' alt='alt text'></div>
+            <div><img data-lazy='http://pipsum.com/200x100.jpg?id=2' alt='alt text'></div>
+            <div><img data-lazy='http://pipsum.com/200x100.jpg?id=3' alt='alt text'></div>
+            <div><img data-lazy='http://pipsum.com/200x100.jpg?id=4' alt='alt text'></div>
+            <div><img data-lazy='http://pipsum.com/200x100.jpg?id=5' alt='alt text'></div>
+        </div>
+
+         <div class='partSlickSlider partSlickSliderSyncNavigationVertical'>
+            <div><img data-lazy='http://pipsum.com/200x100.jpg?id=1' alt='alt text'></div>
+            <div><img data-lazy='http://pipsum.com/200x100.jpg?id=2' alt='alt text'></div>
+            <div><img data-lazy='http://pipsum.com/200x100.jpg?id=3' alt='alt text'></div>
+            <div><img data-lazy='http://pipsum.com/200x100.jpg?id=4' alt='alt text'></div>
+            <div><img data-lazy='http://pipsum.com/200x100.jpg?id=5' alt='alt text'></div>
+        </div>
+
+        <h3>Javascript/jQuery</h3>
+
+<xmp class='prettyprint'>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='http://cdn.dailycms.com/js/jqueryslick-1.5.9.js'></script>
+
+<script type='text/javascript'>     
+$(document).ready(function(){          
+    $('.partSlickSliderSync').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        asNavFor: '.partSlickSliderSyncNavigation'
+    });
+    
+    $('.partSlickSliderSyncNavigationHorizontal').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.partSlickSliderSync',
+        dots: true,
+        arrows: false.
+        centerMode: false,
+        focusOnSelect: true
+    });
+
+    $('.partSlickSliderSyncNavigationVertical').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.partSlickSliderSync',
+        centerMode: false,
+        vertical: true,
+        verticalSwiping: true,
+        focusOnSelect: true
+    });
+}); 
+</script>
+</xmp>
+
+        <h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partSlickSlider partSlickSliderSync'>
+    <div><img data-lazy='http://pipsum.com/800x400.jpg?id=1' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/800x400.jpg?id=2' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/800x400.jpg?id=3' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/800x400.jpg?id=4' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/800x400.jpg?id=5' alt='alt text'></div>
+</div>
+
+<div class='partSlickSlider partSlickSliderSyncNavigationHorizontal'>
+    <div><img data-lazy='http://pipsum.com/200x100.jpg?id=1' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x100.jpg?id=2' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x100.jpg?id=3' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x100.jpg?id=4' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x100.jpg?id=5' alt='alt text'></div>
+</div>
+
+ <div class='partSlickSlider partSlickSliderSyncNavigationVertical'>
+    <div><img data-lazy='http://pipsum.com/200x100.jpg?id=1' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x100.jpg?id=2' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x100.jpg?id=3' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x100.jpg?id=4' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x100.jpg?id=5' alt='alt text'></div>
+</div>
+</xmp>
+
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<link rel='stylesheet' type='text/css' href='css/partSlickSlider.css'>
+</xmp>
+
+
+        <h2 id='partSlickSliderCarouselAnchor'>partSlickSliderCarousel</h2>
+        
+        <div class='partSlickSlider partSlickSliderCarousel'>
+            <div>
+                <img data-lazy='http://pipsum.com/500x200.jpg?id=1' alt='alt text'>
+            </div>
+            <div>
+                <img data-lazy='http://pipsum.com/500x200.jpg?id=2' alt='alt text'>
+            </div>  
+            <div>
+                <img data-lazy='http://pipsum.com/500x200.jpg?id=3' alt='alt text'>
+            </div>  
+            <div>
+                <img data-lazy='http://pipsum.com/500x200.jpg?id=83' alt='alt text'>
+            </div>
+            <div>
+                <img data-lazy='http://pipsum.com/500x200.jpg?id=63' alt='alt text'>
+            </div>    
+        </div>
+
+        <h3>Javascript/jQuery</h3>
+
+<xmp class='prettyprint'>
+<script type='text/javascript' src='https://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='https://cdn.dailycms.com/js/jqueryslick-1.5.9.js'></script>
+
+<script type='text/javascript'>     
+  $(document).ready(function(){          
+      $('.partSlickSliderCarousel').slick({
+          slidesToShow: 2,
+          fade: false,
+          dots: true,
+          centerMode: false,
+          focusOnSelect: true,
+          pauseOnHover: false,
+          responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+          // You can unslick at a given breakpoint  by adding: settings: 'unslick'
+        ]
+      });
+  }); 
+</script>
+</xmp>
+
+        <h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partSlickSlider partSlickSliderNavigation'>
+    <div><img data-lazy='http://pipsum.com/200x140.jpg?id=1' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x140.jpg?id=2' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x140.jpg?id=3' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x140.jpg?id=4' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x140.jpg?id=5' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x140.jpg?id=6' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x140.jpg?id=7' alt='alt text'></div>
+    <div><img data-lazy='http://pipsum.com/200x140.jpg?id=8' alt='alt text'></div>
+</div>
+</xmp>
+
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<link rel='stylesheet' type='text/css' href='css/partSlickSlider.css'>
+</xmp>
+
+        <h2 id='partSlickSliderLogosAnchor'>partSlickSliderLogos</h2>
+        
+        <!-- In this example an image should never be bigger than 180 pixels (used 20 pixels for margin) -->
+        <div class='partSlickSlider partSlickSliderLogos'>
+            <div>
+                <img data-lazy='http://pipsum.com/180x100.jpg?id=1' alt='alt text'>
+            </div>
+            <div>
+                <img data-lazy='http://pipsum.com/180x100.jpg?id=2' alt='alt text'>
+            </div> 
+            <div>
+                <img data-lazy='http://pipsum.com/180x100.jpg?id=8' alt='alt text'>
+            </div>
+            <div>
+                <img data-lazy='http://pipsum.com/120x100.jpg?id=9' alt='alt text'>
+            </div>  
+            <div>
+                <img data-lazy='http://pipsum.com/80x60.jpg?id=3' alt='alt text'>
+            </div>  
+            <div>
+                <img data-lazy='http://pipsum.com/120x100.jpg?id=83' alt='alt text'>
+            </div>
+            <div>
+                <img data-lazy='http://pipsum.com/180x100.jpg?id=63' alt='alt text'>
+            </div>  
+            <div>
+                <img data-lazy='http://pipsum.com/130x120.jpg?id=68' alt='alt text'>
+            </div>     
+        </div>
+
+        <h3>Javascript/jQuery</h3>
+
+    <xmp class='prettyprint'>
+<script type='text/javascript' src='https://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+<script type='text/javascript' src='https://cdn.dailycms.com/js/jqueryslick-1.5.9.js'></script>
+
+<script type='text/javascript'>     
+$(document).ready(function(){          
+  $('.partSlickSliderLogos').slick({
+        slidesToShow: 4,
+        focusOnSelect: true,
+        pauseOnHover: false,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2
+                }
+            }
+        ]
+    });
+}); 
+</script>
+</xmp>
+
+        <h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class='partSlickSlider partSlickSliderLogos'>
+    <div>
+        <img data-lazy='http://pipsum.com/180x100.jpg?id=1' alt='alt text'>
+    </div>
+    <div>
+        <img data-lazy='http://pipsum.com/180x100.jpg?id=2' alt='alt text'>
+    </div> 
+    <div>
+        <img data-lazy='http://pipsum.com/180x100.jpg?id=8' alt='alt text'>
+    </div>
+    <div>
+        <img data-lazy='http://pipsum.com/120x100.jpg?id=9' alt='alt text'>
+    </div>  
+    <div>
+        <img data-lazy='http://pipsum.com/80x60.jpg?id=3' alt='alt text'>
+    </div>  
+    <div>
+        <img data-lazy='http://pipsum.com/120x100.jpg?id=83' alt='alt text'>
+    </div>
+    <div>
+        <img data-lazy='http://pipsum.com/180x100.jpg?id=63' alt='alt text'>
+    </div>  
+    <div>
+        <img data-lazy='http://pipsum.com/130x120.jpg?id=68' alt='alt text'>
+    </div>     
+</div>
+</xmp>
+
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<link rel='stylesheet' type='text/css' href='css/partSlickSlider.css'>
+</xmp>
+
+    </div>
+
+
+    <!-- start javascript -->
+    <script type='text/javascript' src='https://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+    <script type='text/javascript' src='https://cdn.dailycms.com/js/jqueryslick-1.6.0.js'></script>
+  
+    <script type='text/javascript'>     
+      $(document).ready(function(){          
+          $('.partSlickSliderHeader').slick({
+                lazyLoad: 'progressive',
+                fade: true,
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 6000,
+                pauseOnHover: false
+            });
+          
+            $('.partSlickSliderSync').slick({
+                lazyLoad: 'progressive',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                fade: true,
+                asNavFor: '.partSlickSliderSyncNavigation'
+            });
+            
+            $('.partSlickSliderSyncNavigationHorizontal').slick({
+                lazyLoad: 'progressive',
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '.partSlickSliderSync',
+                dots: true,
+                arrows: false,
+                centerMode: false,
+                focusOnSelect: true
+            });
+
+            $('.partSlickSliderSyncNavigationVertical').slick({
+                lazyLoad: 'progressive',
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '.partSlickSliderSync',
+                centerMode: false,
+                vertical: true,
+                verticalSwiping: true,
+                focusOnSelect: true
+            });
+
+            $('.partSlickSliderCarousel').slick({
+                lazyLoad: 'progressive',
+                slidesToShow: 2,
+                fade: false,
+                dots: true,
+                centerMode: false,
+                focusOnSelect: true,
+                pauseOnHover: false,
+                responsive: [
+                    {
+                        breakpoint: 600,
+                        settings: {
+                          slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+            $('.partSlickSliderLogos').slick({
+                lazyLoad: 'progressive',
+                slidesToShow: 4,
+                focusOnSelect: true,
+                pauseOnHover: false,
+                responsive: [
+                    {
+                        breakpoint: 600,
+                        settings: {
+                          slidesToShow: 2
+                        }
+                    }
+                ]
+            });
+          
+          // Default setting we often deviate on
+          // fade: false, --> true
+          // dots: false,--> true
+          // arrows: true, --> false
+          // speed: 500, --> 1000
+          // centerMode: false, --> true
+          // focusOnSelect: false, --> true
+          // autoplay: false, --> true
+          // autoplaySpeed: 3000, --> 6000
+          // pauseOnHover: true, --> false 
+        
+      }); 
+    </script>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+   
+=======
+>>>>>>> master
+=======
+>>>>>>> master
+=======
+>>>>>>> master
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
+    <script type='text/javascript'>
+        $(document).ready(function(){           
+            $( '.mobileMenuButton').click(function() {
+                $('#mobileMenuContainer').toggleClass('mobileMenuContainerActive');
+            });
+        });  
+    </script>
+</body>
+</html>
