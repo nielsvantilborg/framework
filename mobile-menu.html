@@ -12,14 +12,17 @@
     <link rel='Stylesheet' type='text/css' href='css/fonts.css'>
     <link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
     <link rel='Stylesheet' type='text/css' href='css/index.css'>
-	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+
     <style>
     	#mobileMenuContainer 								{position: fixed; overflow-x:hidden; background-color:red; z-index: 1000; top:0; left:0; margin-left: -30%; padding:20px; width: 30%; height: 100%; transition: 0.5s;}
     	#mobileMenuContainer.mobileMenuContainerActive 		{margin-left: 0px; transition: 0.5s; min-width: 320px;}
     	.mobileMenuOpen, .mobileMenuClose 				{cursor: pointer; border:solid 1px #000; padding:10px; display: inline-block;}
     	.mobileMenuOpen 									{}
-    	.mobileMenuClose  									{margin-bottom: 20px;}
-
+    	.mobileMenuClose  									{margin-bottom: 20px;} 
+      #mobileMenuOverlay  { transition: 0.2s; background-color: rgba(0,0,0,0.0); position: fixed; top:0; left: 0; height: 100%; width: 100%; z-index: 999; visibility: hidden; opacity: 0;} 
+      #mobileMenuOverlay.mobileMenuContainerActive	{background-color: rgba(0,0,0,0.8); visibility: visible; opacity: 1;}
+    	
+	
     	@media (max-width: 600px){
 			#mobileMenuContainer.mobileMenuContainerActive 	{width: 100%; margin-left: 0%; background-color: lime;}
 			#mobileMenuContainer 							{margin-left: -100%;}
@@ -28,7 +31,7 @@
     <!-- end CSS -->
 </head>
 <body>
-
+  <div id="mobileMenuOverlay"></div>
 	<div id="mobileMenuContainer">
 		<span class="mobileMenuButton mobileMenuClose">Sluiten</span>
 		<!-- this is just a random menu for the example -->
@@ -53,8 +56,7 @@
 	</div>
 
 	<div id='tableOfContents'>
-        <div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
-        <div class="menu"></div><div class="top"><a href='index.html'>&lt; Back to overview</a></div>
+        <a href='index.html'>&lt; Back to overview<img src='https://cms.dailycms.com/images/style/partner-logo.png' alt='Back to overview'></a>
     </div>
 
 	<div class='basicContainer'>
@@ -63,7 +65,6 @@
 		<h3>Notes</h3>
 		<div class='partContentText'>
 			<ul>
-				<li>Wish: Close menu if you click outside the "mobileMenuContainer"</li>
 				<li>Tip: Prefer to have the menu button as block or with a border. So there is no doubt that it's a button.</li>
 			</ul>
 		</div>
@@ -76,16 +77,17 @@
 <xmp class='prettyprint'>
 <script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
 <script type='text/javascript'>
-	$(document).ready(function(){       	
-		$( '.mobileMenuButton').click(function() {
-			$('#mobileMenuContainer').toggleClass('mobileMenuContainerActive');
-		});
-	});  
+	$(document).ready(function(){     
+        $( '.mobileMenuButton, #mobileMenuOverlay').on('click', function() {
+          $('#mobileMenuContainer, #mobileMenuOverlay').toggleClass('mobileMenuContainerActive');
+        });
+      });
 </script>
 </xmp>
 
 		<h3>HTML</h3>
 <xmp class='prettyprint'>
+<div id="mobileMenuOverlay"></div>
 <div id="mobileMenuContainer">
 	<span class="mobileMenuButton mobileMenuClose">Sluiten</span>
 	<!-- this is just a random menu for the example -->
@@ -119,6 +121,9 @@
 .mobileMenuOpen, .mobileMenuClose 					{cursor: pointer; border:solid 1px #000; padding:10px; display: inline-block;}
 .mobileMenuOpen 									{}
 .mobileMenuClose  									{margin-bottom: 20px;}
+ #mobileMenuOverlay  { transition: 0.2s; background-color: rgba(0,0,0,0.0); position: fixed; top:0; left: 0; height: 100%; width: 100%; z-index: 999; visibility: hidden; opacity: 0;} 
+#mobileMenuOverlay.mobileMenuContainerActive  {background-color: rgba(0,0,0,0.8); visibility: visible; opacity: 1;}
+
 
 @media (max-width: 600px){
 	#mobileMenuContainer.mobileMenuContainerActive 	{width: 100%; margin-left: 0%; background-color: lime;}
@@ -131,11 +136,21 @@
 		<script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
 
 		<script type='text/javascript'>
-			$(document).ready(function(){       	
-	        	$( '.mobileMenuButton').click(function() {
-	        		$('#mobileMenuContainer').toggleClass('mobileMenuContainerActive');
-	        	});
-	        });  
+			$(document).ready(function(){     
+      	$( '.mobileMenuButton, #mobileMenuOverlay').on('click', function() {
+      		$('#mobileMenuContainer, #mobileMenuOverlay').toggleClass('mobileMenuContainerActive');
+      	});
+      });
+
+
+			// http://stackoverflow.com/questions/5358280/jquery-click-everywhere-but-some-element
+
+
+			//$(document).ready(function(){       	
+	        //	$( '.mobileMenuButton').click(function() {
+	        //		$('#mobileMenuContainer').toggleClass('mobileMenuContainerActive');
+	        //	});
+	        //});  
         </script>
 	</body>
 </html>

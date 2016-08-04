@@ -15,10 +15,10 @@ a:hover																{color: #000; text-decoration:none;}
 .linkButton:hover													{color: #fff; text-decoration:none; background-color: red;}
 
 .partClearBoth														{height: 1px; clear: both;}
-.basicContainer														{max-width:840px; min-width: 280px; margin: 40px auto; padding: 100px 20px 0px 20px;height:3000px;}
+.basicContainer														{max-width:840px; min-width: 280px; margin: 40px auto; padding: 80px 20px 0px 20px;height:3000px;}
 .top 																{margin-top:10px;}
 .logo																{float:left;margin-right:20px;}
-
+.center																{text-align: center;}
 #logoLetters														{left:50%;background-image:url('../images/style/dailycms-logo-letters@1x.png');width:176px;height:50px;background-repeat:no-repeat;margin-left:-100px;position:absolute;top:16px}
 #logoStripes														{left:50%;background-image:url('../images/style/dailycms-logo-stripes@1x.png');width:27px;height:28px;background-repeat:no-repeat;margin-left:74px;position:absolute;top:26px}
 @media all and (-webkit-min-device-pixel-ratio:1.5){
@@ -49,37 +49,56 @@ strong 																{font-weight: bold;}
 /* end please delete this code */
 
 /* mobile menu */
-#mobileMenuContainer 												{position: fixed; overflow-x:hidden; background-color:#f5f5f5; z-index: 1000; top:0; left:0; margin-left: -30%; padding:20px; width: 30%; height: 100%; transition: 0.5s;}
+
+#mobileMenuOverlay  												{ transition: 0.2s; background-color: rgba(0,0,0,0.0); position: fixed; top:0; left: 0; height: 100%; width: 100%; z-index: 999; visibility: hidden; opacity: 0;} 
+#mobileMenuOverlay.mobileMenuContainerActive						{background-color: rgba(0,0,0,0.8); visibility: visible; opacity: 1;}
+    	
+#mobileMenuContainer 												{position: fixed; overflow-x:hidden; background-color:#fff; z-index: 1000; top:0; left:0; margin-left: -30%; padding:20px; width: 30%; height: 100%; transition: 0.5s;}
 #mobileMenuContainer.mobileMenuContainerActive 						{margin-left: 0px; transition: 0.5s; min-width: 320px;}
 #mobileMenuContainer li 											{display:block;border-bottom:1px solid #d1eef2;padding-bottom:20px;}
 #mobileMenuContainer li.title 										{border-bottom:0px;} 
 #mobileMenuContainer li a:link, a:visited, a:active 				{text-decoration: none;}
-#mobileMenuContainer .back a										{margin-left:20px;color:#fff;}
+#mobileMenuContainer .back a										{margin-left:20px;color:#00b7c7;}
+.back																{display: block;text-align: right;}
 
 .menu																{display: none;}
 .mobileMenuOpen, .mobileMenuClose 									{cursor: pointer; border:solid 1px #000; padding:10px; display: inline-block;}
-#mobileMenuContainer ul												{margin-top:60px;}
-#mobileMenuContainer .title 										{color:#fff;font-size:200%;}
-.mobileMenuOpen, .mobileMenuClose 									{color:#fff;cursor: pointer; border:solid 1px #fff; padding:10px;background: #00b7c7; display: inline-block;border-radius:4px;}
-.mobileMenuClose 													{background: #fff;color:#00b7c7;}
 
-.mobileMenuOpen, .mobileMenuClose 									{color:#fff;cursor: pointer; border:solid 1px #fff; padding:10px;background: #00b7c7; display: inline-block;border-radius:4px;}
-.mobileMenuClose 													{background: #fff;color:#00b7c7;}
-.mobileMenuOpen 													{margin-right:20px;}
 
-#mobileMenuContainer li 											{display:block;}
+.mobileMenuOpen, .mobileMenuClose 									{color:#fff;cursor: pointer; border:solid 1px #fff; padding:10px; display: inline-block;border-radius:4px;}
+
+
+.mobileMenuOpen, .mobileMenuClose 									{color:#fff;cursor: pointer; border:solid 1px #fff; padding:10px; display: inline-block;border-radius:4px;}
+.mobileMenuClose 													{background-image:url('../images/style/close.svg');color:#d54726;background-repeat: no-repeat;background-size:15px 15px}
+.home																{background-image:url('../images/style/home.svg');color:#d54726;background-repeat: no-repeat;background-size:15px 15px;display:block;}
+.mobileMenuOpen 													{margin-right:20px;background: #00b7c7;}
+
+
 #mobileMenuContainer li a:link, a:visited, a:active 				{text-decoration: none;}
-.mobileMenuOpen, .mobileMenuClose 									{color:#fff;cursor: pointer; border:solid 1px #fff; padding:10px;background: #00b7c7; display: inline-block;border-radius:4px;}
-.mobileMenuClose 													{background: #fff;color:#00b7c7;}
+.mobileMenuOpen, .mobileMenuClose 									{cursor: pointer; border:solid 1px #fff; padding:10px; display: inline-block;border-radius:4px;}
 
-.mobileMenuClose  													{margin-bottom: 20px;}
+.leftMenu .home{margin-bottom:30px;}
+.mobileMenuClose , .home 													{    height: 30px;
+    border: 0px;
+    padding-left: 20px;
+    margin-top: 0px;
+    padding-top: 0px;}
 
-.leftMenu															{position: fixed;top:150px;left:20px;width:200px;}
-.leftMenu ul li														{padding-bottom:20px;}
-.leftMenu ul li	a 													{text-decoration: none;font-size:90%;}
+    .home a{text-decoration: none;color:#d54726;}
 
+.leftMenu															{position: fixed;top:130px;left:20px;width:200px;}.
+
+#mobileMenuContainer ul li, .leftMenu ul li, .indexMenu ul li									{padding-bottom:20px;}
+#mobileMenuContainer ul li a, .leftMenu ul li	a, .indexMenu ul li a 								{text-decoration: none;font-size:90%;}
+#mobileMenuContainer ul li a:hover, .leftMenu ul li a:hover, .indexMenu ul li a:hover  											{color:#00b7c7;}
+#mobileMenuContainer ul li, .leftMenu ul li, .indexMenu ul li 									{border-bottom:1px solid #f5f5f5; padding-bottom: 10px;margin-bottom: 20px;}
+.indexMenu  														{margin-top:50px;}
+#mobileMenuContainer .title, .leftMenu .title, .indexMenu .title 	 													{color:#00b7c7;font-weight: 700;}
+
+
+ 
 @media (max-width: 600px)											{
-#mobileMenuContainer.mobileMenuContainerActive 						{width: 100%; margin-left: 0%; background-color: lime;}
+#mobileMenuContainer.mobileMenuContainerActive 						{width: 100%; margin-left: 0%; }
 #mobileMenuContainer 												{margin-left: -100%;}
 
 																	}

@@ -26,7 +26,22 @@
         <h1>searchResult</h1>
 
         <div id="searchResult">
+            <a class='linkButton' href='#' title='Button name'>Button name</a>
+        <a class='linkButton linkButtonAlternative' href='#' title='Button name'>Button name</a>
 
+        <!-- partClearBoth note 
+            - Can be used to stop elements floating. An alternative is overflow:hidden
+            - Optionally you can add a custom class
+        -->
+        <div class="partClearBoth"></div>
+        <div class="partClearBoth customClass"></div>
+                    
+        <!-- basic code for search field, possible to deviate -->
+        <form id="searchBar">
+            <input type="search" id="searchBarInput" name="search" placeholder="Zoeken">
+            <a id="searchBarButton"></a>
+        </form>
+        <!-- end -->
             <span id="searchResultFeedback">Helaas, deze zoekopdracht heeft geen resultaat.</span>
 
             <h2>Pagina's</h2>
