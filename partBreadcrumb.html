@@ -8,11 +8,16 @@
 	<!-- In case the website is not responsive, apply an static width <meta name='viewport' content='width=1024, maximum-scale=1.0'> -->
 
     <!-- CSS -->
-    <link rel='Stylesheet' type='text/css' href='css/reset.css'>
-    <link rel='Stylesheet' type='text/css' href='css/fonts.css'>
-    <link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
-    <link rel='Stylesheet' type='text/css' href='css/index.css'>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <link rel="Stylesheet" type="text/css" href="page-style/reset.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/fonts.css">
+    <link rel="Stylesheet" type="text/css" href="css/partContent.css"> 
+    <link rel="Stylesheet" type="text/css" href="page-style/index.css">
+  
+    <!-- Load other css files after index.css, but always before responsive.css -->
+    <link rel='Stylesheet' type='text/css' href='http://cdn.dailycms.com/css/magnificpopup-2.css'>
+    <!-- End load other css files after index.css, but always before responsive.css -->
+    <link rel="Stylesheet" type="text/css" href="page-style/responsive.css">
+    <!-- end CSS -->
 
     <style type='text/css'>
 	    .partBreadcrumb 																		{text-align: left; margin-bottom: 40px;}
@@ -32,19 +37,24 @@
 </head>
 <body>
 
-	<div id='tableOfContents'>
-        <div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
-        <div class="menu"><span class="mobileMenuButton mobileMenuOpen">Menu</span><a href='index.html'>&lt; Back to overview</a></div>
-        <div id="mobileMenuContainer">
-            <span class="mobileMenuButton mobileMenuClose">Sluiten</span><span class="back"><a href='index.html'>&lt; Back to overview</a></span>
-	        <ul>
-	        	<li class="title">partBreadcrumb </li>	
-	            <li><a href='#breadcrumbBasicAnchor'>Breadcrumb basic</a></li> 
+<div id="topBar">
+		<a href="index.html" id="backButton">Back to overview</a>
+		<span class="mobileMenuButton mobileMenuOpen">Options</span>
+		<a id="logo" href="index.html"></a>
+	</div>
+
+	<div id="mobileMenuOverlay"></div>
+
+	<div id="mobileMenuContainer">
+		<span class="mobileMenuButton mobileMenuClose">Close</span>
+
+		<h3>partBreadcrumb</h3>
+		<ul>
+			<li><a href='#breadcrumbBasicAnchor'>Breadcrumb basic</a></li> 
 	            <li><a href='#breadcrumbWithTextLabelAnchor'>Breadcrumb with text label</a></li>
-	            <li><a href='#breadcrumbWithHomeIconAnchor'>Breadcrumb with home icon</a></li>        
-	        </ul>
-        </div>
-    </div>
+	            <li><a href='#breadcrumbWithHomeIconAnchor'>Breadcrumb with home icon</a></li>      
+		</ul>
+	</div>
 
     <div class='basicContainer'>
 

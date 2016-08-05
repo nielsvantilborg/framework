@@ -8,29 +8,39 @@
     <!-- In case the website is not responsive, apply an static width <meta name='viewport' content='width=1024, maximum-scale=1.0'> -->
 
     <!-- CSS -->
-    <link rel='Stylesheet' type='text/css' href='css/reset.css'>
-    <link rel='Stylesheet' type='text/css' href='css/fonts.css'>
-    <link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
-    <link rel='Stylesheet' type='text/css' href='css/index.css'>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <link rel="Stylesheet" type="text/css" href="page-style/reset.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/fonts.css">
+    <link rel="Stylesheet" type="text/css" href="css/partContent.css"> 
+    <link rel="Stylesheet" type="text/css" href="page-style/index.css">
     <link rel='stylesheet' type='text/css' href='css/range-slider.css'>
+    <!-- Load other css files after index.css, but always before responsive.css -->
+    <link rel='Stylesheet' type='text/css' href='http://cdn.dailycms.com/css/magnificpopup-2.css'>
+    <!-- End load other css files after index.css, but always before responsive.css -->
+    <link rel="Stylesheet" type="text/css" href="page-style/responsive.css">
     <!-- end CSS -->
+    
 </head>
 <body>
+    <div id="topBar">
+        <a href="index.html" id="backButton">Back to overview</a>
+        <span class="mobileMenuButton mobileMenuOpen">Options</span>
+        <a id="logo" href="index.html"></a>
+    </div>
 
-    <div id='tableOfContents'>
-        <div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
-        <div class="menu"><span class="mobileMenuButton mobileMenuOpen">Menu</span><a href='index.html'>&lt; Back to overview</a></div>
-        <div id="mobileMenuContainer">
-            <span class="mobileMenuButton mobileMenuClose">Sluiten</span>
-            <!-- this is just a random menu for the example -->
-            <ul>
-                <li><a href='#rangeSliderOneHandle'>Range slider one handle</a></li>
+    <div id="mobileMenuOverlay"></div>
+
+    <div id="mobileMenuContainer">
+        <span class="mobileMenuButton mobileMenuClose">Close</span>
+
+        <h3>Range slider</h3>
+        <ul>
+            <li><a href='#rangeSliderOneHandle'>Range slider one handle</a></li>
                 <li><a href='#rangeSliderTwoHandle'>Range slider two handles</a></li> 
                 <li><a href='#rangeSliderTwoHandlePrefix'>Range slider two handles with prefix</a></li> 
-            </ul>
-        </div>
+        </ul>
     </div>
+
+   
 
     <div class='basicContainer'>
 
