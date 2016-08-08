@@ -8,39 +8,44 @@
 	<!-- In case the website is not responsive, apply an static width <meta name='viewport' content='width=1024, maximum-scale=1.0'> -->
 
     <!-- CSS -->
-    <link rel='Stylesheet' type='text/css' href='css/reset.css'>
-    <link rel='Stylesheet' type='text/css' href='css/fonts.css'>
-    <link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
+    <link rel="Stylesheet" type="text/css" href="page-style/reset.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/fonts.css">
+    <link rel="Stylesheet" type="text/css" href="css/partContent.css"> 
+    <link rel="Stylesheet" type="text/css" href="page-style/index.css">
+    <!-- Load other css files after index.css, but always before responsive.css -->
     <link rel='Stylesheet' type='text/css' href='http://cdn.dailycms.com/css/magnificpopup-2.css'>
-    <link rel='Stylesheet' type='text/css' href='css/index.css'>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <!-- End load other css files after index.css, but always before responsive.css -->
+    <link rel="Stylesheet" type="text/css" href="page-style/responsive.css">
     <!-- end CSS -->
 
 </head>
 <body>
 
-	<div id='tableOfContents'>
-		
-        <div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
-        <div class="menu"><span class="mobileMenuButton mobileMenuOpen">Menu</span><a href='index.html'>&lt; Back to overview</a></div>
-        <div id="mobileMenuContainer">
-            <span class="mobileMenuButton mobileMenuClose">Sluiten</span><span class="back"><a href='index.html'>&lt; Back to overview</a></span>
-			<ul>
-				<li class="title">partContent</li>	
-				<li><a href='#setupAndUsage'>Setup &amp; Usage</a></li>
-				<li><a href='#partContentTextAnchor'>partContentText</a></li>
-				<li><a href='#partContentFileAdminAnchor'>partContentFileAdmin</a></li>
-				<li><a href='#partContentFileImageGallerySingleAnchor'>partContentFileImageGallerySingle</a></li>
-				<li><a href='#partContentFileImageGalleryAnchorImagesInRow2'>partContentFileImageGallery 2 images in a row</a></li>
-				<li><a href='#partContentFileImageGalleryAnchorImagesInRow3'>partContentFileImageGallery 3 images in a row</a></li>
-				<li><a href='#partContentFileImageGalleryAnchorImagesInRow4'>partContentFileImageGallery 4 images in a row</a></li>
-				<li><a href='#partContentFileImageGalleryAndSlingleAnchor'>partContentFileImageGallerySingle & partContentFileImageGallery combined</a></li>
-				<li><a href='#partContentFileImageGalleryLogoAnchor'>partContentFileImageGallery with logo's</a></li>
-				<li><a href='#partContentVideoAnchor'>partContentVideo</a></li>
-				<li><a href='#partContentCodeAnchor'>partContentCode</a></li>
-			</ul>
-		</div>
-		
+	<div id="topBar">
+		<a href="index.html" id="backButton">Back to overview</a>
+		<span class="mobileMenuButton mobileMenuOpen">Options</span>
+		<a id="logo" href="index.html"></a>
+	</div>
+
+	<div id="mobileMenuOverlay"></div>
+
+	<div id="mobileMenuContainer">
+		<span class="mobileMenuButton mobileMenuClose">Close</span>
+
+		<h3>partContent</h3>
+		<ul>
+			<li><a href='#setupAndUsage'>Setup &amp; Usage</a></li>
+			<li><a href='#partContentTextAnchor'>partContentText</a></li>
+			<li><a href='#partContentFileAdminAnchor'>partContentFileAdmin</a></li>
+			<li><a href='#partContentFileImageGallerySingleAnchor'>partContentFileImageGallerySingle</a></li>
+			<li><a href='#partContentFileImageGalleryAnchorImagesInRow2'>partContentFileImageGallery 2 images in a row</a></li>
+			<li><a href='#partContentFileImageGalleryAnchorImagesInRow3'>partContentFileImageGallery 3 images in a row</a></li>
+			<li><a href='#partContentFileImageGalleryAnchorImagesInRow4'>partContentFileImageGallery 4 images in a row</a></li>
+			<li><a href='#partContentFileImageGalleryAndSlingleAnchor'>partContentFileImageGallerySingle & partContentFileImageGallery combined</a></li>
+			<li><a href='#partContentFileImageGalleryLogoAnchor'>partContentFileImageGallery with logo's</a></li>
+			<li><a href='#partContentVideoAnchor'>partContentVideo</a></li>
+			<li><a href='#partContentCodeAnchor'>partContentCode</a></li>
+		</ul>
 	</div>
 
 	<div class='basicContainer'>
@@ -739,14 +744,13 @@
 
 	
     <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
-    <script type='text/javascript'>
-        $(document).ready(function(){           
-            $( '.mobileMenuButton').click(function() {
-                $('#mobileMenuContainer').toggleClass('mobileMenuContainerActive');
-            });
-        });  
-    </script>
-
+	<script type='text/javascript'>
+		$(document).ready(function(){     
+	        $( '.mobileMenuButton, #mobileMenuOverlay').on('click', function() {
+	          $('#mobileMenuContainer, #mobileMenuOverlay').toggleClass('mobileMenuContainerActive');
+	        });
+	      });
+	</script>
 	<!-- end Javascript -->
   
 </body>

@@ -10,96 +10,52 @@
 	<!-- In case the website is not responsive, apply an static width <meta name="viewport" content="width=1024, maximum-scale=1.0"> -->
 
     <!-- CSS -->
-    <link rel="Stylesheet" type="text/css" href="css/reset.css">
-    <link rel="Stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/reset.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/fonts.css">
     <link rel="Stylesheet" type="text/css" href="css/partContent.css"> 
-    <link rel="Stylesheet" type="text/css" href="css/index.css">
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
-	<!-- Load other css files after index.css, but always before responsive.css -->
-    <!-- End load other css files after index.css, but always before responsive.css -->
-    <link rel="Stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/index.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/responsive.css">
     <!-- end CSS -->
 </head>
 <body>
+	<div id="topBar">
+		<span class="mobileMenuButton mobileMenuOpen">Code</span>
+		<a id="logo" href="index.html"></a>
+	</div>
 	
-	<div id="tableOfContents">
-		
-		<div class="menu"><span class="mobileMenuButton mobileMenuOpen">Menu</span></div>
-		<div id="mobileMenuContainer">
-			<span class="mobileMenuButton mobileMenuClose">Sluiten</span><span class="back"><a href='index.html'>&lt; Back to overview</a></span>
-			<!-- this is just a random menu for the example -->
-			<ul>
-				<li><a href="partContent.html">partContent</a></li>
-				<li><a href="partNavigation.html">partNavigation</a></li>
-				<li><a href="partSlickSlider.html">partSlickSlider</a></li>
-				<li><a href="partAccordionMenu.html">partAccordionMenu</a></li>
-				<li><a href="partBreadcrumb.html">partBreadcrumb</a></li>
-				<li><a href="partGoogleMaps.html">partGoogleMaps</a></li>
-				<li><a href="partPagination.html">partPagination</a></li>
-				<li><a href="mobile-menu.html">mobile menu</a></li>
-				<li><a href="stickyScroll.html">stickyScroll</a></li>
-				<li><a href="searchResult.html">searchResult</a></li>
-				<li><a href="form.html">form</a></li>
-				<li><a href="shopping-cart.html">shopping cart</a></li>
-				<li><a href="range-slider.html">range slider</a></li>
-				<li><a href="svg.html">inline SVG icons</a></li>
-				<li><a href="social.html">social</a></li>
-			</ul>
-		</div>
-		<span id="logoLetters"></span>
-		<span id="logoStripes"></span>
-	</div>
-	<div class="leftMenu">
-			<ul>
-				<li><a href="partContent.html">partContent</a></li>
-				<li><a href="partNavigation.html">partNavigation</a></li>
-				<li><a href="partSlickSlider.html">partSlickSlider</a></li>
-				<li><a href="partAccordionMenu.html">partAccordionMenu</a></li>
-				<li><a href="partBreadcrumb.html">partBreadcrumb</a></li>
-				<li><a href="partGoogleMaps.html">partGoogleMaps</a></li>
-				<li><a href="partPagination.html">partPagination</a></li>
-				<li><a href="mobile-menu.html">mobile menu</a></li>
-				<li><a href="stickyScroll.html">stickyScroll</a></li>
-				<li><a href="searchResult.html">searchResult</a></li>
-				<li><a href="form.html">form</a></li>
-				<li><a href="shopping-cart.html">shopping cart</a></li>
-				<li><a href="range-slider.html">range slider</a></li>
-				<li><a href="svg.html">inline SVG icons</a></li>
-				<li><a href="social.html">social</a></li>
-			</ul>
-	</div>
 	<div class="basicContainer">
-		<h1>DailyCMS Front-end platform</h1>
-
-		<div class="partContentText">
-			<p>See the Parts and code examples on the right. Enjoy!</p>
-		</div>
-
-		<a class='linkButton' href='#' title='Button name'>Button name</a>
-		<a class='linkButton linkButtonAlternative' href='#' title='Button name'>Button name</a>
-
-		<!-- partClearBoth note 
-			- Can be used to stop elements floating. An alternative is overflow:hidden
-			- Optionally you can add a custom class
-		-->
-		<div class="partClearBoth"></div>
-		<div class="partClearBoth customClass"></div>
-					
-	    <!-- basic code for search field, possible to deviate -->
-	    <form id="searchBar">
-	    	<input type="search" id="searchBarInput" name="search" placeholder="Zoeken">
-	    	<a id="searchBarButton"></a>
-	    </form>
-	    <!-- end -->
-  </div>
-	<script type='text/javascript' src='https://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
-	<script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
+		<h1>DailyCMS framework</h1>
+		Button naar framework + button new web page
+		<div id="mobileMenuContainer">
+			<span class="mobileMenuButton mobileMenuClose">Close</span>
+			<h3>Code</h3>
+				<ul>
+					<li><a href="partContent.html">partContent</a></li>
+					<li><a href="partNavigation.html">partNavigation</a></li>
+					<li><a href="partSlickSlider.html">partSlickSlider</a></li>
+					<li><a href="partAccordionMenu.html">partAccordionMenu</a></li>
+					<li><a href="partBreadcrumb.html">partBreadcrumb</a></li>
+					<li><a href="partGoogleMaps.html">partGoogleMaps</a></li>
+					<li><a href="partPagination.html">partPagination</a></li>
+					<li><a href="mobile-menu.html">mobile menu</a></li>
+					<li><a href="stickyScroll.html">stickyScroll</a></li>
+					<li><a href="search.html">search</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="shopping-cart.html">shopping cart</a></li>
+					<li><a href="range-slider.html">range slider</a></li>
+					<li><a href="svg.html">inline SVG icons</a></li>
+					<li><a href="social.html">social</a></li>
+				</ul>
+			 </div>
+		 </div>
+  	</div>
+	<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
 	<script type='text/javascript'>
-		$(document).ready(function(){       	
-        	$( '.mobileMenuButton').click(function() {
-        		$('#mobileMenuContainer').toggleClass('mobileMenuContainerActive');
-        	});
-        });  
-    </script>
+		$(document).ready(function(){     
+	        $( '.mobileMenuButton, #mobileMenuOverlay').on('click', function() {
+	          $('#mobileMenuContainer, #mobileMenuOverlay').toggleClass('mobileMenuContainerActive');
+	        });
+	      });
+	</script>
 </body>
 </html>

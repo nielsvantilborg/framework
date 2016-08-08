@@ -8,83 +8,80 @@
     <!-- In case the website is not responsive, apply an static width <meta name='viewport' content='width=1024, maximum-scale=1.0'> -->
 
     <!-- CSS -->
-    <link rel='Stylesheet' type='text/css' href='css/reset.css'>
-    <link rel='Stylesheet' type='text/css' href='css/fonts.css'>
-    <link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
-    <link rel='Stylesheet' type='text/css' href='css/index.css'>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+     <link rel="Stylesheet" type="text/css" href="page-style/reset.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/fonts.css">
+    <link rel="Stylesheet" type="text/css" href="css/partContent.css"> 
+    <link rel="Stylesheet" type="text/css" href="page-style/index.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/index.css">
+    <!-- Load other css files after index.css, but always before responsive.css -->
+    <link rel='Stylesheet' type='text/css' href='http://cdn.dailycms.com/css/magnificpopup-2.css'>
+    <!-- End load other css files after index.css, but always before responsive.css -->
+    <link rel="Stylesheet" type="text/css" href="page-style/responsive.css">
     <link rel='stylesheet' type='text/css' href='css/partSlickSlider.css'>
     <!-- end CSS -->
 
 </head>
 <body>
-
-    <div id='tableOfContents'>
-        <div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
-        <div class="menu"><span class="mobileMenuButton mobileMenuOpen">Menu</span><a href='index.html'>&lt; Back to overview</a></div>
-        <div id="mobileMenuContainer">
-            <span class="mobileMenuButton mobileMenuClose">Sluiten</span><span class="back"><a href='index.html'>&lt; Back to overview</a></span>
-            <ul>
-                <li class="title">partSlickSlider</li>
-                <li><a href='#partSlickSliderHeaderAnchor'>partSlickSliderHeader</a></li>
+<div id="topBar">
+        <a href="index.html" id="backButton">Back to overview</a>
+        <span class="mobileMenuButton mobileMenuOpen">Options</span>
+        <a id="logo" href="index.html"></a>
+    </div>
+<div id="mobileMenuOverlay"></div>
+    <div id="mobileMenuContainer">
+        <span class="mobileMenuButton mobileMenuClose">Close</span>
+        <h3>partSlickSlider</h3>
+        <ul>
+           <li><a href='#partSlickSliderHeaderAnchor'>partSlickSliderHeader</a></li>
                 <li><a href='#partSlickSliderNavigationAnchor'>partSlickSliderNavigation</a></li>
                 <li><a href='#partSlickSliderCarouselAnchor'>partSlickSliderCarousel</a></li> 
-                <li><a href='#partSlickSliderLogosAnchor'>partSlickSliderLogos</a></li>     
-            </ul>
-        </div>
+                <li><a href='#partSlickSliderLogosAnchor'>partSlickSliderLogos</a></li>   
+        </ul>
     </div>
-
-    <div class='basicContainer'>
-
-        <h1>partSlickSlider</h1>
-
-        <h3>Notes</h3>
-
-        <div class='partContentText'>
-            <ul>
-                <li>You always need the class partSlickSlider</li> 
-                <li>If you use multiple slick slickers, apply an extra class. For example 'partSlickSliderHeader', where you can apply CSS on and diviate on JS code.</li>
-                <li>Within the clean 'div' for every slide you can add HTML code to your desire. The image and div with class 'sliderCaption' are just examples what you can do.</li>
-            </ul>
-        </div>
-
-        <h3>Source</h3>
-        <div class='partContentText'>
-            <p><a href='https://kenwheeler.github.io/slick/' target='_blank'>http://kenwheeler.github.io/slick/</a></p>
-        </div>
-      
-        <h2 id='partSlickSliderHeaderAnchor'>partSlickSliderHeader</h2>
-
-    	<div class='partSlickSlider partSlickSliderHeader'>
-    		<div>
-                <img data-lazy='https://pipsum.com/800x550.jpg?id=1' alt='alt text'>
-                <div class='sliderCaption'>
-                    <span class='sliderHeading'>Prachtige header titel 1</span>
-                    <div class='partContentText'>
-                       <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis.</p>
-                    </div>  
-                </div>
-    		</div>
-    		<div>
-                <img data-lazy='https://pipsum.com/800x550.jpg?id=2' alt='alt text'>
-                <div class='sliderCaption'>
-                    <span class='sliderHeading'>Prachtige header titel 2</span>
-                    <div class='partContentText'>
-                       <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis.</p>
-                    </div>  
-                </div>
+<div class='basicContainer'>
+    <h1>partSlickSlider</h1>
+    <h3>Notes</h3>
+    <div class='partContentText'>
+        <ul>
+            <li>You always need the class partSlickSlider</li> 
+            <li>If you use multiple slick slickers, apply an extra class. For example 'partSlickSliderHeader', where you can apply CSS on and diviate on JS code.</li>
+            <li>Within the clean 'div' for every slide you can add HTML code to your desire. The image and div with class 'sliderCaption' are just examples what you can do.</li>
+        </ul>
+    </div>
+    <h3>Source</h3>
+    <div class='partContentText'>
+        <p><a href='https://kenwheeler.github.io/slick/' target='_blank'>http://kenwheeler.github.io/slick/</a></p>
+    </div>
+    <h2 id='partSlickSliderHeaderAnchor'>partSlickSliderHeader</h2>
+	<div class='partSlickSlider partSlickSliderHeader'>
+		<div>
+            <img data-lazy='https://pipsum.com/800x550.jpg?id=1' alt='alt text'>
+            <div class='sliderCaption'>
+                <span class='sliderHeading'>Prachtige header titel 1</span>
+                <div class='partContentText'>
+                   <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis.</p>
+                </div>  
             </div>
-            <div>
-                <img data-lazy='https://pipsum.com/800x550.jpg?id=3' alt='alt text'>
-                <div class='sliderCaption'>
-                    <span class='sliderHeading'>Prachtige header titel 2</span>
-                    <div class='partContentText'>
-                       <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis.</p>
-                    </div>  
-                </div>
+		</div>
+		<div>
+            <img data-lazy='https://pipsum.com/800x550.jpg?id=2' alt='alt text'>
+            <div class='sliderCaption'>
+                <span class='sliderHeading'>Prachtige header titel 2</span>
+                <div class='partContentText'>
+                   <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis.</p>
+                </div>  
             </div>
-    	</div>
-
+        </div>
+        <div>
+            <img data-lazy='https://pipsum.com/800x550.jpg?id=3' alt='alt text'>
+            <div class='sliderCaption'>
+                <span class='sliderHeading'>Prachtige header titel 2</span>
+                <div class='partContentText'>
+                   <p>Nam vitae cursus massa. Nunc ut arcu a mi convallis feugiat. Sed ante sem, sollicitudin sed porta et, molestie in turpis.</p>
+                </div>  
+            </div>
+        </div>
+	</div>
         <h3>Javascript/jQuery</h3>
 
 <xmp class='prettyprint'>
@@ -502,17 +499,7 @@ $(document).ready(function(){
         
       }); 
     </script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-   
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
     <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
     <script type='text/javascript'>
         $(document).ready(function(){           

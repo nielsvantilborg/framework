@@ -8,11 +8,15 @@
     <!-- In case the website is not responsive, apply an static width <meta name='viewport' content='width=1024, maximum-scale=1.0'> -->
 
     <!-- CSS -->
-    <link rel='Stylesheet' type='text/css' href='css/reset.css'>
-    <link rel='Stylesheet' type='text/css' href='css/fonts.css'>
-    <link rel='Stylesheet' type='text/css' href='css/partContent.css'> 
+     <link rel="Stylesheet" type="text/css" href="page-style/reset.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/fonts.css">
+    <link rel="Stylesheet" type="text/css" href="css/partContent.css"> 
+    <link rel="Stylesheet" type="text/css" href="page-style/index.css">
     <link rel='Stylesheet' type='text/css' href='css/index.css'>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <!-- Load other css files after index.css, but always before responsive.css -->
+    <link rel='Stylesheet' type='text/css' href='http://cdn.dailycms.com/css/magnificpopup-2.css'>
+    <!-- End load other css files after index.css, but always before responsive.css -->
+    <link rel="Stylesheet" type="text/css" href="page-style/responsive.css">
     <link rel='Stylesheet' type='text/css' href='css/partNavigation-h.css'>
     <link rel='Stylesheet' type='text/css' href='css/partNavigation-v.css'>
     <link rel='Stylesheet' type='text/css' href='css/partNavigation-hvbvr.css'>
@@ -22,26 +26,27 @@
     <!-- end CSS -->
 </head>
 <body>
+<div id="topBar">
+        <a href="index.html" id="backButton">Back to overview</a>
+        <span class="mobileMenuButton mobileMenuOpen">Options</span>
+        <a id="logo" href="index.html"></a>
+    </div>
 
-    <div id='tableOfContents'>
-        <div class="logo"><a href="index.html"><img src="https://cms.dailycms.com/images/style/partner-logo.png" alt="Go back to the index"></a></div>
-        <div class="menu"><span class="mobileMenuButton mobileMenuOpen">Menu</span><a href='index.html'>&lt; Back to overview</a></div>
-        <div id="mobileMenuContainer">
-            <span class="mobileMenuButton mobileMenuClose">Sluiten</span><span class="back"><a href='index.html'>&lt; Back to overview</a></span>
-            <ul>
-                <li class="title">partNavigation</li>  
-                <li><a href='#partNavigation-hAnchor'>partNavigation-h</a></li>
+    <div id="mobileMenuOverlay"></div>
+
+    <div id="mobileMenuContainer">
+        <span class="mobileMenuButton mobileMenuClose">Close</span>
+        <h3>partNavigation</h3>
+        <ul>
+             <li><a href='#partNavigation-hAnchor'>partNavigation-h</a></li>
                 <li><a href='#partNavigation-vAnchor'>partNavigation-v</a></li>
                 <li><a href='#partNavigation-hvbvrAnchor'>partNavigation-hvbvr</a></li>
                 <li><a href='#partNavigation-vvbAnchor'>partNavigation-vvb</a></li>
                 <li><a href='#partNavigation-vvbvbAnchor'>partNavigation-vvbvb</a></li>
-                <li><a href='#partNavigation-hhbvbAnchor'>partNavigation-hhbvb</a></li>            
-            </ul>
-        </div>
+                <li><a href='#partNavigation-hhbvbAnchor'>partNavigation-hhbvb</a></li>     
+        </ul>
     </div>
-
     <div class='basicContainer'>
-
         <h1>partNavigation</h1>
         <h3>Note</h3>
         <div class="partContentText">
@@ -49,9 +54,7 @@
                 <li>Optionally you can add an ID or Class to the 'li' element. For example: custom icons on background</li>
             </ul>
         </div>
-
         <h2 id='partNavigation-hAnchor'>partNavigation-h (horizontal)</h2>
-
         <ul class='partNavigation-h'>
             <li><a href=''>menubutton</a></li>
             <li class='selected' ><a href='#'>menubutton</a></li>
@@ -59,9 +62,7 @@
             <li><a href='#'>menubutton</a></li>
             <li><a href=''>menubutton</a></li>	
         </ul>
-
         <h3>HTML</h3>
-
 <xmp class='prettyprint'>
 <ul class='partNavigation-h'>
     <li><a href=''>menubutton</a></li>
@@ -99,9 +100,7 @@
     <li><a href=''>menubutton</a></li>	
 </ul>
 </xmp>
-
 	<h3>CSS</h3>
-
 <xmp class='prettyprint'>
 <link rel='Stylesheet' type='text/css' href='css/partNavigation-v.css'>
 </xmp>
@@ -465,17 +464,7 @@ Superfish options: http://users.tpg.com.au/j_birch/plugins/superfish/options/
             });
         });
     </script> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-   
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
     <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
     <script type='text/javascript'>
         $(document).ready(function(){           
