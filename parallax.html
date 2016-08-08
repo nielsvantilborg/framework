@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="nl" prefix="og: http://ogp.me/ns#">
+<head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Parallax - DailyCMS framework</title>
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="Stylesheet" type="text/css" href="page-style/reset.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/fonts.css">
+    <link rel="Stylesheet" type="text/css" href="css/partContent.css"> 
+    <link rel="Stylesheet" type="text/css" href="page-style/index.css">
+    <!-- Load other css files after index.css, but always before responsive.css -->
+    <link rel='Stylesheet' type='text/css' href='http://cdn.dailycms.com/css/magnificpopup-2.css'>
+    <!-- End load other css files after index.css, but always before responsive.css -->
+    
+     <style type='text/css'>
+     	.parallaxContainer 											{background-repeat: no-repeat; position: relative; background-attachment: fixed;}
+		.parallaxContainerTop 										{background-position: center 90px; background-size: 100% auto; padding-top: 27.7%;}
+		.parallaxContainerMiddle 									{background-position: center center; background-size: cover; padding-top: 34.72%;}
+
+		@media (max-width: 666px){
+			.parallaxContainerTop 									{padding-top: 0px; height:200px; background-position: center center; background-attachment: scroll; background-size: cover;}
+			.parallaxContainerMiddle 								{padding-top: 0px; height:200px;}
+		}
+	</style>
+
+    <link rel="Stylesheet" type="text/css" href="page-style/responsive.css">
+</head>
+<body>
+
+	<div id="topBar">
+		<a href="index.html" id="backButton">Back to overview</a>
+		<span class="mobileMenuButton mobileMenuOpen">Options</span>
+		<a id="logo" href="index.html"></a>
+	</div>
+
+	<div class="parallaxContainer parallaxContainerTop" style="background-image: url('https://placeimg.com/1440/400/nature');"></div>
+
+	<div id="mobileMenuOverlay"></div>
+
+	<div id="mobileMenuContainer">
+		<span class="mobileMenuButton mobileMenuClose">Close</span>
+
+		<h3>Options</h3>
+		<ul>
+			<li><a href='#parallaxTop'>Parallax top</a></li>
+			<li><a href='#parallaxMiddle'>Parallax midde</a></li>
+		</ul>
+	</div>
+
+	<div class="basicContainer">
+		<h1>Parallax</h1>
+
+		<h2 id="parallaxTop">Parallax top</h2>
+
+		<h3>Notes</h3>
+		<div class="partContentText">
+			<ul>
+				<li>Only apply this parallax to a fixed top margin.</li>
+				<li>background-position top is based on the height of the fixed element. No fixed element? Set it to 0.</li>
+				<li>Padding-top is based on the image ratio. For example: The image is 1440x400. 400/1440*100 = 27,777.. (always round down 27.7)</li>
+			</ul>
+		</div>
+
+		<h3>Demo</h3>
+		<div class="partContentText">
+			<ul>
+				<li>See top image :)</li>
+			</ul>
+		</div>
+		
+		<h3>HTML</h3>
+<xmp class='prettyprint'>
+<div class="parallaxContainer parallaxContainerTop" style="background-image: url('https://placeimg.com/1440/400/nature');"></div>
+</xmp>
+
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+.parallaxContainer 			{background-repeat: no-repeat; position: relative; background-attachment: fixed;}
+.parallaxContainerTop 			{background-position: center 90px; background-size: 100% auto; padding-top: 27.7%;}
+
+@media (max-width: 666px){
+	.parallaxContainerTop 		{padding-top: 0px; height: 200px; background-position: center center; background-attachment: scroll; background-size: cover;}
+}
+</xmp>	
+
+		<h2 id="parallaxMiddle">Parallax middle</h2>
+
+		<h3>Notes</h3>
+		<div class="partContentText">
+			<ul>
+				<li>Only apply this parallax when the effect is in the middle of the page.</li>
+				<li>Padding-top can be set to whatever you want as height. We use padding-top in precentages to have a dynamic height. If the height is static or depends on the content. Just set padding-top to 0.</li>
+				<li>Tip: background-size: cover, uses the viewport, not the parrent to determine how the image will be applied.
+			</ul>
+		</div>
+
+		<h3>Demo</h3>
+	</div>
+
+	<div class="parallaxContainer parallaxContainerMiddle" style="background-image: url('https://placeimg.com/1440/1000/nature');"></div>
+
+	<div class="basicContainer">
+
+	<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div class="parallaxContainer parallaxContainerMiddle" style="background-image: url('https://placeimg.com/1440/1000/nature');"></div>
+</xmp>
+
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+.parallaxContainer 			{background-repeat: no-repeat; position: relative; background-attachment: fixed;}
+.parallaxContainerMiddle 		{background-position: center center; background-size: cover; padding-top: 34.72%;}
+
+@media (max-width: 666px){
+	.parallaxContainerMiddle 	{padding-top: 0px; height:200px;}
+}
+</xmp>
+
+	<!-- Extra white space to see the parallax effect in action -->
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	</div>
+</div>
+
+	<!-- start Javascript -->
+	<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+	<script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
+	<script type='text/javascript'>
+		$(document).ready(function(){     
+	        $( '.mobileMenuButton, #mobileMenuOverlay').on('click', function() {
+	          $('#mobileMenuContainer, #mobileMenuOverlay').toggleClass('mobileMenuContainerActive');
+	        });
+	      });
+	</script>
+	<!-- end Javascript -->
+
+</body>
+</html>

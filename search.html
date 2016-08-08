@@ -14,7 +14,20 @@
     <!-- Load other css files after index.css, but always before responsive.css -->
     <link rel='Stylesheet' type='text/css' href='http://cdn.dailycms.com/css/magnificpopup-2.css'>
     <!-- End load other css files after index.css, but always before responsive.css -->
-    <link rel="Stylesheet" type="text/css" href="css/search.css">
+    
+     <style type='text/css'>
+	  	#searchBar															{position: relative; width: 500px; height: 50px;}
+		#searchBarInput														{color: #000; font-size:100%; font-family: 'Open Sans', sans-serif; -webkit-appearance: none; border-radius:0; border: 1px solid #ccc; background-color: transparent; outline: none; height: 50px; width: 100%; width: calc(100% - 30px);}
+		#searchBarInput[type="search"]::-webkit-search-cancel-button		{-webkit-appearance: none;} 
+		#searchBarInput::-ms-clear 											{display: none;}
+		#searchBarInput::-webkit-input-placeholder 							{color: #ccc; opacity: 1;}
+		#searchBarInput:-moz-placeholder									{color: #ccc; opacity: 1;}
+		#searchBarInput::-moz-placeholder									{color: #ccc; opacity: 1;}
+		#searchBarInput:-ms-input-placeholder								{color: #ccc; opacity: 1;}
+		#searchBarButton													{width: 50px; height: 50px; display: block; position: absolute; background-color: #000; right: 0; top: 0;}  
+	</style>
+
+
     <link rel="Stylesheet" type="text/css" href="page-style/responsive.css">
 </head>
 <body>
@@ -40,14 +53,42 @@
 	<h1>Search</h1>
 
 	<h2 id="searchBarAnchor">Search bar</h2>
-	
+
+	<h3>Demo</h3>
 	<form id="searchBar">
 		<input type="search" id="searchBarInput" name="search" placeholder="Zoeken">
 		<a id="searchBarButton"></a>
 	</form>
 
-	<h2 id="searchResultsAnchor">Search results</h2>
+	<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<form id="searchBar">
+	<input type="search" id="searchBarInput" name="search" placeholder="Zoeken">
+	<a id="searchBarButton"></a>
+</form>
+</xmp>
+
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+#searchBar														{position: relative; width: 500px; height: 50px;}
+#searchBarInput													{color: #000; font-size:100%; font-family: 'Open Sans', sans-serif; -webkit-appearance: none; border-radius:0; border: 1px solid #ccc; background-color: transparent; outline: none; height: 50px; width: 100%; width: calc(100% - 30px);}
+#searchBarInput[type="search"]::-webkit-search-cancel-button	{-webkit-appearance: none;} 
+#searchBarInput::-ms-clear 										{display: none;}
+#searchBarInput::-webkit-input-placeholder 						{color: #ccc; opacity: 1;}
+#searchBarInput:-moz-placeholder								{color: #ccc; opacity: 1;}
+#searchBarInput::-moz-placeholder								{color: #ccc; opacity: 1;}
+#searchBarInput:-ms-input-placeholder							{color: #ccc; opacity: 1;}
+#searchBarButton												{width: 50px; height: 50px; display: block; position: absolute; background-color: #000; right: 0; top: 0;}
+</xmp>
+
+
 	
+	<h2 id="searchResultsAnchor">Search results</h2>
+
+	<h3>Demo</h3>
+
 	<div id="searchResult">
 		<span id="searchResultFeedback">Helaas, deze zoekopdracht heeft geen resultaat.</span>
 	
@@ -126,8 +167,126 @@
 			</li>
 		</ul>
 
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<div id="searchResult">
+	<span id="searchResultFeedback">Helaas, deze zoekopdracht heeft geen resultaat.</span>
+
+	<h2>Pagina's</h2>
+	<ul>
+		<li>
+			<span class="searchTitle"><a href="#">Titel</a></span>
+			<span class="searchLink"><a href="#">www.dailycms.com/search</a></span>
+			<div class="partContentText">
+			<p>Lorem ipsum dolor sit amet, Consectetur adipiscing elit. Maecenas volutpat tempor enim, in iaculis velit accumsan sit amet. Suspendisse porta tristique lacinia. In laoreet euismod volutpat...</p>
+			</div>
+		</li>
+		<li>
+			<span class="searchTitle"><a href="#">Titel</a></span>
+			<span class="searchLink"><a href="#">www.dailycms.com/search</a></span>
+			<div class="partContentText">
+			<p>Suspendisse porta tristique lacinia. Quisque vitae vestibulum elit. Nulla vitae dui ante, quis tempor eros. Nam facilisis ultricies ligula, ac volutpat mauris rhoncus ut...</p>
+			</div>
+		</li>
+		<li>
+			<span class="searchTitle"><a href="#">Titel</a></span>
+			<span class="searchLink"><a href="#">www.dailycms.com/search</a></span>
+			<div class="partContentText">
+			<p>Lorem ipsum dolor sit amet, Consectetur adipiscing elit. Nulla vitae dui ante, quis tempor eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In laoreet euismod volutpat. Nam facilisis ultricies ligula, ac volutpat mauris rhoncus ut...</p>
+			</div>
+		</li>
+	</ul>
+
+	<h2>Nieuws</h2>
+	<ul>
+		<li>
+			<span class="searchTitle"><a href="#">Titel</a></span>
+			<span class="searchLink"><a href="#">www.dailycms.com/search</a></span>
+			<div class="partContentText">
+			<p>Lorem ipsum dolor sit amet, Consectetur adipiscing elit. In laoreet euismod volutpat. Nam facilisis ultricies ligula, ac volutpat mauris rhoncus ut...</p>
+			</div>
+		</li>
+		<li>
+			<span class="searchTitle"><a href="#">Titel</a></span>
+			<span class="searchLink"><a href="#">www.dailycms.com/search</a></span>
+			<div class="partContentText">
+			<p>In laoreet euismod volutpat. Nam facilisis ultricies ligula, ac volutpat mauris rhoncus ut...</p>
+			</div>
+		</li>
+		<li>
+			<span class="searchTitle"><a href="#">Titel</a></span>
+			<span class="searchLink"><a href="#">www.dailycms.com/search</a></span>
+			<div class="partContentText">
+			<p>Lorem ipsum dolor sit amet, Consectetur adipiscing elit. Nulla vitae dui ante, quis tempor eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In laoreet euismod volutpat. Nam facilisis ultricies ligula, ac volutpat mauris rhoncus ut...</p>
+			</div>
+		</li>
+	</ul>
+
+	<h2>Producten</h2>
+	<ul>
+		<li>
+			<span class="searchTitle"><a href="#">Titel</a></span>
+			<span class="searchLink"><a href="#">www.dailycms.com/search</a></span>
+			<div class="partContentText">
+			<p>Lorem ipsum dolor sit amet, Consectetur adipiscing elit. Maecenas volutpat tempor enim, in iaculis velit accumsan sit amet. Suspendisse porta tristique lacinia...</p>
+			</div>
+		</li>
+		<li>
+			<span class="searchTitle"><a href="#">Titel</a></span>
+			<span class="searchLink"><a href="#">www.dailycms.com/search</a></span>
+			<div class="partContentText">
+			<p>Suspendisse porta tristique lacinia. Quisque vitae vestibulum elit. Nulla vitae dui ante, quis tempor eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae...</p>
+			</div>
+		</li>
+		<li>
+			<span class="searchTitle"><a href="#">Titel</a></span>
+			<span class="searchLink"><a href="#">www.dailycms.com/search</a></span>
+			<div class="partContentText">
+			<p>Lorem ipsum cibus orci luctus et ultrices posuere cubilia Curae; In laoreet euismod volutpat. Nam facilisis ultricies ligula, ac volutpat mauris rhoncus ut...</p>
+			</div>
+		</li>
+	</ul>
+</div>
+</xmp>
+
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+#searchResultFeedback												{display: block; margin-bottom: 20px;}
+
+#searchResult                                                  		{}
+#searchResult h2													{}
+#searchResult ul                                               		{list-style:none; padding:0px; margin:0px;}
+#searchResult ul li                                            		{padding:0px; margin:0px 0px 20px 0px;}
+ 
+#searchResult span.searchTitle                             			{font-size: 200%;}
+#searchResult span.searchLink                              			{}
+#searchResult span.searchTitle, #searchResult span.searchLink		{display: block;}
+#searchResult div.partContentText p									{padding:0px; margin:0px;}                                                
+   
+#searchResult ul li span.searchTitle a:link, #searchResult ul li span.searchTitle a:visited, #searchResult ul li span.searchTitle a:active 	{color: #1a0dab; text-decoration:none;}
+#searchResult ul li span.searchTitle a:hover																								{color: #1a0dab; text-decoration:underline;}    
+
+#searchResult span.searchLink a:link, #searchResult span.searchLink a:visited, #searchResult span.searchLink a:active 						{color: #006621; text-decoration:none;}				   
+#searchResult span.searchLink a:hover																										{color: #006621; text-decoration:none;}
+</xmp>
+	
+
 	</div>
 </div>
+
+	<!-- start Javascript -->
+	<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+	<script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
+	<script type='text/javascript'>
+		$(document).ready(function(){     
+	        $( '.mobileMenuButton, #mobileMenuOverlay').on('click', function() {
+	          $('#mobileMenuContainer, #mobileMenuOverlay').toggleClass('mobileMenuContainerActive');
+	        });
+	      });
+	</script>
+	<!-- end Javascript -->
 
 </body>
 </html>
