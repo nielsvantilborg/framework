@@ -16,7 +16,7 @@ a:hover																{color: #000; text-decoration:none;}
 xmp 																{width: auto; overflow: auto; max-height: 600px; margin:0px 0px 35px 0px; padding: 0px 20px 15px 20px; background-color: #f5f5f5; line-height: 140%;}
 /* end showing code */
 
-#topBar 															{width: 100%; height:90px; background-color: #00b7c7; position: fixed; left:0; top:0; z-index: 1; }
+#topBar 															{width: 100%; height:90px; background-color: #00b7c7; position: fixed; left:0; top:0; z-index: 1;}
 	#logo 																{background: url(logo.svg) no-repeat; background-size: contain; height: 50px; width: 201px; margin:0px auto; display: block;}
 	.mobileMenuButton, #backButton  									{float: left; cursor: pointer; border:solid 2px #fff; padding:10px; margin-left: 20px; font-weight: 600; color:#fff; text-decoration: none; border-radius: 4px; transition: background 0.2s;}
 	#backButton:before 													{content: '\003c'; margin-right: 8px; font-weight: 700;}
@@ -40,5 +40,3 @@ xmp 																{width: auto; overflow: auto; max-height: 600px; margin:0px 
 
 #mobileMenuContainer 												{margin-left: 0px; margin-top: 90px; height: calc(100% - 90px); width: 19%;}
 .mobileMenuButton 													{display: none;}
-
-.searchContainer													{}
