@@ -29,37 +29,29 @@
 	    .partBreadcrumb > li > a																{color: #666; text-decoration:none;}
 	    .partBreadcrumb > li.selected > a 														{color: #000; text-decoration:none;}
 	    .partBreadcrumb > li > a:hover															{color: #000; text-decoration:underline;}
-	    
 	    .partBreadcrumbTextLabel li:first-child:after 											{content:none;}
 	    .partBreadcrumbHomeIcon li:first-child a												{overflow: hidden; text-indent: -9999px; width: 20px; background-color: red; float: left; margin-right: 5px;} 	
 	</style>
 	<!-- end CSS -->
 </head>
 <body>
-
 <div id="topBar">
-		<a href="index.html" id="backButton">Back to overview</a>
-		<span class="mobileMenuButton mobileMenuOpen">Options</span>
-		<a id="logo" href="index.html"></a>
-	</div>
-
-	<div id="mobileMenuOverlay"></div>
-
+	<a href="index.html" id="backButton">Back to overview</a>
+	<span class="mobileMenuButton mobileMenuOpen">Options</span>
+	<a id="logo" href="index.html"></a>
+</div>
+<div id="mobileMenuOverlay"></div>
 	<div id="mobileMenuContainer">
 		<span class="mobileMenuButton mobileMenuClose">Close</span>
-
 		<h3>partBreadcrumb</h3>
 		<ul>
 			<li><a href='#breadcrumbBasicAnchor'>Breadcrumb basic</a></li> 
 	            <li><a href='#breadcrumbWithTextLabelAnchor'>Breadcrumb with text label</a></li>
 	            <li><a href='#breadcrumbWithHomeIconAnchor'>Breadcrumb with home icon</a></li>      
 		</ul>
-	</div>
-
-    <div class='basicContainer'>
-
-		<h1>partBreadcrumb</h1>
-
+</div>
+<div class='basicContainer'>
+	<h1>partBreadcrumb</h1>
 		<h3>Notes</h3>
 	    <div class='partContentText'>
 	        <ul>
@@ -86,134 +78,121 @@
 				<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub sub sub navigation name</a>
 			</li>
 		</ul>
-
 		<h3>HTML</h3>
+	<xmp class='prettyprint'>
+	<ul class='partBreadcrumb'>
+		<li>
+			<a hreflang='nl' title='Home' href='/'>Home</a>
+		</li>
+		<li>
+			<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Navigation name</a>
+		</li>
+		<li>
+			<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub navigation name</a>
+		</li>
+		<li>
+			<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub sub navigation name</a>
+		</li>
+		<li class='selected'>
+			<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub sub sub navigation name</a>
+		</li>
+	</ul>
+	</xmp>
+	<h3>CSS</h3>
+	<xmp class='prettyprint'>
+	.partBreadcrumb 					{text-align: left; margin-bottom: 40px;}
+	.partBreadcrumb li					{margin:5px 5px 5px 0px; display: inline-block;}
+	.partBreadcrumb li:last-child 				{margin-right: 0px;}													
+	.partBreadcrumb li:after					{content:'>'; margin-left: 5px;}
+	.partBreadcrumb li:last-child:after 			{content:none;}  
+	.partBreadcrumb li a					{}	
+	.partBreadcrumb > li > a					{color: #666; text-decoration:none;}
+	.partBreadcrumb > li.selected > a 			{color: #000; text-decoration:none;}
+	.partBreadcrumb > li > a:hover				{color: #000; text-decoration:underline;}
+	</xmp>
+			
+			<h2 id='breadcrumbWithTextLabelAnchor'>Breadcrumb with text label</h2>
+			<ul class='partBreadcrumb partBreadcrumbWithTextLabel'>
+				<li>You are here:</li>
+				<li>
+					<a hreflang='nl' title='Home' href='/'>Home</a>
+				</li>
+				<li>
+					<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Navigation name</a>
+				</li>
+				<li class='selected'>
+					<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub navigation name</a>
+				</li>
+			</ul>
 
-<xmp class='prettyprint'>
-<ul class='partBreadcrumb'>
-	<li>
-		<a hreflang='nl' title='Home' href='/'>Home</a>
-	</li>
-	<li>
-		<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Navigation name</a>
-	</li>
-	<li>
-		<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub navigation name</a>
-	</li>
-	<li>
-		<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub sub navigation name</a>
-	</li>
-	<li class='selected'>
-		<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub sub sub navigation name</a>
-	</li>
-</ul>
-</xmp>
-
-<h3>CSS</h3>
-
-<xmp class='prettyprint'>
-.partBreadcrumb 					{text-align: left; margin-bottom: 40px;}
-.partBreadcrumb li					{margin:5px 5px 5px 0px; display: inline-block;}
-.partBreadcrumb li:last-child 				{margin-right: 0px;}													
-.partBreadcrumb li:after					{content:'>'; margin-left: 5px;}
-.partBreadcrumb li:last-child:after 			{content:none;}  
-.partBreadcrumb li a					{}	
-.partBreadcrumb > li > a					{color: #666; text-decoration:none;}
-.partBreadcrumb > li.selected > a 			{color: #000; text-decoration:none;}
-.partBreadcrumb > li > a:hover				{color: #000; text-decoration:underline;}
-</xmp>
-		
-		<h2 id='breadcrumbWithTextLabelAnchor'>Breadcrumb with text label</h2>
-		<ul class='partBreadcrumb partBreadcrumbWithTextLabel'>
-			<li>You are here:</li>
-			<li>
-				<a hreflang='nl' title='Home' href='/'>Home</a>
-			</li>
-			<li>
-				<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Navigation name</a>
-			</li>
-			<li class='selected'>
-				<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub navigation name</a>
-			</li>
-		</ul>
-
-		<h3>HTML</h3>
-
-<xmp class='prettyprint'>
-<ul class='partBreadcrumb partBreadcrumbTextLabel'>
-	<li>You are here:</li>
-	<li>
-		<a hreflang='nl' title='Home' href='/'>Home</a>
-	</li>
-	<li>
-		<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Navigation name</a>
-	</li>
-	<li class='selected'>
-		<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub navigation name</a>
-	</li>
-</ul>
-</xmp>
-
-		<h3>CSS</h3>
-
-<xmp class='prettyprint'>
-.partBreadcrumb 					{text-align: left; margin-bottom: 40px;}
-.partBreadcrumb li					{margin:5px 5px 5px 0px; display: inline-block;}
-.partBreadcrumb li:last-child 				{margin-right: 0px;}													
-.partBreadcrumb li:after					{content:'>'; margin-left: 5px;}
-.partBreadcrumb li:last-child:after 			{content:none;}  
-.partBreadcrumb li a					{}	
-.partBreadcrumb > li > a					{color: #666; text-decoration:none;}
-.partBreadcrumb > li.selected > a 			{color: #000; text-decoration:none;}
-.partBreadcrumb > li > a:hover				{color: #000; text-decoration:underline;}
-.partBreadcrumbTextLabel li:first-child:after 		{content:none;}
-</xmp>
-
-		<h2 id='breadcrumbWithHomeIconAnchor'>Breadcrumb with home icon</h2>
-		<ul class='partBreadcrumb partBreadcrumbHomeIcon'>
-			<li>
-				<a hreflang='nl' title='Home' href='/'>Home</a>
-			</li>
-			<li>
-				<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Navigation name</a>
-			</li>
-			<li class='selected'>
-				<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub navigation name</a>
-			</li>
-		</ul>
-
-		<h3>CSS</h3>
-
-<xmp class='prettyprint'>
-<ul class='partBreadcrumb partBreadcrumbHomeIcon'>
-	<li>
-		<a hreflang='nl' title='Home' href='/'>Home</a>
-	</li>
-	<li>
-		<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Navigation name</a>
-	</li>
-	<li class='selected'>
-		<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub navigation name</a>
-	</li>
-</ul>
-</xmp>
-
-		<h3>CSS</h3>
-
-<xmp class='prettyprint'>
-.partBreadcrumb 				{text-align: left; margin-bottom: 40px;}
-.partBreadcrumb li				{margin:5px 5px 5px 0px; display: inline-block;}
-.partBreadcrumb li:last-child 			{margin-right: 0px;}													
-.partBreadcrumb li:after				{content:'>'; margin-left: 5px;}
-.partBreadcrumb li:last-child:after 		{content:none;}  
-.partBreadcrumb li a				{}	
-.partBreadcrumb > li > a				{color: #666; text-decoration:none;}
-.partBreadcrumb > li.selected > a 		{color: #000; text-decoration:none;}
-.partBreadcrumb > li > a:hover			{color: #000; text-decoration:underline;}
-.partBreadcrumbHomeIcon li:first-child a		{overflow: hidden; text-indent: -9999px; width: 20px; background-color: red; float: left; margin-right: 5px;} 
-</xmp>
-	
-	</div>
+	<h3>HTML</h3>
+	<xmp class='prettyprint'>
+	<ul class='partBreadcrumb partBreadcrumbTextLabel'>
+		<li>You are here:</li>
+		<li>
+			<a hreflang='nl' title='Home' href='/'>Home</a>
+		</li>
+		<li>
+			<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Navigation name</a>
+		</li>
+		<li class='selected'>
+			<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub navigation name</a>
+		</li>
+	</ul>
+	</xmp>
+	<h3>CSS</h3>
+	<xmp class='prettyprint'>
+	.partBreadcrumb 					{text-align: left; margin-bottom: 40px;}
+	.partBreadcrumb li					{margin:5px 5px 5px 0px; display: inline-block;}
+	.partBreadcrumb li:last-child 				{margin-right: 0px;}													
+	.partBreadcrumb li:after					{content:'>'; margin-left: 5px;}
+	.partBreadcrumb li:last-child:after 			{content:none;}  
+	.partBreadcrumb li a					{}	
+	.partBreadcrumb > li > a					{color: #666; text-decoration:none;}
+	.partBreadcrumb > li.selected > a 			{color: #000; text-decoration:none;}
+	.partBreadcrumb > li > a:hover				{color: #000; text-decoration:underline;}
+	.partBreadcrumbTextLabel li:first-child:after 		{content:none;}
+	</xmp>
+			<h2 id='breadcrumbWithHomeIconAnchor'>Breadcrumb with home icon</h2>
+			<ul class='partBreadcrumb partBreadcrumbHomeIcon'>
+				<li>
+					<a hreflang='nl' title='Home' href='/'>Home</a>
+				</li>
+				<li>
+					<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Navigation name</a>
+				</li>
+				<li class='selected'>
+					<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub navigation name</a>
+				</li>
+			</ul>
+	<h3>CSS</h3>
+	<xmp class='prettyprint'>
+	<ul class='partBreadcrumb partBreadcrumbHomeIcon'>
+		<li>
+			<a hreflang='nl' title='Home' href='/'>Home</a>
+		</li>
+		<li>
+			<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Navigation name</a>
+		</li>
+		<li class='selected'>
+			<a hreflang='nl' title='Koekenpannen' href='/koekenpannen/'>Sub navigation name</a>
+		</li>
+	</ul>
+	</xmp>
+	<h3>CSS</h3>
+	<xmp class='prettyprint'>
+	.partBreadcrumb 				{text-align: left; margin-bottom: 40px;}
+	.partBreadcrumb li				{margin:5px 5px 5px 0px; display: inline-block;}
+	.partBreadcrumb li:last-child 			{margin-right: 0px;}													
+	.partBreadcrumb li:after				{content:'>'; margin-left: 5px;}
+	.partBreadcrumb li:last-child:after 		{content:none;}  
+	.partBreadcrumb li a				{}	
+	.partBreadcrumb > li > a				{color: #666; text-decoration:none;}
+	.partBreadcrumb > li.selected > a 		{color: #000; text-decoration:none;}
+	.partBreadcrumb > li > a:hover			{color: #000; text-decoration:underline;}
+	.partBreadcrumbHomeIcon li:first-child a		{overflow: hidden; text-indent: -9999px; width: 20px; background-color: red; float: left; margin-right: 5px;} 
+	</xmp>
+</div>
 
 	 <!-- Javascript -->
 	<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>

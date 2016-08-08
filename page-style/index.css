@@ -40,3 +40,5 @@ xmp 																{width: auto; overflow: auto; max-height: 600px; margin:0px 
 
 #mobileMenuContainer 												{margin-left: 0px; margin-top: 90px; height: calc(100% - 90px); width: 19%;}
 .mobileMenuButton 													{display: none;}
+
+.searchContainer													{}
