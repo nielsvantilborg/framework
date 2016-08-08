@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="nl" prefix="og: http://ogp.me/ns#">
+<head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Parallax - DailyCMS framework</title>
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="Stylesheet" type="text/css" href="page-style/reset.css">
+    <link rel="Stylesheet" type="text/css" href="page-style/fonts.css">
+    <link rel="Stylesheet" type="text/css" href="css/partContent.css"> 
+    <link rel="Stylesheet" type="text/css" href="page-style/index.css">
+    <!-- Load other css files after index.css, but always before responsive.css -->
+    <link rel='Stylesheet' type='text/css' href='http://cdn.dailycms.com/css/magnificpopup-2.css'>
+    <!-- End load other css files after index.css, but always before responsive.css -->
+    
+     <style type='text/css'>
+
+	</style>
+
+
+    <link rel="Stylesheet" type="text/css" href="page-style/responsive.css">
+</head>
+<body>
+
+	<div id="topBar">
+		<a id="backButton" href="index.html">Back to overview</a>
+		<a id="logo" href="index.html"></a>
+	</div>
+
+	<div id="mobileMenuOverlay"></div>
+
+	<div id="mobileMenuContainer">
+		<span class="mobileMenuButton mobileMenuClose">Close</span>
+
+		<h3>Options</h3>
+		<ul>
+			<li><a href='#parallaxTop'>Parallax top</a></li>
+			<li><a href='#parallaxMiddle'>Parallax midde</a></li>
+		</ul>
+	</div>
+
+	<div class="basicContainer">
+		<h1>Parallax</h1>
+
+		<h2 id="parallaxTop">Parallax top</h2>
+
+		<h3>Notes</h3>
+		<div class="partContentText">
+			<ul>
+				<li>Only apply this parallax to a fixed top margin.</li>
+			</ul>
+		</div>
+
+		<h3>Demo</h3>
+
+		<!-- voeg hier je code toe voor de demo -->
+
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<!-- voeg hier je code toe  -->
+</xmp>
+
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<!-- add css code here -->
+</xmp>
+
+		<h2 id="parallaxMiddle">Parallax middle</h2>
+
+		<h3>Notes</h3>
+		<div class="partContentText">
+			<ul>
+				<li>Only apply this parallax when the effect is in the middle of the page.</li>
+			</ul>
+		</div>
+
+		<h3>Demo</h3>
+
+		<!-- voeg hier je code toe voor de demo -->
+
+		<h3>HTML</h3>
+
+<xmp class='prettyprint'>
+<!-- voeg hier je code toe  -->
+</xmp>
+
+        <h3>CSS</h3>
+
+<xmp class='prettyprint'>
+<!-- add css code here -->
+</xmp>
+
+
+	</div>
+</div>
+
+	<!-- start Javascript -->
+	<script type='text/javascript' src='http://cdn.dailycms.com/js/jquery-3.1.0.js'></script>
+	<script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?'></script>
+	<script type='text/javascript'>
+		$(document).ready(function(){     
+	        $( '.mobileMenuButton, #mobileMenuOverlay').on('click', function() {
+	          $('#mobileMenuContainer, #mobileMenuOverlay').toggleClass('mobileMenuContainerActive');
+	        });
+	      });
+	</script>
+	<!-- end Javascript -->
+
+</body>
+</html>
